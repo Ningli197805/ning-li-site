@@ -15,7 +15,11 @@ No build command, Node runtime, database, server middleware or GitHub Actions wo
 ## Site structure
 
 - `/`: Chinese homepage
+- `/about/`: Chinese profile, career phases and earlier experience
+- `/career/clients/`: Chinese anonymised global-dairy client case
 - `/en/`: English homepage
+- `/en/about/`: English profile, career phases and earlier experience
+- `/en/career/clients/`: English anonymised global-dairy client case
 - `/marathon/`: Chinese marathon pages
 - `/en/marathon/`: English marathon pages
 - `/practices/`: Chinese leading-practice page
@@ -24,7 +28,7 @@ No build command, Node runtime, database, server middleware or GitHub Actions wo
 
 ## Current boundaries
 
-- The Yili client case is intentionally excluded pending client disclosure permission.
+- The client case is anonymised as a globally leading dairy group. The public page does not show the client's name, logo or brand links.
 - The formal portrait, work photograph and marathon photograph were supplied by Ning Li. Photographer, event-organizer and race-photo permissions must be confirmed before public deployment.
 - The site uses a mail link. It does not process form submissions, payments or sensitive data.
-- The custom domain is not configured in this package. A `CNAME` file should be added only after DNS is ready.
+- The custom domain is configured through `CNAME` as `ning-li.com`.
