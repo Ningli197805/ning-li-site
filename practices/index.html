@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>领先实践：AI 与人力资源 | 厉宁</title>
-<meta name="description" content="厉宁用 Codex 制作 Dashboard 中英双语视频的实践：AI 按步骤执行、逐步确认，并给出三项后续优化建议。">
+<meta name="description" content="厉宁用 Codex 制作 Dashboard 中英双语视频的实践：包含原始版本与白色 Operator’s Eye 优化版。">
 <meta property="og:type" content="website">
 <meta property="og:title" content="领先实践：AI 与人力资源 | 厉宁">
-<meta property="og:description" content="一个 Dashboard 中英双语视频的 AI 协作实践与成本复盘。">
-<meta property="og:image" content="../assets/videos/dashboard/dashboard-zh-poster.jpg">
+<meta property="og:description" content="Dashboard 中英双语视频的原版、白色优化版、协作方法与复盘。">
+<meta property="og:image" content="../assets/videos/dashboard/operator-eye-zh-full-cover.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <meta name="theme-color" content="#eeeeeb">
@@ -36,6 +36,14 @@
 .video-card video { display: block; width: 100%; aspect-ratio: 16 / 9; border-radius: var(--r-lg); background: #111; }
 .video-card h3 { margin: var(--s-4) 0 var(--s-1); font-size: var(--t-card); font-weight: 500; }
 .video-card p { margin: 0; color: var(--muted); font-size: var(--t-small); }
+.video-version { padding-top: var(--s-5); }
+.video-version h3 { margin: var(--s-2) 0 var(--s-2); font-size: var(--t-card); font-weight: 500; }
+.video-version > p { margin: 0; max-width: 62ch; }
+.optimisation-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s-3) var(--gutter); margin: var(--s-4) 0 0; padding: 0; list-style: none; }
+.optimisation-list li { color: var(--ink); font-size: 16px; line-height: 1.55; }
+.optimisation-list strong { font-weight: 500; }
+.section-next { margin: var(--s-7) 0 0; }
+#optimised-videos .section-head { margin-bottom: var(--s-5); }
 .method-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s-7) var(--s-6); margin: 0; padding: 0; list-style: none; }
 .method-grid--single { grid-template-columns: 1fr; gap: var(--s-4); }
 .method-grid li { padding-top: var(--s-4); border-top: 1px solid var(--line); }
@@ -48,8 +56,16 @@
   .video-grid { grid-template-columns: 1fr; }
   .method-photo { height: auto; aspect-ratio: 16 / 9; margin-top: var(--s-7); }
 }
+@media (min-width: 640px) and (max-width: 1023px) {
+  #optimised-videos { --h: 2; }
+  .video-card p { display: none; }
+}
 @media (max-width: 639px) {
-  .hero--statement .hero__facts, .method-grid { grid-template-columns: 1fr; }
+  .hero--statement .hero__facts { display: grid; }
+  .method-grid { grid-template-columns: 1fr; }
+  .optimisation-list { grid-template-columns: 1fr; }
+  .video-card p { display: none; }
+  .section-next { margin-top: var(--s-5); }
 }
 </style>
 <script>document.documentElement.classList.add('m-enter');setTimeout(()=>document.documentElement.classList.add('m-enter-done'),700)</script>
@@ -87,8 +103,8 @@
   <section class="hero hero--statement" data-enter aria-labelledby="hero-h">
     <div class="wrap"><div class="hero-text hero__in">
       <div>
-        <h1 id="hero-h">领先实践：AI 与人力资源</h1>
-        <p class="hero__lead">我把 AI 放进真实的学习和工作任务里，用视频记录过程、结果与复盘。这个 Dashboard 案例展示了人负责设定方向和确认，AI 负责执行和提出改进建议。</p>
+        <h1 id="hero-h">AI and HR practice</h1>
+        <p class="hero__lead">我把 AI 放进真实的学习和工作任务里，用视频记录过程、结果与复盘。这个 Dashboard 案例保留了原版，也记录了白色 Operator’s Eye 优化版。</p>
         <div class="btn-row">
           <a class="btn btn--primary" href="#videos">观看双语视频<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
           <a class="btn btn--secondary" href="#method">查看协作方法</a>
@@ -97,8 +113,8 @@
       <dl class="hero__facts">
         <div><dt>视频语言</dt><dd>中文与英文</dd></div>
         <div><dt>协作方式</dt><dd>逐步确认</dd></div>
-        <div><dt>两条视频成本</dt><dd>低于 6 元</dd></div>
-        <div><dt>后续优化建议</dt><dd>3 项</dd></div>
+        <div><dt>成片规格</dt><dd>1920×1080 / 30fps</dd></div>
+        <div><dt>视频版本</dt><dd>原版 + 优化版</dd></div>
       </dl>
     </div></div>
   </section>
@@ -107,7 +123,7 @@
     <div class="wrap">
       <div class="section-head">
         <h2 id="videos-h">Dashboard 双语视频</h2>
-        <p>同一份 Dashboard 视觉演示的中文版和英文版。演示使用 synthetic data。</p>
+        <p>先看原始中文、英文版本，再看白色 Operator’s Eye 优化版。所有界面均使用 synthetic data。</p>
       </div>
       <div class="grid">
         <figure class="video-card span-6">
@@ -124,6 +140,40 @@
           <video controls preload="metadata" playsinline poster="../assets/videos/dashboard/dashboard-en-poster.jpg" aria-label="English Dashboard demonstration video">
             <source src="../assets/videos/dashboard/dashboard-en.mp4" type="video/mp4">
             Your browser cannot play HTML5 video. <a href="../assets/videos/dashboard/dashboard-en.mp4">Download the English video</a>.
+          </video>
+        </figure>
+      </div>
+      <p class="section-next"><a class="link" href="#optimised-videos">查看优化版视频 →</a></p>
+    </div>
+  </section>
+
+  <section class="section" id="optimised-videos" aria-labelledby="optimised-videos-h">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="optimised-videos-h">优化版 Dashboard 双语视频</h2>
+        <p>重做后的中英文版本，用更清晰的白色界面呈现同一套成本、编制、趋势和人效分析。</p>
+      </div>
+      <ul class="optimisation-list" aria-label="优化版的具体调整">
+        <li><strong>白底视觉体系：</strong>由深色背景改为浅色背景，保留 Deloitte Green 与 Cost Blue。</li>
+        <li><strong>新增成本视图：</strong>加入成本构成环形图和预算差异瀑布图。</li>
+        <li><strong>核心分析保留：</strong>Cost &amp; HC、HC Trends、NSR / GM / Cost per FTE 继续联动。</li>
+        <li><strong>双语分别排轴：</strong>九个场景按中英文各自旁白时长重排，并缩至画布 90% 留出字幕安全区。</li>
+      </ul>
+      <div class="grid">
+        <figure class="video-card span-6">
+          <h3>中文优化版 Dashboard 展示</h3>
+          <p>74 秒，白色系统，新增成本构成与预算差异图。</p>
+          <video controls preload="metadata" playsinline poster="../assets/videos/dashboard/operator-eye-zh-full-cover.jpg" aria-label="中文优化版 Dashboard 展示视频">
+            <source src="../assets/videos/dashboard/operator-eye-zh-full-captioned-16x9.mp4" type="video/mp4">
+            你的浏览器不支持 HTML5 视频。<a href="../assets/videos/dashboard/operator-eye-zh-full-captioned-16x9.mp4">下载中文优化版视频</a>。
+          </video>
+        </figure>
+        <figure class="video-card span-6">
+          <h3>English optimized Dashboard walkthrough</h3>
+          <p>84 seconds, with a light interface and rebuilt bilingual timing.</p>
+          <video controls preload="metadata" playsinline poster="../assets/videos/dashboard/operator-eye-en-full-cover.jpg" aria-label="English optimized Dashboard demonstration video">
+            <source src="../assets/videos/dashboard/operator-eye-en-full-captioned-16x9.mp4" type="video/mp4">
+            Your browser cannot play HTML5 video. <a href="../assets/videos/dashboard/operator-eye-en-full-captioned-16x9.mp4">Download the optimized English video</a>.
           </video>
         </figure>
       </div>
@@ -168,8 +218,8 @@
 
   <section class="section statement" id="reflection" data-moment="word-highlight" aria-labelledby="reflection-h">
     <div class="wrap">
-      <h2 id="reflection-h" class="t-label">成本与复盘</h2>
-      <p class="mo-wh__text">今天用 Codex 完成了一条 Dashboard 中英双语视频。我只负责提要求，AI 按既定要求推进，每一步与我确认，完成后还提出三项优化建议。两条视频成本低于 <strong>6 元</strong>。</p>
+      <h2 id="reflection-h" class="t-label">原版成本与复盘</h2>
+      <p class="mo-wh__text">原始中英双语视频由我提出要求，AI 按既定步骤执行并逐步确认。两条原版视频成本低于 <strong>6 元</strong>；后续优化最终形成了上方两条白色 Operator’s Eye 完整版。</p>
     </div>
   </section>
 </main>
@@ -191,7 +241,7 @@
         </div>
         <div class="span-3 start-7 footer__col">
           <h3>浏览</h3>
-          <ul><li><a href="#videos">双语视频</a></li><li><a href="#method">协作方法</a></li><li><a href="#reflection">成本与复盘</a></li></ul>
+          <ul><li><a href="#videos">原版视频</a></li><li><a href="#optimised-videos">优化版视频</a></li><li><a href="#method">协作方法</a></li><li><a href="#reflection">原版复盘</a></li></ul>
         </div>
         <div class="span-3 footer__col">
           <h3>语言与联系</h3>

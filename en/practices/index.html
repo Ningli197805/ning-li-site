@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Leading practice: AI and HR | Ning Li</title>
-<meta name="description" content="Ning Li's practical Codex workflow for producing a bilingual HR Dashboard video, including staged confirmation, cost and follow-up suggestions.">
+<meta name="description" content="Ning Li's Codex workflow for producing original and white Operator’s Eye versions of a bilingual HR Dashboard video.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Leading practice: AI and HR | Ning Li">
-<meta property="og:description" content="A bilingual HR Dashboard video, the collaboration method and the cost review.">
-<meta property="og:image" content="../../assets/videos/dashboard/dashboard-en-poster.jpg">
+<meta property="og:description" content="Original and optimized bilingual HR Dashboard videos, the collaboration method and the review.">
+<meta property="og:image" content="../../assets/videos/dashboard/operator-eye-en-full-cover.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
 <meta name="theme-color" content="#eeeeeb">
@@ -36,6 +36,14 @@
 .video-card video { display: block; width: 100%; aspect-ratio: 16 / 9; border-radius: var(--r-lg); background: #111; }
 .video-card h3 { margin: var(--s-4) 0 var(--s-1); font-size: var(--t-card); font-weight: 500; }
 .video-card p { margin: 0; color: var(--muted); font-size: var(--t-small); }
+.video-version { padding-top: var(--s-5); }
+.video-version h3 { margin: var(--s-2) 0 var(--s-2); font-size: var(--t-card); font-weight: 500; }
+.video-version > p { margin: 0; max-width: 62ch; }
+.optimisation-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s-3) var(--gutter); margin: var(--s-4) 0 0; padding: 0; list-style: none; }
+.optimisation-list li { color: var(--ink); font-size: 16px; line-height: 1.55; }
+.optimisation-list strong { font-weight: 500; }
+.section-next { margin: var(--s-7) 0 0; }
+#optimised-videos .section-head { margin-bottom: var(--s-5); }
 .method-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s-7) var(--s-6); margin: 0; padding: 0; list-style: none; }
 .method-grid--single { grid-template-columns: 1fr; gap: var(--s-4); }
 .method-grid li { padding-top: var(--s-4); border-top: 1px solid var(--line); }
@@ -48,8 +56,16 @@
   .video-grid { grid-template-columns: 1fr; }
   .method-photo { height: auto; aspect-ratio: 16 / 9; margin-top: var(--s-7); }
 }
+@media (min-width: 640px) and (max-width: 1023px) {
+  #optimised-videos { --h: 2; }
+  .video-card p { display: none; }
+}
 @media (max-width: 639px) {
-  .hero--statement .hero__facts, .method-grid { grid-template-columns: 1fr; }
+  .hero--statement .hero__facts { display: grid; }
+  .method-grid { grid-template-columns: 1fr; }
+  .optimisation-list { grid-template-columns: 1fr; }
+  .video-card p { display: none; }
+  .section-next { margin-top: var(--s-5); }
 }
 </style>
 <script>document.documentElement.classList.add('m-enter');setTimeout(()=>document.documentElement.classList.add('m-enter-done'),700)</script>
@@ -87,8 +103,8 @@
   <section class="hero hero--statement" data-enter aria-labelledby="hero-h">
     <div class="wrap"><div class="hero-text hero__in">
       <div>
-        <h1 id="hero-h">Leading practice: AI and HR</h1>
-        <p class="hero__lead">I apply AI to real learning and work tasks, then document the output, workflow and review in short videos. This Dashboard case shows the human setting direction and confirming each step while AI executes and suggests improvements.</p>
+        <h1 id="hero-h">AI and HR practice</h1>
+        <p class="hero__lead">I apply AI to real learning and work tasks, then document the output, workflow and review in short videos. This Dashboard case keeps the original releases and adds the white Operator’s Eye optimized versions.</p>
         <div class="btn-row">
           <a class="btn btn--primary" href="#videos">Watch both videos<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
           <a class="btn btn--secondary" href="#method">See the method</a>
@@ -97,8 +113,8 @@
       <dl class="hero__facts">
         <div><dt>Languages</dt><dd>Chinese and English</dd></div>
         <div><dt>Workflow</dt><dd>Step-by-step approval</dd></div>
-        <div><dt>Two videos</dt><dd>Under RMB 6</dd></div>
-        <div><dt>Follow-up ideas</dt><dd>Three</dd></div>
+        <div><dt>Release format</dt><dd>1920×1080 / 30fps</dd></div>
+        <div><dt>Video versions</dt><dd>Original + optimized</dd></div>
       </dl>
     </div></div>
   </section>
@@ -107,7 +123,7 @@
     <div class="wrap">
       <div class="section-head">
         <h2 id="videos-h">Bilingual Dashboard videos</h2>
-        <p>Chinese and English versions of the same Dashboard visual demo. The demonstration uses synthetic data.</p>
+        <p>Watch the original Chinese and English releases, followed by the white Operator’s Eye optimized versions. All interfaces use synthetic data.</p>
       </div>
       <div class="grid">
         <figure class="video-card span-6">
@@ -124,6 +140,40 @@
           <video controls preload="metadata" playsinline poster="../../assets/videos/dashboard/dashboard-en-poster.jpg" aria-label="English Dashboard demonstration video">
             <source src="../../assets/videos/dashboard/dashboard-en.mp4" type="video/mp4">
             Your browser cannot play HTML5 video. <a href="../../assets/videos/dashboard/dashboard-en.mp4">Download the English video</a>.
+          </video>
+        </figure>
+      </div>
+      <p class="section-next"><a class="link" href="#optimised-videos">See the optimized videos →</a></p>
+    </div>
+  </section>
+
+  <section class="section" id="optimised-videos" aria-labelledby="optimised-videos-h">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="optimised-videos-h">Optimized Dashboard videos</h2>
+        <p>A rebuilt bilingual release that presents the same cost, headcount, trend and productivity analysis on a clearer light interface.</p>
+      </div>
+      <ul class="optimisation-list" aria-label="What changed in the optimized release">
+        <li><strong>Light visual system:</strong> a white background replaces the dark version, with Deloitte Green and Cost Blue retained.</li>
+        <li><strong>New cost views:</strong> a cost-composition donut and a plan-to-actual variance waterfall.</li>
+        <li><strong>Core analysis retained:</strong> Cost &amp; HC, HC Trends and NSR / GM / Cost per FTE continue to update together.</li>
+        <li><strong>Language-specific timing:</strong> nine scenes follow each language’s own narration and scale to 90% with a caption-safe band.</li>
+      </ul>
+      <div class="grid">
+        <figure class="video-card span-6">
+          <h3>Chinese optimized Dashboard walkthrough</h3>
+          <p>74 seconds, with a light interface and new cost views.</p>
+          <video controls preload="metadata" playsinline poster="../../assets/videos/dashboard/operator-eye-zh-full-cover.jpg" aria-label="Chinese optimized Dashboard demonstration video">
+            <source src="../../assets/videos/dashboard/operator-eye-zh-full-captioned-16x9.mp4" type="video/mp4">
+            Your browser cannot play HTML5 video. <a href="../../assets/videos/dashboard/operator-eye-zh-full-captioned-16x9.mp4">Download the optimized Chinese video</a>.
+          </video>
+        </figure>
+        <figure class="video-card span-6">
+          <h3>English optimized Dashboard walkthrough</h3>
+          <p>84 seconds, with a light interface and rebuilt bilingual timing.</p>
+          <video controls preload="metadata" playsinline poster="../../assets/videos/dashboard/operator-eye-en-full-cover.jpg" aria-label="English optimized Dashboard demonstration video">
+            <source src="../../assets/videos/dashboard/operator-eye-en-full-captioned-16x9.mp4" type="video/mp4">
+            Your browser cannot play HTML5 video. <a href="../../assets/videos/dashboard/operator-eye-en-full-captioned-16x9.mp4">Download the optimized English video</a>.
           </video>
         </figure>
       </div>
@@ -168,8 +218,8 @@
 
   <section class="section statement" id="reflection" data-moment="word-highlight" aria-labelledby="reflection-h">
     <div class="wrap">
-      <h2 id="reflection-h" class="t-label">Cost and review</h2>
-      <p class="mo-wh__text">Today I used Codex to produce a bilingual Dashboard video. I set the requirements; AI executed the plan, confirmed each step and proposed three further improvements at the end. The two videos cost under <strong>RMB 6</strong>.</p>
+      <h2 id="reflection-h" class="t-label">Original release review</h2>
+      <p class="mo-wh__text">I set the requirements for the original bilingual releases; AI executed the plan and confirmed each step. The two original videos cost under <strong>RMB 6</strong>; the follow-up work became the white Operator’s Eye versions above.</p>
     </div>
   </section>
 </main>
@@ -191,7 +241,7 @@
         </div>
         <div class="span-3 start-7 footer__col">
           <h3>Browse</h3>
-          <ul><li><a href="#videos">Bilingual videos</a></li><li><a href="#method">Collaboration method</a></li><li><a href="#reflection">Cost and review</a></li></ul>
+          <ul><li><a href="#videos">Original videos</a></li><li><a href="#optimised-videos">Optimized videos</a></li><li><a href="#method">Collaboration method</a></li><li><a href="#reflection">Original review</a></li></ul>
         </div>
         <div class="span-3 footer__col">
           <h3>Language and contact</h3>
