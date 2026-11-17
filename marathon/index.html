@@ -33,12 +33,12 @@
   --display-tracking-xl: -0.038em;
 }
 .marathon-photo { margin: 0; border-radius: var(--r-lg); overflow: hidden; height: min(520px, var(--ly-fit)); }
-.marathon-photo img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 55%; }
+.marathon-photo img { display: block; width: 100%; height: 100%; object-fit: contain; background: #f3f3ef; }
 .marathon-photo--detail { height: auto; aspect-ratio: 4 / 3; }
 .record-list .rows__value { color: var(--p-ink); font-weight: 500; font-variant-numeric: tabular-nums; }
 .record-list .rows__name small { display: block; font-weight: 400; color: var(--muted); font-size: var(--t-small); }
 @media (max-width: 1023px) { .marathon-photo { height: auto; aspect-ratio: 4 / 3; margin-top: var(--s-7); } }
-@media (max-width: 639px) { .hero__media .ly-float__title, .hero--split .hero__facts { display: none; } }
+@media (max-width: 639px) { .hero__media .ly-float__title, .hero--split .hero__facts { display: none; } #start .marathon-photo { aspect-ratio: 16 / 9; } }
 </style>
 <script>document.documentElement.classList.add('m-enter');setTimeout(()=>document.documentElement.classList.add('m-enter-done'),700)</script>
 <script>document.documentElement.classList.add('mo-js');setTimeout(()=>document.documentElement.classList.add('mo-safe'),2500)</script>
@@ -76,7 +76,7 @@
     <div class="wrap"><div class="hero-text grid hero__grid">
       <div class="hero__text span-5">
         <h1 id="hero-h">马拉松跑者厉宁</h1>
-        <p class="hero__lead">我是一名马拉松爱好者。2016 年为了减重开始跑步，从 2 公里、5 公里、10 公里，到半马和全马。2026 年 3 月，我在首尔跑出个人最好成绩 3 小时 5 分 30 秒。</p>
+        <p class="hero__lead">从减重开始，到两轮六大满贯与全球八大满贯。</p>
         <div class="btn-row">
           <a class="btn btn--primary" href="records.html">查看赛事清单<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
           <a class="btn btn--secondary" href="#milestones">查看里程碑</a>
@@ -88,7 +88,7 @@
         </dl>
       </div>
       <div class="hero__media span-6 start-7">
-        <img src="../assets/photos/stand-ins/selected/marathon-track-960.jpg" width="960" height="722" alt="阴天里的红色田径跑道" style="--ly-pos: 52% 60%" fetchpriority="high" data-source="stand-in" data-subject="running track">
+        <img src="../assets/photos/marathon/majors/major-medals-2023-2024.jpg" width="900" height="1200" alt="2023 至 2024 年柏林、芝加哥、纽约、东京、波士顿和伦敦马拉松奖牌陈列" style="object-fit:contain;background:#f3f3ef" fetchpriority="high" data-source="client" data-subject="major marathon medals">
         <div class="ly-float">
           <div class="ly-float__row"><span>首尔 · 2026.03</span><span>PB</span></div>
           <div class="ly-float__title">3 小时 5 分 30 秒</div>
@@ -113,7 +113,10 @@
         </ul>
       </div>
       <figure class="marathon-photo marathon-photo--detail span-6 start-7">
-        <img src="../assets/photos/stand-ins/marathon-start-detail-960.webp" width="960" height="720" alt="红色跑道上的 200 米起跑线" loading="lazy" decoding="async" data-source="stand-in" data-subject="running track">
+        <img src="../assets/photos/marathon/majors/major-medals-collection.jpg"
+             srcset="../assets/photos/marathon/majors/major-medals-collection-800.jpg 800w, ../assets/photos/marathon/majors/major-medals-collection.jpg 1200w"
+             sizes="(max-width: 1023px) 100vw, 628px"
+             width="1200" height="900" alt="多年国际马拉松赛事奖牌收藏" loading="lazy" decoding="async" data-source="client" data-subject="marathon medal collection">
       </figure>
     </div>
   </section>
@@ -122,13 +125,15 @@
     <div class="wrap grid grid--top">
       <div class="span-6">
         <div class="section-head">
-          <h2 id="start-h">从减重开始</h2>
+          <h2 id="start-h">从六大满贯到八大满贯</h2>
         </div>
-        <p class="t-lead">2016 年，为了减重，我开始跑步。最初只是 2 公里，慢慢到 5 公里、10 公里；随着训练持续，我完成了半马和全马。</p>
-        <p>跑步从此不只是一项减重计划。它变成了长期习惯，也把我带到世界各地的赛道。</p>
+        <p class="t-lead">我是一名马拉松爱好者。2016 年为了减重开始跑步，从 2 公里、5 公里、10 公里，到半马和全马。2026 年 3 月，我在首尔跑出个人最好成绩 3 小时 5 分 30 秒。2023年9月参加第一场全球六大满贯的柏林，在随后的10月芝加哥，11月的纽约，2024年3月的东京，4月波士顿和伦敦，不到7个月的时间成为第一轮六大满贯跑者，在全中国参加一轮大满贯的跑者排名进入前500，在2026年4月15日完成波士顿马拉松后，不到三年时间完成第二轮六大满贯，并且在5月25日开普敦马拉松成为全球第八大满贯后首批117名中国人完成八大满贯，华人排名44位，男子排名38位。</p>
       </div>
       <figure class="marathon-photo span-6 start-7">
-        <img src="../assets/photos/stand-ins/photo-f118438730-960.jpg" width="960" height="539" alt="俯视蓝色跑道与绿色场地" loading="lazy" decoding="async" data-source="stand-in" data-subject="running track">
+        <img src="../assets/photos/marathon/majors/major-medals-wall.jpg"
+             srcset="../assets/photos/marathon/majors/major-medals-wall-800.jpg 800w, ../assets/photos/marathon/majors/major-medals-wall.jpg 900w"
+             sizes="(max-width: 1023px) 100vw, 628px"
+             width="900" height="1200" alt="两轮六大满贯及全球八大满贯奖牌陈列" loading="lazy" decoding="async" data-source="client" data-subject="major marathon medals">
       </figure>
     </div>
   </section>

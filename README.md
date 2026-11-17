@@ -21,6 +21,8 @@ No build command, Node runtime, database, server middleware or GitHub Actions wo
 - `/en/about/`: English profile, career phases and earlier experience
 - `/en/career/clients/`: English anonymised global-dairy client case
 - `/marathon/`: Chinese marathon pages
+- `/marathon/wuxi-2020/`: Chinese Wuxi Marathon first-marathon story and photo gallery
+- `/marathon/shanghai-2020/`: Chinese Shanghai Marathon second-marathon story and photo gallery
 - `/en/marathon/`: English marathon pages
 - `/practices/`: Chinese leading-practice page
 - `/en/practices/`: English leading-practice page
