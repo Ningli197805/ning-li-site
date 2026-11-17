@@ -33,12 +33,12 @@
   --display-tracking-xl: -0.038em;
 }
 .marathon-photo { margin: 0; border-radius: var(--r-lg); overflow: hidden; height: min(520px, var(--ly-fit)); }
-.marathon-photo img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 55%; }
+.marathon-photo img { display: block; width: 100%; height: 100%; object-fit: contain; background: #f3f3ef; }
 .marathon-photo--detail { height: auto; aspect-ratio: 4 / 3; }
 .record-list .rows__value { color: var(--p-ink); font-weight: 500; font-variant-numeric: tabular-nums; }
 .record-list .rows__name small { display: block; font-weight: 400; color: var(--muted); font-size: var(--t-small); }
 @media (max-width: 1023px) { .marathon-photo { height: auto; aspect-ratio: 4 / 3; margin-top: var(--s-7); } }
-@media (max-width: 639px) { .hero__media .ly-float__title, .hero--split .hero__facts { display: none; } }
+@media (max-width: 639px) { .hero__media .ly-float__title, .hero--split .hero__facts { display: none; } #start .marathon-photo { aspect-ratio: 16 / 9; } }
 </style>
 <script>document.documentElement.classList.add('m-enter');setTimeout(()=>document.documentElement.classList.add('m-enter-done'),700)</script>
 <script>document.documentElement.classList.add('mo-js');setTimeout(()=>document.documentElement.classList.add('mo-safe'),2500)</script>
@@ -59,7 +59,7 @@
       <div class="nav__item"><a class="nav__link" href="../about/">About</a></div>
       <div class="nav__item"><a class="nav__link" href="../career/clients/">Client work</a></div>
       <div class="nav__item"><a class="nav__link" href="index.html" aria-current="page">Marathon</a></div>
-      <div class="nav__item"><a class="nav__link" href="../../en/practices/">Leading practice</a></div>
+      <div class="nav__item"><a class="nav__link" href="../practices/">Leading practice</a></div>
     </nav>
     <div class="nav__actions">
       <a class="nav__link" href="../../marathon/index.html" lang="zh-CN" hreflang="zh-CN">中文</a>
@@ -76,7 +76,7 @@
     <div class="wrap"><div class="hero-text grid hero__grid">
       <div class="hero__text span-5">
         <h1 id="hero-h">Marathon runner Ning Li</h1>
-        <p class="hero__lead">I began running in 2016 to lose weight, starting at two kilometres and working up through 5K and 10K to half and full marathons. In March 2026, I ran a personal best of 3:05:30 in Seoul.</p>
+        <p class="hero__lead">From a first run for weight loss to two rounds of the six World Marathon Majors and all eight global majors.</p>
         <div class="btn-row">
           <a class="btn btn--primary" href="records.html">See race records<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
           <a class="btn btn--secondary" href="#milestones">See milestones</a>
@@ -88,7 +88,7 @@
         </dl>
       </div>
       <div class="hero__media span-6 start-7">
-        <img src="../../assets/photos/stand-ins/selected/marathon-track-960.jpg" width="960" height="722" alt="A red athletics track under an overcast sky" style="--ly-pos: 52% 60%" fetchpriority="high" data-source="stand-in" data-subject="running track">
+        <img src="../../assets/photos/marathon/majors/major-medals-2023-2024.jpg" width="900" height="1200" alt="Berlin, Chicago, New York, Tokyo, Boston and London Marathon medals from 2023 and 2024" style="object-fit:contain;background:#f3f3ef" fetchpriority="high" data-source="client" data-subject="major marathon medals">
         <div class="ly-float">
           <div class="ly-float__row"><span>Seoul · Mar 2026</span><span>PB</span></div>
           <div class="ly-float__title">3:05:30</div>
@@ -113,7 +113,10 @@
         </ul>
       </div>
       <figure class="marathon-photo marathon-photo--detail span-6 start-7">
-        <img src="../../assets/photos/stand-ins/marathon-start-detail-960.webp" width="960" height="720" alt="A 200-metre start line on a red running track" loading="lazy" decoding="async" data-source="stand-in" data-subject="running track">
+        <img src="../../assets/photos/marathon/majors/major-medals-collection.jpg"
+             srcset="../../assets/photos/marathon/majors/major-medals-collection-800.jpg 800w, ../../assets/photos/marathon/majors/major-medals-collection.jpg 1200w"
+             sizes="(max-width: 1023px) 100vw, 628px"
+             width="1200" height="900" alt="A collection of international marathon medals" loading="lazy" decoding="async" data-source="client" data-subject="marathon medal collection">
       </figure>
     </div>
   </section>
@@ -122,13 +125,15 @@
     <div class="wrap grid grid--top">
       <div class="span-6">
         <div class="section-head">
-          <h2 id="start-h">Running origin</h2>
+          <h2 id="start-h">From six majors to eight majors</h2>
         </div>
-        <p class="t-lead">I started running in 2016 to lose weight. The first runs were two kilometres; later came 5K and 10K, then half and full marathons as training continued.</p>
-        <p>Running stopped being only a weight-loss plan. It became a long-term habit and took me to race courses around the world.</p>
+        <p class="t-lead">I am a marathon enthusiast. I started running in 2016 to lose weight, progressing from 2 km, 5 km and 10 km to half marathons and full marathons. In March 2026, I ran a personal best of 3:05:30 in Seoul. I ran my first World Marathon Major in Berlin in September 2023, followed by Chicago in October, New York in November, Tokyo in March 2024, and Boston and London in April. In under seven months I became a first-round six-major finisher. Among runners in China who have completed one round of the majors, I ranked inside the top 500. After finishing the Boston Marathon on 15 April 2026, I completed a second round of the six majors in under three years. Then, on 25 May, at the Cape Town Marathon, which became the eighth global major, I was among the first 117 Chinese runners to complete all eight majors, ranking 44th among Chinese runners and 38th among men.</p>
       </div>
       <figure class="marathon-photo span-6 start-7">
-        <img src="../../assets/photos/stand-ins/photo-f118438730-960.jpg" width="960" height="539" alt="An overhead view of a blue running track and green field" loading="lazy" decoding="async" data-source="stand-in" data-subject="running track">
+        <img src="../../assets/photos/marathon/majors/major-medals-wall.jpg"
+             srcset="../../assets/photos/marathon/majors/major-medals-wall-800.jpg 800w, ../../assets/photos/marathon/majors/major-medals-wall.jpg 900w"
+             sizes="(max-width: 1023px) 100vw, 628px"
+             width="900" height="1200" alt="A display of medals from two rounds of the six World Marathon Majors and all eight global majors" loading="lazy" decoding="async" data-source="client" data-subject="major marathon medals">
       </figure>
     </div>
   </section>

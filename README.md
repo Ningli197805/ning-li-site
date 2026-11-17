@@ -24,6 +24,8 @@ No build command, Node runtime, database, server middleware or GitHub Actions wo
 - `/marathon/wuxi-2020/`: Chinese Wuxi Marathon first-marathon story and photo gallery
 - `/marathon/shanghai-2020/`: Chinese Shanghai Marathon second-marathon story and photo gallery
 - `/en/marathon/`: English marathon pages
+- `/en/marathon/wuxi-2020/`: English Wuxi Marathon first-marathon story and photo gallery
+- `/en/marathon/shanghai-2020/`: English Shanghai Marathon second-marathon story and photo gallery
 - `/practices/`: Chinese leading-practice page
 - `/en/practices/`: English leading-practice page
 - `/credits.html`: photo sources and usage boundaries
