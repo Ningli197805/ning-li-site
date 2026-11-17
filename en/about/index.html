@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Ning Li: HR Director and Organisation Transformation Lead</title>
-<meta name="description" content="Ning Li is HR Director at Deloitte China, leading HR Shared Services and AI-driven transformation.">
+<title>Ning Li: Strategic HR Leader and Transformation Partner</title>
+<meta name="description" content="Ning Li is a strategic HR leader with over 25 years of experience across multinational organizations, management consulting, and HR transformation.">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Ning Li: HR Director and Organisation Transformation Lead">
-<meta property="og:description" content="From consulting to enterprise leadership and AI-driven shared services.">
+<meta property="og:title" content="Ning Li: Strategic HR Leader and Transformation Partner">
+<meta property="og:description" content="Strategic HR expertise, operational leadership, and international experience for a global business environment.">
 <meta property="og:image" content="../../share.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
@@ -32,38 +32,73 @@
   --display-tracking: -0.03em;
   --display-tracking-xl: -0.038em;
 }
+.strength-list { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--line); }
+#strengths { height: auto; min-height: 100vh; min-height: 100svh; }
+#strengths > .wrap { height: auto; }
 .profile-photo, .earlier-photo { margin: 0; border-radius: var(--r-lg); overflow: hidden; height: min(520px, var(--ly-fit)); }
 .profile-photo img, .earlier-photo img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 58%; }
+.earlier-photo { width: min(100%, 440px); height: auto; aspect-ratio: 4 / 3; justify-self: start; }
 .profile-note { margin-top: var(--s-6); max-width: 52ch; }
 .earlier-list .rows__name small { display: block; font-weight: 400; color: var(--muted); font-size: var(--t-small); }
-@media (max-width: 1023px) { .profile-photo, .earlier-photo { height: auto; aspect-ratio: 4 / 3; margin-top: var(--s-7); } }
-@media (max-width: 639px) { .hero__media .ly-float__title, .hero--split .hero__facts { display: none; } }
+.strength { display: grid; grid-template-columns: 128px minmax(0, 1fr); gap: var(--gutter); padding: var(--s-6) 0; border-bottom: 1px solid var(--line); align-items: start; }
+.strength__number { padding-top: 0.08em; color: var(--accent); font-family: var(--font-display); font-size: clamp(38px, 2.8vw, 52px); font-weight: 400; line-height: 1; letter-spacing: -0.03em; }
+.strength p { max-width: 68ch; margin: 0; font-size: clamp(18px, 1vw + 8px, 22px); line-height: 1.52; }
+.strength strong { color: var(--ink); font-weight: 600; }
+.value-statement { max-width: 34ch; margin: var(--s-8) 0 0; font-family: var(--font-display); font-size: clamp(28px, 2vw + 14px, 44px); line-height: 1.16; letter-spacing: var(--display-tracking); text-wrap: balance; }
+.value-statement strong { font-weight: 500; color: var(--ink); }
+footer#contact { height: auto; min-height: 100vh; min-height: 100svh; }
+footer#contact > .wrap { height: auto; }
+.contact-layout { align-items: end; }
+.contact-details { display: grid; gap: 0; margin: var(--s-6) 0 0; }
+.contact-details > div { display: grid; grid-template-columns: 132px minmax(0, 1fr); gap: var(--s-5); align-items: baseline; padding: var(--s-4) 0; border-top: 1px solid var(--line); }
+.contact-details dt { color: var(--muted); font-size: var(--t-small); }
+.contact-details dd { margin: 0; color: var(--ink); font-size: clamp(20px, 1vw + 10px, 28px); line-height: 1.3; }
+.contact-photo { width: min(100%, 360px); aspect-ratio: 4 / 5; margin: 0; justify-self: end; overflow: hidden; border-radius: var(--r-lg); background: var(--surface); }
+.contact-photo img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 34%; }
+#journey { height: auto; min-height: 0; padding-block: var(--padt) var(--s-7); }
+#journey > .wrap, #earlier > .wrap { height: auto; }
+.career-phases-head { margin-bottom: var(--s-7); }
+.career-phases-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s-8) var(--s-7); margin: 0; padding: 0; list-style: none; }
+.career-phase { display: grid; gap: var(--s-5); align-content: start; padding-top: var(--s-5); border-top: 1px solid var(--line); }
+.career-phase h3 { margin: 0; font-family: var(--font-text); font-size: var(--t-lead); font-weight: 500; line-height: 1.35; letter-spacing: -0.01em; }
+.career-phase p { margin: 0; max-width: 46ch; line-height: 1.6; }
+.career-phases-link { margin-top: var(--s-7); }
+#earlier { height: auto; min-height: 0; padding-block: var(--s-7) calc(var(--padb) + var(--bar)); }
+@media (max-width: 639px) {
+  .hero__media .ly-float__title, .hero--split .hero__facts { display: none; }
+  .profile-photo, .earlier-photo { width: 100%; height: auto; aspect-ratio: 4 / 3; margin-top: var(--s-7); justify-self: stretch; }
+  .strength { grid-template-columns: 44px minmax(0, 1fr); gap: var(--s-3); padding: var(--s-5) 0; }
+  .strength__number { font-size: 28px; }
+  .strength p { font-size: 18px; }
+  .contact-details > div { grid-template-columns: 88px minmax(0, 1fr); gap: var(--s-3); }
+  .contact-photo { justify-self: start; }
+  .career-phases-list { grid-template-columns: minmax(0, 1fr); gap: var(--s-7); }
+  .career-phase { gap: var(--s-4); }
+}
 </style>
 <script>document.documentElement.classList.add('m-enter');setTimeout(()=>document.documentElement.classList.add('m-enter-done'),700)</script>
 <script>document.documentElement.classList.add('mo-js');setTimeout(()=>document.documentElement.classList.add('mo-safe'),2500)</script>
-<link rel="modulepreload" href="../../assets/moments/moments.js">
-<link rel="modulepreload" href="../../assets/moments/lib.js">
-<link rel="modulepreload" href="../../assets/moments/pinned-chapters/moment.js">
 </head>
 <body>
 <!-- type: service
-     deal: hero statement (no approved personal portrait yet), palette steel-orange, type hanken,
+     deal: hero statement, palette steel-orange, type hanken,
      nav split, footer columns, close type, rhythm surface-pairs, buttons solid, mark arc
-     moments: pinned-chapters in #journey -->
+     profile: three core strengths, career history, contact details and professional portrait -->
 <header class="nav nav--split">
   <div class="wrap nav__bar">
     <a class="skip-link" href="#top">Skip to content</a>
     <a class="nav__logo" href="#top"><span class="mark" data-mark="arc" aria-hidden="true"></span>Ning Li</a>
     <nav class="nav__links" aria-label="Main">
-      <div class="nav__item"><a class="nav__link" href="#profile" aria-current="page">About</a></div>
-      <div class="nav__item"><a class="nav__link" href="#journey">Career phases</a></div>
+      <div class="nav__item"><a class="nav__link" href="#top" aria-current="page">About</a></div>
+      <div class="nav__item"><a class="nav__link" href="#journey">Career</a></div>
+      <div class="nav__item"><a class="nav__link" href="#strengths">Core strengths</a></div>
       <div class="nav__item"><a class="nav__link" href="../../en/career/clients/">Client work</a></div>
       <div class="nav__item"><a class="nav__link" href="../../en/marathon/">Marathon</a></div>
       <div class="nav__item"><a class="nav__link" href="../../en/practices/">Leading practice</a></div>
     </nav>
     <div class="nav__actions">
       <a class="nav__link" href="../../about/" lang="zh-CN" hreflang="zh-CN">中文</a>
-      <a class="btn btn--primary" href="mailto:lining78@sina.com">Contact Ning</a>
+      <a class="btn btn--primary" href="#contact">Contact details</a>
     </div>
     <button class="nav__toggle" type="button" aria-expanded="false" aria-label="Open menu">
       <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M2 5h14M2 13h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
@@ -76,15 +111,16 @@
     <div class="wrap"><div class="hero-text grid hero__grid">
       <div class="hero__text span-5">
         <h1 id="hero-h">HR Director: Ning Li</h1>
-        <p class="hero__lead">I am HR Director at Deloitte China, leading HR Shared Services and AI-driven transformation. Across 25 years in consulting and in-house HR, I turn organisational problems into workable people systems.</p>
+        <p class="hero__lead">I'm a strategic HR leader with over 25 years of experience across multinational organizations, management consulting, and HR transformation.</p>
+        <p class="hero__lead">Throughout my career, I've developed three core strengths.</p>
         <div class="btn-row">
-          <a class="btn btn--primary" href="mailto:lining78@sina.com">Contact Ning<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
-          <a class="btn btn--secondary" href="#journey">See the career</a>
+          <a class="btn btn--primary" href="#contact">Contact details<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
+          <a class="btn btn--secondary" href="#strengths">See the strengths</a>
         </div>
         <dl class="hero__facts">
           <div><dt>HR experience</dt><dd>25+ years</dd></div>
-          <div><dt>Transformation work</dt><dd>40+ projects</dd></div>
-          <div><dt>People served</dt><dd>20,000+</dd></div>
+          <div><dt>Transformation work</dt><dd>40+ engagements</dd></div>
+          <div><dt>Efficiency gain</dt><dd>60%+</dd></div>
         </dl>
       </div>
       <div class="hero__media span-6 start-7">
@@ -95,6 +131,29 @@
         </div>
       </div>
     </div></div>
+  </section>
+
+  <section class="section" id="strengths" aria-labelledby="strengths-h">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="strengths-h">Three core strengths</h2>
+      </div>
+      <ol class="strength-list">
+        <li class="strength">
+          <span class="strength__number" aria-hidden="true">01</span>
+          <p><strong>First, strategic business partnering and organizational transformation.</strong> During my consulting career at Deloitte, I led over 40 HR transformation engagements, working with senior stakeholders to redesign HR operating models, establish HRBP structures, and strengthen organizational capabilities.</p>
+        </li>
+        <li class="strength">
+          <span class="strength__number" aria-hidden="true">02</span>
+          <p><strong>Second, large-scale people leadership and operational excellence.</strong> Currently, I lead Deloitte China's HR Shared Services organization, managing around 60 professionals supporting over 20,000 employees. I've focused on developing team capabilities, improving organizational effectiveness, and driving operational transformation. As a result, we've achieved over 60% improvement in operational efficiency while absorbing significant workload growth without increasing headcount.</p>
+        </li>
+        <li class="strength">
+          <span class="strength__number" aria-hidden="true">03</span>
+          <p><strong>Third, global collaboration and innovation.</strong> My international experience includes working across more than 10 African countries with Huawei. More recently, I've led AI adoption initiatives and represented China in Deloitte's Asia-Pacific and global AI communities.</p>
+        </li>
+      </ol>
+      <p class="value-statement"><strong>I believe my greatest value is connecting business priorities with organization design, people capabilities, and measurable operational outcomes.</strong></p>
+    </div>
   </section>
 
   <section class="section" id="profile" aria-labelledby="profile-h">
@@ -113,36 +172,26 @@
     </div>
   </section>
 
-  <section class="section" id="journey" style="--h: 2" data-moment="pinned-chapters" aria-labelledby="journey-h">
-    <div class="wrap mo-pc__grid">
-      <div class="mo-pc__text">
+  <section class="section" id="journey" aria-labelledby="journey-h">
+    <div class="wrap">
+      <div class="section-head career-phases-head">
         <h2 id="journey-h">Career phases</h2>
-        <ol class="mo-pc__steps">
-          <li class="mo-pc__step">
-            <h3>Consulting: redesigning organisations and processes</h3>
-            <p>At Deloitte Human Capital Advisory, I worked on more than 40 large-scale HR transformation engagements, covering three-pillar models, shared services, systems and capability development.</p>
-            <figure class="mo-pc__visual">
-              <img src="../../assets/photos/stand-ins/selected/texture-paper-960.jpg" width="960" height="1371" alt="Layers of pale grey-green card" loading="lazy" data-source="stand-in" data-subject="process design">
-            </figure>
-          </li>
-          <li class="mo-pc__step">
-            <h3>Enterprise: owning service delivery</h3>
-            <p>At TCL, I established an HR shared services centre from the ground up. At Deloitte China, I now lead a team of around 60 serving more than 20,000 employees.</p>
-            <figure class="mo-pc__visual">
-              <img src="../../assets/photos/stand-ins/photo-f22187669-960.jpg" width="960" height="640" alt="City buildings reflected in a modern glass facade" loading="lazy" data-source="stand-in" data-subject="organisation">
-            </figure>
-          </li>
-          <li class="mo-pc__step">
-            <h3>AI transformation: connecting systems and work</h3>
-            <p>I connect SAP SuccessFactors, Oracle HCM, low-code workflows and generative AI. More than 20 AI Agents have been deployed, and I received eRoad's Best Individual AI Innovation Award.</p>
-            <figure class="mo-pc__visual">
-              <img src="../../assets/photos/stand-ins/selected/ai-learning-keyboard-960.jpg" width="960" height="722" alt="A close view of a computer keyboard" loading="lazy" data-source="stand-in" data-subject="technology">
-            </figure>
-          </li>
-        </ol>
-        <p><a class="link" href="#earlier">See earlier experience</a></p>
       </div>
-      <div class="mo-pc__visuals frame"></div>
+      <ol class="career-phases-list">
+        <li class="career-phase">
+          <h3>Consulting: redesigning organisations and processes</h3>
+          <p>At Deloitte Human Capital Advisory, I worked on more than 40 large-scale HR transformation engagements, covering three-pillar models, shared services, systems and capability development.</p>
+        </li>
+        <li class="career-phase">
+          <h3>Enterprise: owning service delivery</h3>
+          <p>At TCL, I established an HR shared services centre from the ground up. At Deloitte China, I now lead a team of around 60 serving more than 20,000 employees.</p>
+        </li>
+        <li class="career-phase">
+          <h3>AI transformation: connecting systems and work</h3>
+          <p>I connect SAP SuccessFactors, Oracle HCM, low-code workflows and generative AI. More than 20 AI Agents have been deployed, and I received eRoad's Best Individual AI Innovation Award.</p>
+        </li>
+      </ol>
+      <p class="career-phases-link"><a class="link" href="#earlier">See earlier experience</a></p>
     </div>
   </section>
 
@@ -169,12 +218,22 @@
 
 <footer class="footer closing" id="contact" aria-labelledby="close-h">
   <div class="wrap">
-    <div class="closing__cta close--type">
-      <div class="section-head">
-        <h2 id="close-h">Contact Ning Li</h2>
-        <p>Discuss organisation transformation, HR shared services, people analytics or practical applications of AI at work.</p>
+    <div class="closing__cta">
+      <div class="grid contact-layout">
+        <div class="span-5">
+          <div class="section-head">
+            <h2 id="close-h">Contact Ning Li</h2>
+            <p>Discuss organisation transformation, HR shared services, people analytics or practical applications of AI at work.</p>
+          </div>
+          <dl class="contact-details">
+            <div><dt>Email</dt><dd>lining78@sina.com</dd></div>
+            <div><dt>WeChat</dt><dd>1602204695</dd></div>
+          </dl>
+        </div>
+        <figure class="contact-photo span-6 start-7">
+          <img src="../../assets/photos/profile/ning-li-portrait-1400.jpg" width="1163" height="1400" alt="Professional portrait of Ning Li" loading="lazy" decoding="async" data-source="user-provided">
+        </figure>
       </div>
-      <a class="btn btn--primary btn--xl" href="mailto:lining78@sina.com">Contact Ning<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
     </div>
     <div class="closing__links">
       <div class="grid">
@@ -184,11 +243,11 @@
         </div>
         <div class="span-3 start-7 footer__col">
           <h3>Browse</h3>
-          <ul><li><a href="#profile">About</a></li><li><a href="#journey">Career</a></li><li><a href="../../en/career/clients/">Client work</a></li><li><a href="../../en/marathon/">Marathon</a></li><li><a href="../../en/practices/">Leading practice</a></li><li><a href="#earlier">Experience</a></li></ul>
+          <ul><li><a href="#top">About</a></li><li><a href="#journey">Career</a></li><li><a href="#strengths">Core strengths</a></li><li><a href="../../en/career/clients/">Client work</a></li><li><a href="../../en/marathon/">Marathon</a></li><li><a href="../../en/practices/">Leading practice</a></li><li><a href="#earlier">Experience</a></li></ul>
         </div>
         <div class="span-3 footer__col">
-          <h3>Language and contact</h3>
-          <ul><li><a href="../../about/" lang="zh-CN" hreflang="zh-CN">中文</a></li><li><a href="mailto:lining78@sina.com">Send an email</a></li></ul>
+          <h3>Language</h3>
+          <ul><li><a href="../../about/" lang="zh-CN" hreflang="zh-CN">中文</a></li></ul>
         </div>
       </div>
       <div class="footer__legal">

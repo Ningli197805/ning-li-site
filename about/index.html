@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>厉宁：人力资源总监与组织转型实践者</title>
-<meta name="description" content="厉宁现任德勤中国人力资源总监，负责 HR 共享服务与 AI 转型。25 年跨咨询与企业的人力资源经验。">
+<title>厉宁：战略人力资源领导者与转型伙伴</title>
+<meta name="description" content="厉宁是一名战略型人力资源领导者，拥有超过 25 年跨跨国公司、管理咨询和人力资源转型的经验。">
 <meta property="og:type" content="website">
-<meta property="og:title" content="厉宁：人力资源总监与组织转型实践者">
-<meta property="og:description" content="从咨询到企业，再到 AI 驱动的共享服务。">
+<meta property="og:title" content="厉宁：战略人力资源领导者与转型伙伴">
+<meta property="og:description" content="以战略人力资源专业能力、运营领导力和国际经验，服务全球业务环境。">
 <meta property="og:image" content="../share.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
@@ -32,38 +32,72 @@
   --display-tracking: -0.03em;
   --display-tracking-xl: -0.038em;
 }
+.strength-list { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--line); }
+#strengths { height: auto; min-height: 100vh; min-height: 100svh; }
+#strengths > .wrap { height: auto; }
 .profile-photo, .earlier-photo { margin: 0; border-radius: var(--r-lg); overflow: hidden; height: min(520px, var(--ly-fit)); }
 .profile-photo img, .earlier-photo img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 58%; }
+.earlier-photo { width: min(100%, 440px); height: auto; aspect-ratio: 4 / 3; justify-self: start; }
 .profile-note { margin-top: var(--s-6); max-width: 52ch; }
 .earlier-list .rows__name small { display: block; font-weight: 400; color: var(--muted); font-size: var(--t-small); }
-@media (max-width: 1023px) { .profile-photo, .earlier-photo { height: auto; aspect-ratio: 4 / 3; margin-top: var(--s-7); } }
-@media (max-width: 639px) { .hero__media .ly-float__title, .hero--split .hero__facts { display: none; } }
+.strength { display: grid; grid-template-columns: 128px minmax(0, 1fr); gap: var(--gutter); padding: var(--s-6) 0; border-bottom: 1px solid var(--line); align-items: start; }
+.strength__number { padding-top: 0.08em; color: var(--accent); font-family: var(--font-display); font-size: clamp(38px, 2.8vw, 52px); font-weight: 400; line-height: 1; letter-spacing: -0.03em; }
+.strength p { max-width: 68ch; margin: 0; font-size: clamp(18px, 1vw + 8px, 22px); line-height: 1.52; }
+.strength strong { color: var(--ink); font-weight: 600; }
+.value-statement { max-width: 34ch; margin: var(--s-8) 0 0; font-family: var(--font-display); font-size: clamp(28px, 2vw + 14px, 44px); line-height: 1.16; letter-spacing: var(--display-tracking); text-wrap: balance; }
+.value-statement strong { font-weight: 500; color: var(--ink); }
+footer#contact { height: auto; min-height: 100vh; min-height: 100svh; }
+footer#contact > .wrap, #journey > .wrap, #earlier > .wrap { height: auto; }
+.contact-layout { align-items: end; }
+.contact-details { display: grid; gap: 0; margin: var(--s-6) 0 0; }
+.contact-details > div { display: grid; grid-template-columns: 132px minmax(0, 1fr); gap: var(--s-5); align-items: baseline; padding: var(--s-4) 0; border-top: 1px solid var(--line); }
+.contact-details dt { color: var(--muted); font-size: var(--t-small); }
+.contact-details dd { margin: 0; color: var(--ink); font-size: clamp(20px, 1vw + 10px, 28px); line-height: 1.3; }
+.contact-photo { width: min(100%, 360px); aspect-ratio: 4 / 5; margin: 0; justify-self: end; overflow: hidden; border-radius: var(--r-lg); background: var(--surface); }
+.contact-photo img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 34%; }
+#journey { height: auto; min-height: 0; padding-block: var(--padt) var(--s-7); }
+.career-phases-head { margin-bottom: var(--s-7); }
+.career-phases-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s-8) var(--s-7); margin: 0; padding: 0; list-style: none; }
+.career-phase { display: grid; gap: var(--s-5); align-content: start; padding-top: var(--s-5); border-top: 1px solid var(--line); }
+.career-phase h3 { margin: 0; font-family: var(--font-text); font-size: var(--t-lead); font-weight: 500; line-height: 1.35; letter-spacing: -0.01em; }
+.career-phase p { margin: 0; max-width: 46ch; line-height: 1.6; }
+.career-phases-link { margin-top: var(--s-7); }
+#earlier { height: auto; min-height: 0; padding-block: var(--s-7) calc(var(--padb) + var(--bar)); }
+@media (max-width: 639px) {
+  .hero__media .ly-float__title, .hero--split .hero__facts { display: none; }
+  .profile-photo, .earlier-photo { width: 100%; height: auto; aspect-ratio: 4 / 3; margin-top: var(--s-7); justify-self: stretch; }
+  .strength { grid-template-columns: 44px minmax(0, 1fr); gap: var(--s-3); padding: var(--s-5) 0; }
+  .strength__number { font-size: 28px; }
+  .strength p { font-size: 18px; }
+  .contact-details > div { grid-template-columns: 88px minmax(0, 1fr); gap: var(--s-3); }
+  .contact-photo { justify-self: start; }
+  .career-phases-list { grid-template-columns: minmax(0, 1fr); gap: var(--s-7); }
+  .career-phase { gap: var(--s-4); }
+}
 </style>
 <script>document.documentElement.classList.add('m-enter');setTimeout(()=>document.documentElement.classList.add('m-enter-done'),700)</script>
 <script>document.documentElement.classList.add('mo-js');setTimeout(()=>document.documentElement.classList.add('mo-safe'),2500)</script>
-<link rel="modulepreload" href="../assets/moments/moments.js">
-<link rel="modulepreload" href="../assets/moments/lib.js">
-<link rel="modulepreload" href="../assets/moments/pinned-chapters/moment.js">
 </head>
 <body>
 <!-- type: service
-     deal: hero statement (no approved personal portrait yet), palette steel-orange, type hanken,
+     deal: hero statement, palette steel-orange, type hanken,
      nav split, footer columns, close type, rhythm surface-pairs, buttons solid, mark arc
-     moments: pinned-chapters in #journey -->
+     profile: three core strengths, career history, contact details and professional portrait -->
 <header class="nav nav--split">
   <div class="wrap nav__bar">
     <a class="skip-link" href="#top">跳到正文 Skip to content</a>
     <a class="nav__logo" href="#top"><span class="mark" data-mark="arc" aria-hidden="true"></span>厉宁</a>
     <nav class="nav__links" aria-label="主导航">
-      <div class="nav__item"><a class="nav__link" href="#profile" aria-current="page">关于</a></div>
-      <div class="nav__item"><a class="nav__link" href="#journey">职业主线</a></div>
+      <div class="nav__item"><a class="nav__link" href="#top" aria-current="page">关于</a></div>
+      <div class="nav__item"><a class="nav__link" href="#strengths">核心优势</a></div>
+      <div class="nav__item"><a class="nav__link" href="#journey">职业阶段</a></div>
       <div class="nav__item"><a class="nav__link" href="../career/clients/">客户案例</a></div>
       <div class="nav__item"><a class="nav__link" href="../marathon/">马拉松</a></div>
       <div class="nav__item"><a class="nav__link" href="../practices/">领先实践</a></div>
     </nav>
     <div class="nav__actions">
       <a class="nav__link" href="../en/about/" lang="en" hreflang="en">EN</a>
-      <a class="btn btn--primary" href="mailto:lining78@sina.com">联系厉宁</a>
+      <a class="btn btn--primary" href="#contact">联系方式</a>
     </div>
     <button class="nav__toggle" type="button" aria-expanded="false" aria-label="打开菜单">
       <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M2 5h14M2 13h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
@@ -76,15 +110,16 @@
     <div class="wrap"><div class="hero-text grid hero__grid">
       <div class="hero__text span-5">
         <h1 id="hero-h">人力资源总监厉宁</h1>
-        <p class="hero__lead">我现任德勤中国人力资源总监，负责 HR 共享服务与 AI 转型。25 年跨咨询与企业的人力资源经验，让我习惯把组织问题做成可以执行的机制。</p>
+        <p class="hero__lead">我是一名战略型人力资源领导者，拥有超过 25 年跨跨国公司、管理咨询和人力资源转型的经验。</p>
+        <p class="hero__lead">在职业生涯中，我形成了三项核心优势。</p>
         <div class="btn-row">
-          <a class="btn btn--primary" href="mailto:lining78@sina.com">联系厉宁<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
-          <a class="btn btn--secondary" href="#journey">查看职业主线</a>
+          <a class="btn btn--primary" href="#contact">联系方式<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
+          <a class="btn btn--secondary" href="#strengths">查看核心优势</a>
         </div>
         <dl class="hero__facts">
           <div><dt>人力资源经验</dt><dd>25 年以上</dd></div>
-          <div><dt>转型项目</dt><dd>40 多个</dd></div>
-          <div><dt>服务体系</dt><dd>20,000+ 员工</dd></div>
+          <div><dt>转型项目</dt><dd>40+ 项</dd></div>
+          <div><dt>效率提升</dt><dd>60%+</dd></div>
         </dl>
       </div>
       <div class="hero__media span-6 start-7">
@@ -95,6 +130,29 @@
         </div>
       </div>
     </div></div>
+  </section>
+
+  <section class="section" id="strengths" aria-labelledby="strengths-h">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="strengths-h">三项核心优势</h2>
+      </div>
+      <ol class="strength-list">
+        <li class="strength">
+          <span class="strength__number" aria-hidden="true">01</span>
+          <p><strong>第一，战略业务伙伴与组织转型。</strong>在德勤咨询期间，我领导了 40 多个 HR 转型项目，与高层利益相关者共同重塑 HR 运营模式、建立 HRBP 架构，并强化组织能力。</p>
+        </li>
+        <li class="strength">
+          <span class="strength__number" aria-hidden="true">02</span>
+          <p><strong>第二，大规模人员领导与卓越运营。</strong>目前，我领导德勤中国 HR 共享服务组织，管理约 60 名专业人员，为超过 20,000 名员工提供支持。我专注于提升团队能力、改善组织效能并推动运营转型。由此，我们在不增加人员编制的情况下承接了显著增长的工作量，运营效率提升超过 60%。</p>
+        </li>
+        <li class="strength">
+          <span class="strength__number" aria-hidden="true">03</span>
+          <p><strong>第三，全球协作与创新。</strong>我的国际经验包括在华为期间负责 10 多个非洲国家的工作。近期，我推动 AI 应用落地，并代表中国参与德勤亚太及全球 AI 社群。</p>
+        </li>
+      </ol>
+      <p class="value-statement"><strong>我相信，我最大的价值在于将业务优先级与组织设计、人员能力和可衡量的运营成果连接起来。</strong></p>
+    </div>
   </section>
 
   <section class="section" id="profile" aria-labelledby="profile-h">
@@ -113,36 +171,26 @@
     </div>
   </section>
 
-  <section class="section" id="journey" style="--h: 2" data-moment="pinned-chapters" aria-labelledby="journey-h">
-    <div class="wrap mo-pc__grid">
-      <div class="mo-pc__text">
-        <h2 id="journey-h">三段工作主线</h2>
-        <ol class="mo-pc__steps">
-          <li class="mo-pc__step">
-            <h3>咨询：重构组织与流程</h3>
-            <p>在德勤人力资本咨询，作为项目负责人参与 40 多个大型 HR 转型项目，覆盖三支柱、共享服务中心、系统落地和组织能力。</p>
-            <figure class="mo-pc__visual">
-              <img src="../assets/photos/stand-ins/selected/texture-paper-960.jpg" width="960" height="1371" alt="浅灰绿色卡纸层叠的纸面" loading="lazy" data-source="stand-in" data-subject="process design">
-            </figure>
-          </li>
-          <li class="mo-pc__step">
-            <h3>企业管理：负责服务交付</h3>
-            <p>在 TCL 从 0 到 1 搭建人力资源共享服务中心；在德勤中国负责约 60 人团队和 20,000 多名员工的服务体系。</p>
-            <figure class="mo-pc__visual">
-              <img src="../assets/photos/stand-ins/photo-f22187669-960.jpg" width="960" height="640" alt="现代玻璃幕墙映出城市建筑" loading="lazy" data-source="stand-in" data-subject="organisation">
-            </figure>
-          </li>
-          <li class="mo-pc__step">
-            <h3>AI 转型：连接系统与业务</h3>
-            <p>推动 SAP SuccessFactors、Oracle HCM、低代码与生成式 AI 协同应用，落地 20 多个 AI 智能体，并获得易路“AI 最佳创新个人奖”。</p>
-            <figure class="mo-pc__visual">
-              <img src="../assets/photos/stand-ins/selected/ai-learning-keyboard-960.jpg" width="960" height="722" alt="浅色电脑键盘的近景" loading="lazy" data-source="stand-in" data-subject="technology">
-            </figure>
-          </li>
-        </ol>
-        <p><a class="link" href="#earlier">查看早期经历</a></p>
+  <section class="section" id="journey" aria-labelledby="journey-h">
+    <div class="wrap">
+      <div class="section-head career-phases-head">
+        <h2 id="journey-h">职业阶段</h2>
       </div>
-      <div class="mo-pc__visuals frame"></div>
+      <ol class="career-phases-list">
+        <li class="career-phase">
+          <h3>咨询：重塑组织与流程</h3>
+          <p>在德勤人力资本咨询期间，我参与 40 多个大型 HR 转型项目，覆盖三支柱模式、共享服务、系统与能力建设。</p>
+        </li>
+        <li class="career-phase">
+          <h3>企业管理：负责服务交付</h3>
+          <p>在 TCL，我从零搭建人力资源共享服务中心；在德勤中国，我目前带领约 60 人团队，为超过 20,000 名员工提供服务。</p>
+        </li>
+        <li class="career-phase">
+          <h3>AI 转型：连接系统与工作</h3>
+          <p>我将 SAP SuccessFactors、Oracle HCM、低代码工作流与生成式 AI 连接起来。已有 20 多个 AI 智能体投入使用，我也获得了易路“AI 最佳创新个人奖”。</p>
+        </li>
+      </ol>
+      <p class="career-phases-link"><a class="link" href="#earlier">查看早期经历</a></p>
     </div>
   </section>
 
@@ -150,8 +198,8 @@
     <div class="wrap grid grid--top">
       <div class="span-6">
         <div class="section-head">
-          <h2 id="earlier-h">此前的职业阶段</h2>
-          <p>从企业共享服务、咨询项目到跨国 HR 管理，这些经历构成了今天的工作方式。</p>
+          <h2 id="earlier-h">早期职业经历</h2>
+          <p>共享服务、咨询与跨国 HR 领导经验，塑造了我今天的工作方式。</p>
         </div>
         <ul class="rows earlier-list">
           <li><span class="rows__name">TCL 多媒体<small>HRSSC 负责人 / HR 转型负责人 · 2015.7–2016.9</small></span><span class="rows__value">8,000+ 员工</span></li>
@@ -169,12 +217,22 @@
 
 <footer class="footer closing" id="contact" aria-labelledby="close-h">
   <div class="wrap">
-    <div class="closing__cta close--type">
-      <div class="section-head">
-        <h2 id="close-h">与厉宁联系</h2>
-        <p>讨论组织转型、HR 共享服务、人员分析或 AI 在工作中的实际应用。</p>
+    <div class="closing__cta">
+      <div class="grid contact-layout">
+        <div class="span-5">
+          <div class="section-head">
+            <h2 id="close-h">联系厉宁</h2>
+            <p>讨论组织转型、HR 共享服务、人员分析或 AI 在工作中的实际应用。</p>
+          </div>
+          <dl class="contact-details">
+            <div><dt>邮箱</dt><dd>lining78@sina.com</dd></div>
+            <div><dt>微信</dt><dd>1602204695</dd></div>
+          </dl>
+        </div>
+        <figure class="contact-photo span-6 start-7">
+          <img src="../assets/photos/profile/ning-li-portrait-1400.jpg" width="1163" height="1400" alt="厉宁的职业肖像" loading="lazy" decoding="async" data-source="user-provided">
+        </figure>
       </div>
-      <a class="btn btn--primary btn--xl" href="mailto:lining78@sina.com">联系厉宁<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
     </div>
     <div class="closing__links">
       <div class="grid">
@@ -184,11 +242,11 @@
         </div>
         <div class="span-3 start-7 footer__col">
           <h3>浏览</h3>
-          <ul><li><a href="#profile">关于</a></li><li><a href="#journey">职业主线</a></li><li><a href="../career/clients/">客户案例</a></li><li><a href="../marathon/">马拉松</a></li><li><a href="../practices/">领先实践</a></li><li><a href="#earlier">早期经历</a></li></ul>
+          <ul><li><a href="#top">关于</a></li><li><a href="#journey">职业阶段</a></li><li><a href="#strengths">核心优势</a></li><li><a href="../career/clients/">客户案例</a></li><li><a href="../marathon/">马拉松</a></li><li><a href="../practices/">领先实践</a></li><li><a href="#earlier">早期经历</a></li></ul>
         </div>
         <div class="span-3 footer__col">
-          <h3>语言与联系</h3>
-          <ul><li><a href="../en/about/" lang="en" hreflang="en">English</a></li><li><a href="mailto:lining78@sina.com">发送邮件</a></li></ul>
+          <h3>语言</h3>
+          <ul><li><a href="../en/about/" lang="en" hreflang="en">English</a></li></ul>
         </div>
       </div>
       <div class="footer__legal">
