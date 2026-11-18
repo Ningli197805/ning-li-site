@@ -49,16 +49,16 @@
 .record-note { display: block; margin-top: 4px; color: var(--muted); font-size: var(--t-small); line-height: 1.35; }
 @media (max-width: 639px) {
   .hero.hero--statement { min-height: 0; padding-bottom: var(--s-7); }
-  .records-table { width: 100%; }
+  .records-table { width: 100vw; max-width: none; margin-inline: calc(50% - 50vw); }
   .records-table caption { display: block; }
   .records-table thead { display: none; }
   .records-table, .records-table tbody, .records-table tr, .records-table td { display: block; width: auto; }
-  .records-table tr { display: grid; grid-template-columns: auto 1fr auto; grid-template-areas: "no date time" "race race race"; gap: 4px 12px; padding: var(--s-3) 0; border-bottom: 1px solid var(--line); }
+  .records-table tr { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: 3px 12px; padding: var(--s-3) 0; border-bottom: 1px solid var(--line); }
   .records-table td { padding: 0; border: 0; }
-  .records-table .record-no { grid-area: no; padding-left: var(--s-3); }
-  .records-table .record-date { grid-area: date; text-align: left; }
-  .records-table .record-race { grid-area: race; padding: 0; }
-  .records-table .record-time { grid-area: time; padding-right: var(--s-3); text-align: right; }
+  .records-table .record-no { grid-column: 1; grid-row: 1; padding-left: var(--s-3); }
+  .records-table .record-race { grid-column: 2; grid-row: 1; padding: 0; }
+  .records-table .record-time { grid-column: 3; grid-row: 1; padding-right: var(--s-3); text-align: right; }
+  .records-table .record-date { grid-column: 2; grid-row: 2; text-align: left; color: var(--muted); font-size: var(--t-small); }
 }
 </style>
 <script>document.documentElement.classList.add('m-enter');setTimeout(()=>document.documentElement.classList.add('m-enter-done'),700)</script>
