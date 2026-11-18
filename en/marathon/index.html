@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="en" data-type="service" data-radius="soft" data-buttons="solid" data-motion>
+<html lang="en" data-type="service" data-radius="sharp" data-buttons="solid" data-motion>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Marathon runner Ning Li: eight majors and nearly 50 marathons</title>
+<title>Marathon runner Ning Li: ten years, eight majors and 3:05:30</title>
 <meta name="description" content="Ning Li's ten-year running memoir: from 2016 to all eight cities of the World Marathon Majors.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Marathon runner Ning Li: eight majors and nearly 50 marathons">
@@ -42,14 +42,56 @@
 .memoir-excerpt { display: grid; gap: var(--s-4); max-width: 62ch; }
 .memoir-excerpt p { margin: 0; font-size: var(--t-body); line-height: 1.75; }
 .read-full { margin-top: var(--s-7); }
-.hero.marathon-home-hero { height: auto; min-height: 100vh; min-height: 100svh; padding-bottom: var(--s-8); }
-.hero.marathon-home-hero > .wrap, .hero.marathon-home-hero .hero-text { height: auto; }
-.hero.marathon-home-hero .hero-text { align-content: start; }
-.hero.marathon-home-hero .hero__media { height: min(520px, var(--ly-fit)); }
-#start { height: auto; min-height: 0; }
-#start > .wrap { height: auto; }
-@media (max-width: 1023px) { .marathon-photo { height: auto; aspect-ratio: 4 / 3; margin-top: var(--s-7); } .hero.marathon-home-hero .hero__media { height: auto; aspect-ratio: 4 / 3; margin-top: var(--s-7); } }
-@media (max-width: 639px) { .hero__media .ly-float__title, .hero--split .hero__facts { display: none; } #start .marathon-photo { aspect-ratio: 16 / 9; } }
+.sport-hero { position: relative; height: 100vh; height: 100svh; min-height: 0; overflow: clip; background: #101113; color: #fff; }
+.sport-hero > picture.sport-hero__media.layer { position: absolute; top: calc(var(--nav) + 1px); right: 0; bottom: 0; left: 0; height: calc(100% - var(--nav) - 1px); z-index: 0; }
+.sport-hero__media img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 52% 42%; filter: saturate(.82) contrast(1.06); }
+.sport-hero::after { content: ""; position: absolute; inset: var(--nav) 0 0; z-index: 0; pointer-events: none; background: linear-gradient(90deg, rgba(7,8,9,.92) 0%, rgba(7,8,9,.72) 46%, rgba(7,8,9,.18) 76%, rgba(7,8,9,.28) 100%); }
+.sport-hero > .wrap { display: block; height: 100%; }
+.sport-hero > .wrap > .hero-text { height: 100%; }
+.sport-hero__inner { position: relative; z-index: 1; display: flex; height: 100%; flex-direction: column; justify-content: flex-end; padding-block: calc(var(--nav) + var(--s-7)) var(--s-6); }
+.sport-hero__eyebrow { margin: 0 0 var(--s-4); color: rgba(255,255,255,.82); font-size: var(--t-small); letter-spacing: .08em; }
+.sport-hero h1 { max-width: 13ch; margin: 0; color: #fff; font-size: clamp(54px, 6.2vw, 92px); font-weight: 600; line-height: .92; letter-spacing: -.055em; text-wrap: balance; }
+.sport-hero__lead { max-width: 42ch; margin: var(--s-5) 0 0; color: rgba(255,255,255,.86); font-size: var(--t-lead); line-height: 1.5; }
+.sport-hero .btn-row { margin-top: var(--s-5); }
+.sport-hero .btn--secondary { border-color: rgba(255,255,255,.54); background: transparent; color: #fff; }
+.sport-hero__facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s-5); width: 100%; margin: var(--s-5) 0 0; padding: var(--s-3) 0; background: #101113; }
+.sport-hero__facts div { display: grid; gap: var(--s-1); }
+.sport-hero__facts dt { color: rgba(255,255,255,.78); font-size: var(--t-label); }
+.sport-hero__facts dd { margin: 0; color: #fff; font-size: clamp(22px, 2vw, 31px); font-weight: 600; font-variant-numeric: tabular-nums; }
+.marathon-photo { border-radius: 0; }
+@media (min-width: 640px) {
+  #milestones, #start { height: 100svh; min-height: 0; }
+  #milestones > .wrap, #start > .wrap { height: 100%; align-items: stretch; grid-template-rows: minmax(0, 1fr); }
+  #milestones .marathon-photo, #milestones .marathon-photo--detail, #start .marathon-photo { height: 100%; aspect-ratio: auto; margin-top: 0; }
+  #milestones .marathon-photo img, #start .marathon-photo img { height: 100%; object-fit: cover; }
+}
+@media (max-width: 1023px) {
+  .marathon-photo { height: auto; aspect-ratio: 4 / 3; margin-top: 0; }
+  .sport-hero h1 { max-width: 14ch; }
+  #milestones > .wrap, #start > .wrap { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: var(--s-5); }
+  #milestones .span-6, #start .span-6 { grid-column: auto; }
+}
+@media (max-width: 639px) {
+  .sport-hero::after { background: linear-gradient(180deg, rgba(7,8,9,.34) 0%, rgba(7,8,9,.56) 38%, rgba(7,8,9,.9) 78%, rgba(7,8,9,.98) 100%); }
+  .sport-hero__media img { object-position: 54% 34%; }
+  .sport-hero__inner { padding-block: calc(var(--nav) + var(--s-5)) var(--s-5); }
+  .sport-hero__eyebrow { display: none; }
+  .sport-hero h1 { font-size: clamp(40px, 11.8vw, 50px); max-width: none; }
+  .sport-hero__lead { margin-top: var(--s-4); font-size: var(--t-body); }
+  .sport-hero .btn-row { margin-top: var(--s-4); }
+  .sport-hero__facts { gap: var(--s-3); margin-top: var(--s-5); padding-top: var(--s-3); }
+  .sport-hero__facts dd { font-size: 18px; }
+  #start { --hm: 2; }
+  #milestones > .wrap, #start > .wrap { grid-template-columns: minmax(0, 1fr); }
+  #start > .wrap { grid-template-rows: auto minmax(0, 1fr); row-gap: var(--s-6); min-height: calc(2 * 100lvh - var(--padt) - var(--padb)); }
+  #milestones { --padt: 72px; --padb: 32px; }
+  #milestones .record-list .rows__name small { display: none; }
+  #milestones .marathon-photo { aspect-ratio: 16 / 9; margin-top: var(--s-4); }
+  #start .marathon-photo { height: 100%; min-height: 360px; aspect-ratio: auto; margin-top: 0; }
+  #start .marathon-photo img { height: 100%; object-fit: cover; }
+  .read-full .btn { width: 100%; }
+  #contact { --padt: 88px; }
+}
 </style>
 <script>document.documentElement.classList.add('m-enter');setTimeout(()=>document.documentElement.classList.add('m-enter-done'),700)</script>
 <script>document.documentElement.classList.add('mo-js');setTimeout(()=>document.documentElement.classList.add('mo-safe'),2500)</script>
@@ -59,7 +101,7 @@
 </head>
 <body>
 <!-- type: service
-     deal: hero split, palette steel-orange, nav centre, footer dark, close type,
+     deal: full-bleed sport hero, palette steel-orange, nav centre, footer dark, close type,
      rhythm surface-pairs, buttons solid, mark dots
      moments: word-highlight in #rhythm -->
 <header class="nav nav--centre">
@@ -83,23 +125,24 @@
 </header>
 
 <main id="top">
-  <section class="hero hero--split marathon-home-hero" data-enter aria-labelledby="hero-h">
-    <div class="wrap"><div class="hero-text grid hero__grid">
-      <div class="hero__text span-5">
-        <h1 id="hero-h">Marathon runner Ning Li</h1>
-        <p class="hero__lead">I am a marathon enthusiast. I started running in 2016 to lose weight, progressing from 2 km, 5 km and 10 km to half marathons and full marathons. In March 2026, I ran a personal best of 3:05:30 in Seoul. I ran my first World Marathon Major in Berlin in September 2023, followed by Chicago in October, New York in November, Tokyo in March 2024, and Boston and London in April. In under seven months I became a first-round six-major finisher. Among runners in China who have completed one round of the majors, I ranked inside the top 500. After finishing the Boston Marathon on 20 April 2026, I completed a second round of the six majors in under three years. Then, on 24 May, at the Cape Town Marathon, which became the eighth global major, I was among the first 117 Chinese runners to complete all eight majors, ranking 44th among Chinese runners and 38th among men.</p>
+  <section class="sport-hero" data-enter aria-labelledby="hero-h">
+    <picture class="sport-hero__media layer" aria-hidden="true">
+      <img src="../../assets/photos/marathon/cape-town-marathon-1400.jpg" width="1400" height="934" alt="" fetchpriority="high" data-source="client" data-subject="Cape Town Marathon">
+    </picture>
+    <div class="wrap"><div class="hero-text">
+      <div class="sport-hero__inner">
+        <p class="sport-hero__eyebrow">CAPE TOWN · MAY 2026 · THE EIGHTH MAJOR STAR</p>
+        <h1 id="hero-h">Ten years.<br>From two kilometres<br>to eight majors.</h1>
+        <p class="sport-hero__lead">From a two-kilometre first run in 2016 to eight majors and a 3:05:30 best in Seoul.</p>
         <div class="btn-row">
           <a class="btn btn--primary" href="records.html">See race records<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
-          <a class="btn btn--secondary" href="#milestones">See milestones</a>
+          <a class="btn btn--secondary" href="ten-years/index.html">Read the ten-year story</a>
         </div>
-        <dl class="hero__facts">
-          <div><dt>Major marathon events</dt><dd>8</dd></div>
+        <dl class="sport-hero__facts">
+          <div><dt>Major events</dt><dd>8</dd></div>
           <div><dt>Six-major rounds</dt><dd>2</dd></div>
-          <div><dt>Marathons</dt><dd>Nearly 50</dd></div>
+          <div><dt>Personal best</dt><dd>3:05:30</dd></div>
         </dl>
-      </div>
-      <div class="hero__media span-6 start-7">
-        <img src="../../assets/photos/marathon/ten-years/hero.jpg" width="1000" height="668" alt="Ning Li at the Cape Town Marathon finish" style="--ly-pos: 50% 42%; object-fit:cover;background:#f3f3ef" fetchpriority="high" data-source="client" data-subject="Cape Town Marathon">
       </div>
     </div></div>
   </section>
@@ -120,10 +163,9 @@
         </ul>
       </div>
       <figure class="marathon-photo marathon-photo--detail span-6 start-7">
-        <img src="../../assets/photos/marathon/majors/major-medals-collection.jpg"
-             srcset="../../assets/photos/marathon/majors/major-medals-collection-800.jpg 800w, ../../assets/photos/marathon/majors/major-medals-collection.jpg 1200w"
+        <img src="../../assets/photos/marathon/majors/major-medals-wall.jpg"
              sizes="(max-width: 1023px) 100vw, 628px"
-             width="1200" height="900" alt="A collection of international marathon medals" loading="lazy" decoding="async" data-source="client" data-subject="marathon medal collection">
+             width="900" height="1200" alt="A collection of international marathon medals" loading="lazy" decoding="async" data-source="client" data-subject="marathon medal collection">
       </figure>
     </div>
   </section>
@@ -136,26 +178,19 @@
           <p class="memoir-subtitle">— From 200 jin to eight stars: my ten years of running</p>
         </div>
         <div class="memoir-excerpt">
-          <p>During all the years I have lived in Shenzhen, I have rarely taken time to appreciate the city at night.</p>
-          <p>It sounds a little hard to believe.</p>
-          <p>Shenzhen is a vibrant city, but my life is simple: early to bed, early to rise, running and work. I do not socialise much either. Apart from family and colleagues, the people I spend most time with are a group of friends who love running.</p>
-          <p>Because I need to run early the next morning, I usually go to bed very early.</p>
-          <p>Some people may wonder whether life like this is a little monotonous.</p>
-          <p>For me, however, this is exactly what ten years of running has brought: a more regular life, greater inner calm, and better physical and mental health.</p>
-          <p>If I rewind to 2016, I find it hard to imagine that I would one day live like this.</p>
-          <p>Even less could I have imagined that someone who once weighed 200 jin (about 100 kilograms), sat in an office all day and hardly exercised would one day run in all eight cities of the World Marathon Majors.</p>
-          <p>In May 2026, I completed my eighth World Marathon Major star in Cape Town, South Africa.</p>
-          <p>According to the data I saw at the time on the official results platform, there were 117 Chinese runners in the first group to complete all eight stars. I was 38th among Chinese men and 44th overall.</p>
-          <p>I felt very honoured to be part of that group.</p>
-          <p>But when I look back on ten years of running, I realise that what is more precious than the eight stars is the change that took place, little by little, over those ten years.</p>
+          <p>I have lived in Shenzhen for years but have rarely seen the city at night. My life has stayed simple: early to bed, early to rise, running and work.</p>
+          <p>In 2016, I weighed about 100 kilograms, sat in an office all day and hardly exercised. In May 2026, I completed my eighth World Marathon Major star in Cape Town.</p>
+          <p>More precious than the eight stars is the rhythm and change that running has built, little by little, over ten years.</p>
         </div>
-        <p class="read-full"><a class="btn btn--primary btn--xl" href="ten-years/index.html">Read the full story<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a></p>
+        <p class="read-full"><a class="btn btn--primary" href="ten-years/index.html">Read the full ten-year story<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a></p>
       </div>
       <figure class="marathon-photo span-6 start-7">
-        <img src="../../assets/photos/marathon/majors/major-medals-wall.jpg"
-             srcset="../../assets/photos/marathon/majors/major-medals-wall-800.jpg 800w, ../../assets/photos/marathon/majors/major-medals-wall.jpg 900w"
-             sizes="(max-width: 1023px) 100vw, 628px"
-             width="900" height="1200" alt="A display of medals from two rounds of the six World Marathon Majors and all eight global majors" loading="lazy" decoding="async" data-source="client" data-subject="major marathon medals">
+        <img src="../../assets/photos/marathon/boston-2026-finisher-1350.jpg"
+             srcset="../../assets/photos/marathon/boston-2026-finisher-740.jpg 740w, ../../assets/photos/marathon/boston-2026-finisher-1350.jpg 1350w"
+             sizes="(max-width: 639px) 740px, 628px"
+             width="1350" height="2025" alt="Ning Li holding his finisher medal after the 2026 Boston Marathon"
+             style="object-position: 50% 40%" loading="lazy" decoding="async"
+             data-source="client" data-subject="Boston Marathon finisher">
       </figure>
     </div>
   </section>
@@ -175,7 +210,7 @@
         <h2 id="close-h">Talk about running</h2>
         <p>If you are preparing a first half or full marathon, or want to compare notes on major races, send a message.</p>
       </div>
-      <a class="btn btn--primary btn--xl" href="mailto:lining78@sina.com">Contact Ning<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
+      <a class="btn btn--primary" href="mailto:lining78@sina.com">Contact Ning<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
     </div>
     <div class="closing__links">
       <div class="grid">

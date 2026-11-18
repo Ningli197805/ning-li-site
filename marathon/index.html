@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="zh-CN" data-type="service" data-radius="soft" data-buttons="solid" data-motion>
+<html lang="zh-CN" data-type="service" data-radius="sharp" data-buttons="solid" data-motion>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>马拉松跑者厉宁：八大满贯与近 50 场全马</title>
+<title>马拉松跑者厉宁｜十年、八大满贯与 3:05:30</title>
 <meta name="description" content="厉宁的十年奔跑回忆：从 2016 年开始跑步，到完成世界马拉松八大满贯的八座城市。">
 <meta property="og:type" content="website">
 <meta property="og:title" content="马拉松跑者厉宁：八大满贯与近 50 场全马">
@@ -42,14 +42,56 @@
 .memoir-excerpt { display: grid; gap: var(--s-4); max-width: 62ch; }
 .memoir-excerpt p { margin: 0; font-size: var(--t-body); line-height: 1.75; }
 .read-full { margin-top: var(--s-7); }
-.hero.marathon-home-hero { height: auto; min-height: 100vh; min-height: 100svh; padding-bottom: var(--s-8); }
-.hero.marathon-home-hero > .wrap, .hero.marathon-home-hero .hero-text { height: auto; }
-.hero.marathon-home-hero .hero-text { align-content: start; }
-.hero.marathon-home-hero .hero__media { height: min(520px, var(--ly-fit)); }
-#start { height: auto; min-height: 0; }
-#start > .wrap { height: auto; }
-@media (max-width: 1023px) { .marathon-photo { height: auto; aspect-ratio: 4 / 3; margin-top: var(--s-7); } .hero.marathon-home-hero .hero__media { height: auto; aspect-ratio: 4 / 3; margin-top: var(--s-7); } }
-@media (max-width: 639px) { .hero__media .ly-float__title, .hero--split .hero__facts { display: none; } #start .marathon-photo { aspect-ratio: 16 / 9; } }
+.sport-hero { position: relative; height: 100vh; height: 100svh; min-height: 0; overflow: clip; background: #101113; color: #fff; }
+.sport-hero > picture.sport-hero__media.layer { position: absolute; top: calc(var(--nav) + 1px); right: 0; bottom: 0; left: 0; height: calc(100% - var(--nav) - 1px); z-index: 0; }
+.sport-hero__media img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 52% 42%; filter: saturate(.82) contrast(1.06); }
+.sport-hero::after { content: ""; position: absolute; inset: var(--nav) 0 0; z-index: 0; pointer-events: none; background: linear-gradient(90deg, rgba(7,8,9,.92) 0%, rgba(7,8,9,.72) 46%, rgba(7,8,9,.18) 76%, rgba(7,8,9,.28) 100%); }
+.sport-hero > .wrap { display: block; height: 100%; }
+.sport-hero > .wrap > .hero-text { height: 100%; }
+.sport-hero__inner { position: relative; z-index: 1; display: flex; height: 100%; flex-direction: column; justify-content: flex-end; padding-block: calc(var(--nav) + var(--s-7)) var(--s-6); }
+.sport-hero__eyebrow { margin: 0 0 var(--s-4); color: rgba(255,255,255,.82); font-size: var(--t-small); letter-spacing: .08em; }
+.sport-hero h1 { max-width: 12ch; margin: 0; color: #fff; font-size: clamp(54px, 6.2vw, 92px); font-weight: 600; line-height: .92; letter-spacing: -.055em; text-wrap: balance; }
+.sport-hero__lead { max-width: 38ch; margin: var(--s-5) 0 0; color: rgba(255,255,255,.86); font-size: var(--t-lead); line-height: 1.5; }
+.sport-hero .btn-row { margin-top: var(--s-5); }
+.sport-hero .btn--secondary { border-color: rgba(255,255,255,.54); background: transparent; color: #fff; }
+.sport-hero__facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s-5); width: 100%; margin: var(--s-5) 0 0; padding: var(--s-3) 0; background: #101113; }
+.sport-hero__facts div { display: grid; gap: var(--s-1); }
+.sport-hero__facts dt { color: rgba(255,255,255,.78); font-size: var(--t-label); }
+.sport-hero__facts dd { margin: 0; color: #fff; font-size: clamp(22px, 2vw, 31px); font-weight: 600; font-variant-numeric: tabular-nums; }
+.marathon-photo { border-radius: 0; }
+@media (min-width: 640px) {
+  #milestones, #start { height: 100svh; min-height: 0; }
+  #milestones > .wrap, #start > .wrap { height: 100%; align-items: stretch; grid-template-rows: minmax(0, 1fr); }
+  #milestones .marathon-photo, #milestones .marathon-photo--detail, #start .marathon-photo { height: 100%; aspect-ratio: auto; margin-top: 0; }
+  #milestones .marathon-photo img, #start .marathon-photo img { height: 100%; object-fit: cover; }
+}
+@media (max-width: 1023px) {
+  .marathon-photo { height: auto; aspect-ratio: 4 / 3; margin-top: 0; }
+  .sport-hero h1 { max-width: 13ch; }
+  #milestones > .wrap, #start > .wrap { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: var(--s-5); }
+  #milestones .span-6, #start .span-6 { grid-column: auto; }
+}
+@media (max-width: 639px) {
+  .sport-hero::after { background: linear-gradient(180deg, rgba(7,8,9,.34) 0%, rgba(7,8,9,.56) 38%, rgba(7,8,9,.9) 78%, rgba(7,8,9,.98) 100%); }
+  .sport-hero__media img { object-position: 54% 34%; }
+  .sport-hero__inner { padding-block: calc(var(--nav) + var(--s-5)) var(--s-5); }
+  .sport-hero__eyebrow { display: none; }
+  .sport-hero h1 { font-size: clamp(40px, 11.8vw, 50px); max-width: none; }
+  .sport-hero__lead { margin-top: var(--s-4); font-size: var(--t-body); }
+  .sport-hero .btn-row { margin-top: var(--s-4); }
+  .sport-hero__facts { gap: var(--s-3); margin-top: var(--s-5); padding-top: var(--s-3); }
+  .sport-hero__facts dd { font-size: 18px; }
+  #start { --hm: 2; }
+  #milestones > .wrap, #start > .wrap { grid-template-columns: minmax(0, 1fr); }
+  #start > .wrap { grid-template-rows: auto minmax(0, 1fr); row-gap: var(--s-6); min-height: calc(2 * 100lvh - var(--padt) - var(--padb)); }
+  #milestones { --padt: 72px; --padb: 32px; }
+  #milestones .record-list .rows__name small { display: none; }
+  #milestones .marathon-photo { aspect-ratio: 16 / 9; margin-top: var(--s-4); }
+  #start .marathon-photo { height: 100%; min-height: 360px; aspect-ratio: auto; margin-top: 0; }
+  #start .marathon-photo img { height: 100%; object-fit: cover; }
+  .read-full .btn { width: 100%; }
+  #contact { --padt: 88px; }
+}
 </style>
 <script>document.documentElement.classList.add('m-enter');setTimeout(()=>document.documentElement.classList.add('m-enter-done'),700)</script>
 <script>document.documentElement.classList.add('mo-js');setTimeout(()=>document.documentElement.classList.add('mo-safe'),2500)</script>
@@ -59,7 +101,7 @@
 </head>
 <body>
 <!-- type: service
-     deal: hero split, palette steel-orange, nav centre, footer dark, close type,
+     deal: full-bleed sport hero, palette steel-orange, nav centre, footer dark, close type,
      rhythm surface-pairs, buttons solid, mark dots
      moments: word-highlight in #rhythm -->
 <header class="nav nav--centre">
@@ -82,23 +124,24 @@
 </header>
 
 <main id="top">
-  <section class="hero hero--split marathon-home-hero" data-enter aria-labelledby="hero-h">
-    <div class="wrap"><div class="hero-text grid hero__grid">
-      <div class="hero__text span-5">
-        <h1 id="hero-h">马拉松跑者厉宁</h1>
-        <p class="hero__lead">我是一名马拉松爱好者。2016 年为了减重开始跑步，从 2 公里、5 公里、10 公里，到半马和全马。2026 年 3 月，我在首尔跑出个人最好成绩 3 小时 5 分 30 秒。2023年9月参加第一场全球六大满贯的柏林，在随后的10月芝加哥，11月的纽约，2024年3月的东京，4月波士顿和伦敦，不到7个月的时间成为第一轮六大满贯跑者，在全中国参加一轮大满贯的跑者排名进入前500，在2026年4月20日完成波士顿马拉松后，不到三年时间完成第二轮六大满贯，并且在5月24日开普敦马拉松成为全球第八大满贯后首批117名中国人完成八大满贯，华人排名44位，男子排名38位。</p>
+  <section class="sport-hero" data-enter aria-labelledby="hero-h">
+    <picture class="sport-hero__media layer" aria-hidden="true">
+      <img src="../assets/photos/marathon/cape-town-marathon-1400.jpg" width="1400" height="934" alt="" fetchpriority="high" data-source="client" data-subject="Cape Town Marathon">
+    </picture>
+    <div class="wrap"><div class="hero-text">
+      <div class="sport-hero__inner">
+        <p class="sport-hero__eyebrow">开普敦 · 2026.05 · 第八颗大满贯之星</p>
+        <h1 id="hero-h">十年马拉松<br>从两公里到八大满贯</h1>
+        <p class="sport-hero__lead">从 2016 年的两公里，到首尔 3:05:30，再到八大满贯。</p>
         <div class="btn-row">
           <a class="btn btn--primary" href="records.html">查看赛事清单<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
-          <a class="btn btn--secondary" href="#milestones">查看里程碑</a>
+          <a class="btn btn--secondary" href="ten-years/index.html">阅读十年奔跑</a>
         </div>
-        <dl class="hero__facts">
-          <div><dt>全球大满贯</dt><dd>8 大满贯</dd></div>
-          <div><dt>六大满贯</dt><dd>2 轮</dd></div>
-          <div><dt>全马比赛</dt><dd>近 50 场</dd></div>
+        <dl class="sport-hero__facts">
+          <div><dt>全球大满贯</dt><dd>8</dd></div>
+          <div><dt>两轮六大满贯</dt><dd>2</dd></div>
+          <div><dt>个人最好成绩</dt><dd>3:05:30</dd></div>
         </dl>
-      </div>
-      <div class="hero__media span-6 start-7">
-        <img src="../assets/photos/marathon/ten-years/hero.jpg" width="1000" height="668" alt="厉宁在开普敦马拉松终点前举手机记录比赛" style="--ly-pos: 50% 42%; object-fit:cover;background:#f3f3ef" fetchpriority="high" data-source="client" data-subject="Cape Town Marathon">
       </div>
     </div></div>
   </section>
@@ -119,10 +162,9 @@
         </ul>
       </div>
       <figure class="marathon-photo marathon-photo--detail span-6 start-7">
-        <img src="../assets/photos/marathon/majors/major-medals-collection.jpg"
-             srcset="../assets/photos/marathon/majors/major-medals-collection-800.jpg 800w, ../assets/photos/marathon/majors/major-medals-collection.jpg 1200w"
+        <img src="../assets/photos/marathon/majors/major-medals-wall.jpg"
              sizes="(max-width: 1023px) 100vw, 628px"
-             width="1200" height="900" alt="多年国际马拉松赛事奖牌收藏" loading="lazy" decoding="async" data-source="client" data-subject="marathon medal collection">
+             width="900" height="1200" alt="多年国际马拉松赛事奖牌收藏" loading="lazy" decoding="async" data-source="client" data-subject="marathon medal collection">
       </figure>
     </div>
   </section>
@@ -135,26 +177,19 @@
           <p class="memoir-subtitle">——从200斤到八颗星，我的十年奔跑</p>
         </div>
         <div class="memoir-excerpt">
-          <p>在深圳生活了这么多年，我却没有怎么欣赏过深圳的夜景。</p>
-          <p>说起来有点不可思议。</p>
-          <p>深圳是一座充满活力的城市，而我的生活却很简单：早睡、早起、跑步、工作。平时的社交也不多，除了家人、同事，接触最多的就是一群喜欢跑步的朋友。</p>
-          <p>因为第二天清晨要跑步，我往往很早就睡了。</p>
-          <p>有人可能会觉得，这样的生活是不是有些单调？</p>
-          <p>但对我而言，这恰恰是跑步十年来带给我的改变：生活越来越规律，内心越来越平和，身体和精神状态也越来越好。</p>
-          <p>如果把时间倒回2016年，我很难想象自己有一天会过上这样的生活。</p>
-          <p>更不会想到，那个体重一度达到200斤、长期坐办公室、几乎不运动的自己，有一天竟然能够跑遍世界马拉松大满贯的八座城市。</p>
-          <p>2026年5月，我在南非开普敦完成了自己的第八颗世界马拉松大满贯之星。</p>
-          <p>根据我当时在官方统计平台看到的数据，首批完成八星的中国跑者共有117位，我在其中的中国男子排名第38位、总体排名第44位。</p>
-          <p>能够成为其中的一员，我感到非常荣幸。</p>
-          <p>但当我回顾过去十年的跑步经历时，我发现，比八颗星更珍贵的，是这十年中一点一滴发生的改变。</p>
+          <p>在深圳生活多年，我却很少看这座城市的夜景。我的生活一直很简单：早睡、早起、跑步、工作。</p>
+          <p>2016 年，我体重一度达到 200 斤，长期坐办公室，几乎不运动。2026 年 5 月，我在开普敦完成第八颗世界马拉松大满贯之星。</p>
+          <p>比八颗星更珍贵的，是这十年里一点一滴形成的节奏和改变。</p>
         </div>
-        <p class="read-full"><a class="btn btn--primary btn--xl" href="ten-years/index.html">点击阅读全文<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a></p>
+        <p class="read-full"><a class="btn btn--primary" href="ten-years/index.html">阅读整篇十年记录<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a></p>
       </div>
       <figure class="marathon-photo span-6 start-7">
-        <img src="../assets/photos/marathon/majors/major-medals-wall.jpg"
-             srcset="../assets/photos/marathon/majors/major-medals-wall-800.jpg 800w, ../assets/photos/marathon/majors/major-medals-wall.jpg 900w"
-             sizes="(max-width: 1023px) 100vw, 628px"
-             width="900" height="1200" alt="两轮六大满贯及全球八大满贯奖牌陈列" loading="lazy" decoding="async" data-source="client" data-subject="major marathon medals">
+        <img src="../assets/photos/marathon/boston-2026-finisher-1350.jpg"
+             srcset="../assets/photos/marathon/boston-2026-finisher-740.jpg 740w, ../assets/photos/marathon/boston-2026-finisher-1350.jpg 1350w"
+             sizes="(max-width: 639px) 740px, 628px"
+             width="1350" height="2025" alt="厉宁在2026年波士顿马拉松完赛后手持奖牌"
+             style="object-position: 50% 40%" loading="lazy" decoding="async"
+             data-source="client" data-subject="Boston Marathon finisher">
       </figure>
     </div>
   </section>
@@ -174,7 +209,7 @@
         <h2 id="close-h">聊聊跑步</h2>
         <p>如果你也在准备第一场半马、全马，或想交流世界大满贯赛事，欢迎写信。</p>
       </div>
-      <a class="btn btn--primary btn--xl" href="mailto:lining78@sina.com">联系厉宁<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
+      <a class="btn btn--primary" href="mailto:lining78@sina.com">联系厉宁<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
     </div>
     <div class="closing__links">
       <div class="grid">

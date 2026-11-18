@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>厉宁｜人力资源总监，组织与 AI 实践者</title>
+<title>厉宁｜HR 转型与 AI 落地</title>
 <meta name="description" content="厉宁的个人档案：德勤中国人力资源总监，记录组织转型、HR 共享服务、AI 实践与马拉松。">
 <meta property="og:type" content="website">
-<meta property="og:title" content="厉宁｜人力资源总监，组织与 AI 实践者">
+<meta property="og:title" content="厉宁｜HR 转型与 AI 落地">
 <meta property="og:description" content="组织转型、HR 共享服务、AI 实践与马拉松的真实记录。">
 <meta property="og:image" content="share.jpg">
 <meta name="twitter:card" content="summary_large_image">
@@ -42,26 +42,32 @@
 .stat-line { display: flex; flex-wrap: wrap; gap: var(--s-6); margin: var(--s-6) 0; }
 .stat-line span { display: block; color: var(--muted); font-size: var(--t-small); }
 .stat-line strong { display: block; margin-top: 4px; font-size: 24px; font-weight: 500; }
+.hero--split .hero__facts.home-proof { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s-4); margin-top: var(--s-6); }
+.hero--split .hero__text .home-proof > div { grid-column: auto; }
 .practice-list { margin: 0; padding: 0; list-style: none; }
 .practice-list li { padding: var(--s-4) 0; border-top: 1px solid var(--line); }
 .practice-list li:first-child { border-top: 0; }
 .practice-list h3 { margin: 0 0 var(--s-2); font-size: var(--t-card); font-weight: 500; }
 .practice-list p { margin: 0; color: var(--muted); }
-@media (max-width: 1023px) { .feature-photo { height: auto; margin-top: var(--s-7); } }
+@media (max-width: 1023px) {
+  .hero--split .hero__text { align-self: stretch; width: 100%; }
+  .feature-photo { height: auto; margin-top: var(--s-7); }
+}
 @media (min-width: 640px) and (max-width: 1023px) { #work .recent-card .panel { height: 360px; } }
 @media (max-width: 639px) {
-  .hero--split .hero__facts { display: none; }
+  .hero--split .hero__facts.home-proof { display: grid; margin-top: var(--s-5); }
+  #contact { --padt: 64px; --padb: 48px; }
   #marathon .grid > * { grid-column: 1 / -1; }
   #work .recent-card { gap: var(--s-5); padding: var(--s-4); }
   #work .recent-card:nth-child(2) { display: none; }
   #work .recent-card .panel { height: 200px; }
   .stat-line { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s-4); margin: var(--s-5) 0; }
   .stat-line > div:last-child { grid-column: 1 / -1; }
-  footer.closing > .wrap { row-gap: var(--s-4); }
+  footer.closing > .wrap { row-gap: var(--s-3); }
   #contact .closing__cta { gap: var(--s-4); }
-  #contact .closing__links { gap: var(--s-4); }
+  #contact .closing__links { gap: var(--s-3); }
   #contact .closing__links > .grid { row-gap: var(--s-4); }
-  .footer__legal { align-items: flex-start; flex-direction: column; gap: var(--s-2); }
+  .footer__legal { align-items: flex-start; flex-direction: column; gap: var(--s-2); padding-top: var(--s-3); }
 }
 </style>
 <script>document.documentElement.classList.add('m-enter');setTimeout(()=>document.documentElement.classList.add('m-enter-done'),700)</script>
@@ -100,20 +106,25 @@
   <section class="hero hero--split" data-enter aria-labelledby="hero-h">
     <div class="wrap"><div class="hero-text grid hero__grid">
       <div class="hero__text span-5">
-        <p class="t-label">深圳 · HR 共享服务与 AI 转型</p>
-        <h1 id="hero-h">HR 与 AI 实践</h1>
-        <p class="hero__lead">我是厉宁。过去 25 年，我先后在咨询与企业从事人力资源和组织转型；现在负责德勤中国的 HR 共享服务与 AI 转型。这里记录我的工作现场、实践方法与马拉松。</p>
+        <p class="t-label">深圳 · 人力资源总监</p>
+        <h1 id="hero-h">HR 转型与 AI 落地</h1>
+        <p class="hero__lead">我帮助组织把组织设计、共享服务和 AI 变成可运行的业务流程。我在德勤中国负责 HR 共享服务与 AI 转型，这里记录工作现场、实践方法与马拉松。</p>
         <div class="btn-row">
           <a class="btn btn--primary" href="mailto:lining78@sina.com">联系厉宁<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
           <a class="btn btn--secondary" href="#work">查看工作现场</a>
         </div>
+        <dl class="hero__facts home-proof">
+          <div><dt>专业经验</dt><dd>25+ 年</dd></div>
+          <div><dt>转型项目</dt><dd>40+ 项</dd></div>
+          <div><dt>员工支持范围</dt><dd>20,000+</dd></div>
+        </dl>
       </div>
       <div class="hero__media span-6 start-7">
-        <img src="assets/photos/profile/ning-li-portrait-1400.jpg"
-             srcset="assets/photos/profile/ning-li-portrait-740.jpg 740w, assets/photos/profile/ning-li-portrait-1400.jpg 1400w"
-             sizes="(max-width: 1023px) 100vw, 628px"
-             width="1163" height="1400" alt="厉宁的正式肖像"
-             style="--ly-pos: 50% 24%; --ly-pos-phone: 50% 22%" fetchpriority="high">
+        <img src="assets/photos/work/deloitte-ai-booth-1400.jpg"
+             srcset="assets/photos/work/deloitte-ai-booth-740.jpg 740w, assets/photos/work/deloitte-ai-booth-1400.jpg 1400w"
+             sizes="(max-width: 639px) 740px, 1400px"
+             width="1400" height="933" alt="厉宁在德勤 AI 展台向访客演示工作系统"
+             style="--ly-pos: 54% 48%; --ly-pos-phone: 54% 48%" fetchpriority="high">
       </div>
     </div></div>
   </section>
@@ -121,14 +132,14 @@
   <section class="section" id="work" style="--h: 1" aria-labelledby="work-h">
     <div class="wrap">
       <div class="section-head">
-        <h2 id="work-h">工作现场</h2>
+        <h2 id="work-h">HR 转型服务</h2>
         <p>从 HR 共享服务、流程标准化到 AI 转型，我关注方法如何进入日常运营。</p>
       </div>
       <div class="grid">
-        <a class="card recent-card span-6" href="#work">
+        <a class="card recent-card span-6" href="career/clients/">
           <div>
             <span class="t-label">职业实践</span>
-            <h3>HR 共享服务与流程标准化</h3>
+            <h3>HR 共享服务运营模式</h3>
             <p>在上海 HR Directors Summit 现场，分享共享服务运营与流程标准化的实践。</p>
           </div>
           <div class="panel"><img src="assets/photos/work/hr-directors-summit-shanghai-1400.jpg"
@@ -152,7 +163,7 @@
     <div class="wrap grid grid--top">
       <div class="span-6">
         <div class="section-head">
-          <h2 id="marathon-h">马拉松记录</h2>
+          <h2 id="marathon-h">马拉松历程</h2>
         </div>
         <p class="t-lead">2016 年，为了减重，我从 2 公里开始跑步，逐步完成半马和全马。现在，我仍持续训练和参赛。</p>
         <div class="stat-line">
