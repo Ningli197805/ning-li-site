@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Marathon runner Ning Li: eight majors and nearly 50 marathons</title>
-<meta name="description" content="Ning Li began running in 2016, has completed eight major marathon events worldwide, two rounds of the six majors and nearly 50 marathons, with a personal best of 3:05:30 in Seoul.">
+<meta name="description" content="Ning Li's ten-year running memoir: from 2016 to all eight cities of the World Marathon Majors.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Marathon runner Ning Li: eight majors and nearly 50 marathons">
-<meta property="og:description" content="From a two-kilometre run to 3:05:30 in Seoul.">
+<meta property="og:description" content="I have never seen Shenzhen at night, yet I have run all eight World Marathon Majors.">
 <meta property="og:image" content="../../share-marathon.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
@@ -37,7 +37,18 @@
 .marathon-photo--detail { height: auto; aspect-ratio: 4 / 3; }
 .record-list .rows__value { color: var(--p-ink); font-weight: 500; font-variant-numeric: tabular-nums; }
 .record-list .rows__name small { display: block; font-weight: 400; color: var(--muted); font-size: var(--t-small); }
-@media (max-width: 1023px) { .marathon-photo { height: auto; aspect-ratio: 4 / 3; margin-top: var(--s-7); } }
+.memoir-subtitle { color: var(--muted); font-size: var(--t-lead); line-height: 1.5; }
+:is(h1,h2).memoir-title { font-size: clamp(34px, 3.15vw, 48px); line-height: 1.12; letter-spacing: var(--display-tracking); }
+.memoir-excerpt { display: grid; gap: var(--s-4); max-width: 62ch; }
+.memoir-excerpt p { margin: 0; font-size: var(--t-body); line-height: 1.75; }
+.read-full { margin-top: var(--s-7); }
+.hero.marathon-home-hero { height: auto; min-height: 100vh; min-height: 100svh; padding-bottom: var(--s-8); }
+.hero.marathon-home-hero > .wrap, .hero.marathon-home-hero .hero-text { height: auto; }
+.hero.marathon-home-hero .hero-text { align-content: start; }
+.hero.marathon-home-hero .hero__media { height: min(520px, var(--ly-fit)); }
+#start { height: auto; min-height: 0; }
+#start > .wrap { height: auto; }
+@media (max-width: 1023px) { .marathon-photo { height: auto; aspect-ratio: 4 / 3; margin-top: var(--s-7); } .hero.marathon-home-hero .hero__media { height: auto; aspect-ratio: 4 / 3; margin-top: var(--s-7); } }
 @media (max-width: 639px) { .hero__media .ly-float__title, .hero--split .hero__facts { display: none; } #start .marathon-photo { aspect-ratio: 16 / 9; } }
 </style>
 <script>document.documentElement.classList.add('m-enter');setTimeout(()=>document.documentElement.classList.add('m-enter-done'),700)</script>
@@ -72,11 +83,11 @@
 </header>
 
 <main id="top">
-  <section class="hero hero--split" data-enter aria-labelledby="hero-h">
+  <section class="hero hero--split marathon-home-hero" data-enter aria-labelledby="hero-h">
     <div class="wrap"><div class="hero-text grid hero__grid">
       <div class="hero__text span-5">
         <h1 id="hero-h">Marathon runner Ning Li</h1>
-        <p class="hero__lead">From a first run for weight loss to two rounds of the six World Marathon Majors and all eight global majors.</p>
+        <p class="hero__lead">I am a marathon enthusiast. I started running in 2016 to lose weight, progressing from 2 km, 5 km and 10 km to half marathons and full marathons. In March 2026, I ran a personal best of 3:05:30 in Seoul. I ran my first World Marathon Major in Berlin in September 2023, followed by Chicago in October, New York in November, Tokyo in March 2024, and Boston and London in April. In under seven months I became a first-round six-major finisher. Among runners in China who have completed one round of the majors, I ranked inside the top 500. After finishing the Boston Marathon on 20 April 2026, I completed a second round of the six majors in under three years. Then, on 24 May, at the Cape Town Marathon, which became the eighth global major, I was among the first 117 Chinese runners to complete all eight majors, ranking 44th among Chinese runners and 38th among men.</p>
         <div class="btn-row">
           <a class="btn btn--primary" href="records.html">See race records<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
           <a class="btn btn--secondary" href="#milestones">See milestones</a>
@@ -88,11 +99,7 @@
         </dl>
       </div>
       <div class="hero__media span-6 start-7">
-        <img src="../../assets/photos/marathon/majors/major-medals-2023-2024.jpg" width="900" height="1200" alt="Berlin, Chicago, New York, Tokyo, Boston and London Marathon medals from 2023 and 2024" style="object-fit:contain;background:#f3f3ef" fetchpriority="high" data-source="client" data-subject="major marathon medals">
-        <div class="ly-float">
-          <div class="ly-float__row"><span>Seoul · Mar 2026</span><span>PB</span></div>
-          <div class="ly-float__title">3:05:30</div>
-        </div>
+        <img src="../../assets/photos/marathon/ten-years/hero.jpg" width="1000" height="668" alt="Ning Li at the Cape Town Marathon finish" style="--ly-pos: 50% 42%; object-fit:cover;background:#f3f3ef" fetchpriority="high" data-source="client" data-subject="Cape Town Marathon">
       </div>
     </div></div>
   </section>
@@ -125,9 +132,24 @@
     <div class="wrap grid grid--top">
       <div class="span-6">
         <div class="section-head">
-          <h2 id="start-h">From six majors to eight majors</h2>
+          <h2 id="start-h" class="memoir-title">I have never seen Shenzhen at night, yet I have run all eight World Marathon Majors</h2>
+          <p class="memoir-subtitle">— From 200 jin to eight stars: my ten years of running</p>
         </div>
-        <p class="t-lead">I am a marathon enthusiast. I started running in 2016 to lose weight, progressing from 2 km, 5 km and 10 km to half marathons and full marathons. In March 2026, I ran a personal best of 3:05:30 in Seoul. I ran my first World Marathon Major in Berlin in September 2023, followed by Chicago in October, New York in November, Tokyo in March 2024, and Boston and London in April. In under seven months I became a first-round six-major finisher. Among runners in China who have completed one round of the majors, I ranked inside the top 500. After finishing the Boston Marathon on 15 April 2026, I completed a second round of the six majors in under three years. Then, on 25 May, at the Cape Town Marathon, which became the eighth global major, I was among the first 117 Chinese runners to complete all eight majors, ranking 44th among Chinese runners and 38th among men.</p>
+        <div class="memoir-excerpt">
+          <p>During all the years I have lived in Shenzhen, I have rarely taken time to appreciate the city at night.</p>
+          <p>It sounds a little hard to believe.</p>
+          <p>Shenzhen is a vibrant city, but my life is simple: early to bed, early to rise, running and work. I do not socialise much either. Apart from family and colleagues, the people I spend most time with are a group of friends who love running.</p>
+          <p>Because I need to run early the next morning, I usually go to bed very early.</p>
+          <p>Some people may wonder whether life like this is a little monotonous.</p>
+          <p>For me, however, this is exactly what ten years of running has brought: a more regular life, greater inner calm, and better physical and mental health.</p>
+          <p>If I rewind to 2016, I find it hard to imagine that I would one day live like this.</p>
+          <p>Even less could I have imagined that someone who once weighed 200 jin (about 100 kilograms), sat in an office all day and hardly exercised would one day run in all eight cities of the World Marathon Majors.</p>
+          <p>In May 2026, I completed my eighth World Marathon Major star in Cape Town, South Africa.</p>
+          <p>According to the data I saw at the time on the official results platform, there were 117 Chinese runners in the first group to complete all eight stars. I was 38th among Chinese men and 44th overall.</p>
+          <p>I felt very honoured to be part of that group.</p>
+          <p>But when I look back on ten years of running, I realise that what is more precious than the eight stars is the change that took place, little by little, over those ten years.</p>
+        </div>
+        <p class="read-full"><a class="btn btn--primary btn--xl" href="ten-years/index.html">Read the full story<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a></p>
       </div>
       <figure class="marathon-photo span-6 start-7">
         <img src="../../assets/photos/marathon/majors/major-medals-wall.jpg"
@@ -163,7 +185,7 @@
         </div>
         <div class="span-3 start-7 footer__col">
           <h3>Marathon</h3>
-          <ul><li><a href="#milestones">Milestones</a></li><li><a href="records.html">Race records</a></li><li><a href="#start">Running origin</a></li><li><a href="#rhythm">Training rhythm</a></li></ul>
+          <ul><li><a href="#milestones">Milestones</a></li><li><a href="records.html">Race records</a></li><li><a href="#start">Ten-year memoir</a></li><li><a href="#rhythm">Training rhythm</a></li></ul>
         </div>
         <div class="span-3 footer__col">
           <h3>Language and contact</h3>

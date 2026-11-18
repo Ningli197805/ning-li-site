@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>马拉松赛事记录 | 厉宁</title>
-<meta name="description" content="厉宁的历年马拉松记录，按 No.1 至 No.47 编号倒序排列。当前已录入无锡马拉松和上海马拉松。">
+<meta name="description" content="厉宁的完整马拉松记录，按 No.1 至 No.52 编号倒序排列，包含已完赛和后续赛事。">
 <meta property="og:type" content="website">
 <meta property="og:title" content="马拉松赛事记录 | 厉宁">
 <meta property="og:description" content="按编号倒序排列的历年马拉松赛事记录。">
@@ -32,28 +32,42 @@
   --display-tracking: -0.03em;
   --display-tracking-xl: -0.038em;
 }
-.records-table { width: 100%; border-collapse: collapse; font-size: var(--t-body); }
-.records-table caption { text-align: left; color: var(--muted); font-size: var(--t-small); padding-bottom: var(--s-4); }
+.records-table { width: min(80vw, 100%); margin-inline: auto; border-collapse: collapse; table-layout: fixed; font-size: var(--t-body); }
+.hero.hero--statement { height: auto; min-height: 0; padding: calc(var(--nav) + var(--hgap)) 0 var(--s-8); }
+.hero.hero--statement > .wrap { height: auto; }
+.hero.hero--statement .hero__in { justify-content: flex-start; }
+#records { height: auto; min-height: 0; padding-block: var(--s-8) var(--s-10); }
+#records > .wrap { height: auto; }
+.records-table caption { display: table-caption; caption-side: top; width: 100%; text-align: left; color: var(--muted); font-size: var(--t-small); padding-bottom: var(--s-4); }
 .records-table th { padding: 0 0 var(--s-3); border-bottom: 1px solid var(--line); color: var(--muted); font-size: var(--t-label); font-weight: 500; text-align: left; }
-.records-table td { padding: var(--s-4) 0; border-bottom: 1px solid var(--line); }
-.records-table :is(th, td):first-child { width: 20%; white-space: nowrap; }
-.records-table :is(th, td):last-child { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
-.records-photo { margin: 0; border-radius: var(--r-lg); overflow: hidden; height: min(520px, var(--ly-fit)); }
-.records-photo img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 58%; }
-@media (max-width: 1023px) { .records-photo { height: auto; aspect-ratio: 4 / 3; margin-top: var(--s-7); } }
-@media (max-width: 639px) { .records-table th:nth-child(2), .records-table td:nth-child(2) { display: none; } }
+.records-table td { padding: 14px 0; border-bottom: 1px solid var(--line); vertical-align: top; }
+.records-table tbody tr:nth-child(even) { background: #e6e6e2; }
+.records-table :is(th, td):first-child { width: 12%; padding-left: var(--s-4); white-space: nowrap; }
+.records-table :is(th, td):nth-child(2) { width: 18%; white-space: nowrap; }
+.records-table :is(th, td):nth-child(3) { padding-inline: 12px 20px; }
+.records-table :is(th, td):last-child { width: 15%; padding-right: var(--s-4); text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.record-note { display: block; margin-top: 4px; color: var(--muted); font-size: var(--t-small); line-height: 1.35; }
+@media (max-width: 639px) {
+  .hero.hero--statement { min-height: 0; padding-bottom: var(--s-7); }
+  .records-table { width: 100%; }
+  .records-table caption { display: block; }
+  .records-table thead { display: none; }
+  .records-table, .records-table tbody, .records-table tr, .records-table td { display: block; width: auto; }
+  .records-table tr { display: grid; grid-template-columns: auto 1fr auto; grid-template-areas: "no date time" "race race race"; gap: 4px 12px; padding: var(--s-3) 0; border-bottom: 1px solid var(--line); }
+  .records-table td { padding: 0; border: 0; }
+  .records-table .record-no { grid-area: no; padding-left: var(--s-3); }
+  .records-table .record-date { grid-area: date; text-align: left; }
+  .records-table .record-race { grid-area: race; padding: 0; }
+  .records-table .record-time { grid-area: time; padding-right: var(--s-3); text-align: right; }
+}
 </style>
 <script>document.documentElement.classList.add('m-enter');setTimeout(()=>document.documentElement.classList.add('m-enter-done'),700)</script>
 <script>document.documentElement.classList.add('mo-js');setTimeout(()=>document.documentElement.classList.add('mo-safe'),2500)</script>
-<link rel="modulepreload" href="../assets/moments/moments.js">
-<link rel="modulepreload" href="../assets/moments/lib.js">
-<link rel="modulepreload" href="../assets/moments/picture-develops/moment.js">
 </head>
 <body>
 <!-- type: service
      deal: statement hero, palette steel-orange, nav centre, footer dark, close type,
-     rhythm space, buttons solid, mark dots
-     moments: picture-develops in #records -->
+     rhythm space, buttons solid, mark dots -->
 <header class="nav nav--centre">
   <div class="wrap nav__bar">
     <a class="skip-link" href="#top">跳到正文 Skip to content</a>
@@ -61,8 +75,7 @@
     <nav class="nav__links" aria-label="主导航">
       <div class="nav__item"><a class="nav__link" href="index.html">马拉松</a></div>
       <div class="nav__item"><a class="nav__link" href="records.html" aria-current="page">赛事记录</a></div>
-      <div class="nav__item"><a class="nav__link" href="../about/">关于</a></div>
-      <div class="nav__item"><a class="nav__link" href="../career/clients/">客户案例</a></div>
+      <div class="nav__item"><a class="nav__link" href="../index.html#journey">职业</a></div>
     </nav>
     <div class="nav__actions">
       <a class="nav__link" href="../en/marathon/records.html" lang="en" hreflang="en">EN</a>
@@ -79,39 +92,84 @@
     <div class="wrap"><div class="hero-text hero__in">
       <div>
         <h1 id="hero-h">马拉松赛事记录</h1>
-        <p class="hero__lead">历年全程马拉松记录按编号倒序排列。No.1 对应 2020 年 11 月无锡马拉松，No.2 对应 2020 年 11 月上海马拉松。</p>
+        <p class="hero__lead">完整比赛清单按编号倒序排列，共 52 场，包含已完赛和已列入计划的后续赛事。No.1 对应 2020 年 11 月无锡马拉松，No.2 对应 2020 年 11 月上海马拉松；尚无完赛成绩的场次以“—”表示。</p>
         <div class="btn-row">
           <a class="btn btn--primary" href="index.html">返回马拉松<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
           <a class="btn btn--secondary" href="#records">查看记录</a>
         </div>
       </div>
       <dl class="hero__facts">
-        <div><dt>编号范围</dt><dd>No.1–No.47</dd></div>
+        <div><dt>记录总数</dt><dd>52 场</dd></div>
+        <div><dt>编号范围</dt><dd>No.1–No.52</dd></div>
         <div><dt>首场记录</dt><dd>无锡马拉松</dd></div>
-        <div><dt>最新录入</dt><dd>上海马拉松</dd></div>
         <div><dt>个人最好成绩</dt><dd>3:05:30</dd></div>
       </dl>
     </div></div>
   </section>
 
   <section class="section" id="records" aria-labelledby="records-h">
-    <div class="wrap grid grid--top">
-      <div class="span-6">
-        <div class="section-head">
-          <h2 id="records-h">比赛清单</h2>
-        </div>
-        <table class="records-table">
-          <caption>按编号倒序排列，编号越大越靠前。</caption>
-          <thead><tr><th scope="col">编号</th><th scope="col">年月</th><th scope="col">赛事</th><th scope="col">成绩</th></tr></thead>
-          <tbody>
-            <tr><td>No.2</td><td>2020 年 11 月</td><td><a class="link" href="shanghai-2020/">上海马拉松</a>（点击进入）</td><td>3 小时 56 分</td></tr>
-            <tr><td>No.1</td><td>2020 年 11 月</td><td><a class="link" href="wuxi-2020/">无锡马拉松</a>（点击进入）</td><td>4 小时 06 分 36 秒</td></tr>
-          </tbody>
-        </table>
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="records-h">比赛清单</h2>
       </div>
-      <figure class="records-photo span-6 start-7" data-moment="picture-develops">
-        <img src="../assets/photos/stand-ins/selected/marathon-track-960.jpg" width="960" height="722" alt="阴天里的红色田径跑道" loading="lazy" decoding="async" data-source="stand-in" data-subject="running track">
-      </figure>
+      <table class="records-table">
+        <caption>按编号倒序排列，编号越大越靠前。</caption>
+        <thead><tr><th scope="col">编号</th><th scope="col">日期</th><th scope="col">赛事 / 地点</th><th scope="col">成绩</th></tr></thead>
+        <tbody>
+          <tr><td class="record-no">No.52</td><td class="record-date"><time datetime="2027-04-04">2027.04.04</time></td><td class="record-race">法国巴黎</td><td class="record-time">—</td></tr>
+          <tr><td class="record-no">No.51</td><td class="record-date"><time datetime="2027-03-21">2027.03.21</time></td><td class="record-race">韩国首尔</td><td class="record-time">—</td></tr>
+          <tr><td class="record-no">No.50</td><td class="record-date"><time datetime="2027-02-28">2027.02.28</time></td><td class="record-race">日本大阪</td><td class="record-time">—</td></tr>
+          <tr><td class="record-no">No.49</td><td class="record-date"><time datetime="2027-01-20">2027.01.20</time></td><td class="record-race">也门索特拉岛</td><td class="record-time">—</td></tr>
+          <tr><td class="record-no">No.48</td><td class="record-date"><time datetime="2027-01-10">2027.01.10</time></td><td class="record-race">厦门</td><td class="record-time">—</td></tr>
+          <tr><td class="record-no">No.47</td><td class="record-date"><time datetime="2026-12-06">2026.12.06</time></td><td class="record-race">上海</td><td class="record-time">—</td></tr>
+          <tr><td class="record-no">No.46</td><td class="record-date"><time datetime="2026-10-25">2026.10.25</time></td><td class="record-race">成都</td><td class="record-time">3:36:42</td></tr>
+          <tr><td class="record-no">No.45</td><td class="record-date"><time datetime="2026-10-18">2026.10.18</time></td><td class="record-race">东营</td><td class="record-time">3:16:22</td></tr>
+          <tr><td class="record-no">No.44</td><td class="record-date"><time datetime="2026-09-13">2026.09.13</time></td><td class="record-race">哈尔滨</td><td class="record-time">3:41:19</td></tr>
+          <tr><td class="record-no">No.43</td><td class="record-date"><time datetime="2026-08-07">2026.08.07</time></td><td class="record-race">莫桑比克马普托</td><td class="record-time">3:34:25</td></tr>
+          <tr><td class="record-no">No.42</td><td class="record-date"><time datetime="2026-08-06">2026.08.06</time></td><td class="record-race">斯威士兰姆巴巴内</td><td class="record-time">3:41:08</td></tr>
+          <tr><td class="record-no">No.41</td><td class="record-date"><time datetime="2026-08-04">2026.08.04</time></td><td class="record-race">莱索托马塞卢</td><td class="record-time">3:38:31</td></tr>
+          <tr><td class="record-no">No.40</td><td class="record-date"><time datetime="2026-08-02">2026.08.02</time></td><td class="record-race">马拉维利隆圭</td><td class="record-time">4:14:44</td></tr>
+          <tr><td class="record-no">No.39</td><td class="record-date"><time datetime="2026-05-24">2026.05.24</time></td><td class="record-race">南非开普敦<span class="record-note">第八大满贯</span></td><td class="record-time">3:26:35</td></tr>
+          <tr><td class="record-no">No.38</td><td class="record-date"><time datetime="2026-04-20">2026.04.20</time></td><td class="record-race">美国波士顿<span class="record-note">第二轮大满贯六星</span></td><td class="record-time">3:15:53</td></tr>
+          <tr><td class="record-no">No.37</td><td class="record-date"><time datetime="2026-03-21">2026.03.21</time></td><td class="record-race">无锡</td><td class="record-time">3:15:12</td></tr>
+          <tr><td class="record-no">No.36</td><td class="record-date"><time datetime="2026-03-15">2026.03.15</time></td><td class="record-race">韩国首尔<span class="record-note">PB</span></td><td class="record-time">3:05:30</td></tr>
+          <tr><td class="record-no">No.35</td><td class="record-date"><time datetime="2026-01-18">2026.01.18</time></td><td class="record-race">香港</td><td class="record-time">3:17:03</td></tr>
+          <tr><td class="record-no">No.34</td><td class="record-date"><time datetime="2026-01-10">2026.01.10</time></td><td class="record-race">厦门</td><td class="record-time">3:12:43</td></tr>
+          <tr><td class="record-no">No.33</td><td class="record-date"><time datetime="2025-12-07">2025.12.07</time></td><td class="record-race">深圳</td><td class="record-time">3:46:18</td></tr>
+          <tr><td class="record-no">No.32</td><td class="record-date"><time datetime="2025-11-30">2025.11.30</time></td><td class="record-race">上海</td><td class="record-time">3:24:33</td></tr>
+          <tr><td class="record-no">No.31</td><td class="record-date"><time datetime="2025-10-13">2025.10.13</time></td><td class="record-race">美国芝加哥<span class="record-note">第二轮大满贯第五星</span></td><td class="record-time">3:31:14</td></tr>
+          <tr><td class="record-no">No.30</td><td class="record-date"><time datetime="2025-08-31">2025.08.31</time></td><td class="record-race">澳大利亚悉尼<span class="record-note">第七大满贯</span></td><td class="record-time">3:27:12</td></tr>
+          <tr><td class="record-no">No.29</td><td class="record-date"><time datetime="2025-08-24">2025.08.24</time></td><td class="record-race">澳大利亚巴罗萨<span class="record-note">PB</span></td><td class="record-time">3:06:50</td></tr>
+          <tr><td class="record-no">No.28</td><td class="record-date"><time datetime="2025-04-28">2025.04.28</time></td><td class="record-race">英国伦敦<span class="record-note">第二轮大满贯第四星</span></td><td class="record-time">3:49:30</td></tr>
+          <tr><td class="record-no">No.27</td><td class="record-date"><time datetime="2025-04-07">2025.04.07</time></td><td class="record-race">朝鲜平壤</td><td class="record-time">3:24:00</td></tr>
+          <tr><td class="record-no">No.26</td><td class="record-date"><time datetime="2025-03-23">2025.03.23</time></td><td class="record-race">无锡</td><td class="record-time">3:23:46</td></tr>
+          <tr><td class="record-no">No.25</td><td class="record-date"><time datetime="2025-03-02">2025.03.02</time></td><td class="record-race">日本东京<span class="record-note">第二轮大满贯第三星</span></td><td class="record-time">3:29:26</td></tr>
+          <tr><td class="record-no">No.24</td><td class="record-date"><time datetime="2025-02-09">2025.02.09</time></td><td class="record-race">香港<span class="record-note">PB</span></td><td class="record-time">3:14:47</td></tr>
+          <tr><td class="record-no">No.23</td><td class="record-date"><time datetime="2024-12-01">2024.12.01</time></td><td class="record-race">澳门</td><td class="record-time">3:37:27</td></tr>
+          <tr><td class="record-no">No.22</td><td class="record-date"><time datetime="2024-11-03">2024.11.03</time></td><td class="record-race">美国纽约<span class="record-note">第二轮大满贯第二星</span></td><td class="record-time">3:46:10</td></tr>
+          <tr><td class="record-no">No.21</td><td class="record-date"><time datetime="2024-10-20">2024.10.20</time></td><td class="record-race">长沙</td><td class="record-time">3:36:11</td></tr>
+          <tr><td class="record-no">No.20</td><td class="record-date"><time datetime="2024-09-29">2024.09.29</time></td><td class="record-race">德国柏林<span class="record-note">第二轮大满贯第一星</span></td><td class="record-time">3:48:27</td></tr>
+          <tr><td class="record-no">No.19</td><td class="record-date"><time datetime="2024-09-15">2024.09.15</time></td><td class="record-race">澳大利亚悉尼</td><td class="record-time">3:41:17</td></tr>
+          <tr><td class="record-no">No.18</td><td class="record-date"><time datetime="2024-04-21">2024.04.21</time></td><td class="record-race">英国伦敦<span class="record-note">第一轮大满贯第六星</span></td><td class="record-time">3:37:53</td></tr>
+          <tr><td class="record-no">No.17</td><td class="record-date"><time datetime="2024-04-15">2024.04.15</time></td><td class="record-race">美国波士顿<span class="record-note">第一轮大满贯第五星</span></td><td class="record-time">3:34:28</td></tr>
+          <tr><td class="record-no">No.16</td><td class="record-date"><time datetime="2024-03-03">2024.03.03</time></td><td class="record-race">日本东京<span class="record-note">第一轮大满贯第四星</span></td><td class="record-time">3:20:50</td></tr>
+          <tr><td class="record-no">No.15</td><td class="record-date"><time datetime="2024-01-21">2024.01.21</time></td><td class="record-race">香港</td><td class="record-time">3:45:22</td></tr>
+          <tr><td class="record-no">No.14</td><td class="record-date"><time datetime="2024-01-01">2024.01.01</time></td><td class="record-race">深圳大鹏</td><td class="record-time">3:51:43</td></tr>
+          <tr><td class="record-no">No.13</td><td class="record-date"><time datetime="2023-12-17">2023.12.17</time></td><td class="record-race">杭州</td><td class="record-time">3:44:05</td></tr>
+          <tr><td class="record-no">No.12</td><td class="record-date"><time datetime="2023-12-01">2023.12.01</time></td><td class="record-race">澳门</td><td class="record-time">3:40:39</td></tr>
+          <tr><td class="record-no">No.11</td><td class="record-date"><time datetime="2023-11-05">2023.11.05</time></td><td class="record-race">美国纽约<span class="record-note">第一轮大满贯第三星</span></td><td class="record-time">4:04:38</td></tr>
+          <tr><td class="record-no">No.10</td><td class="record-date"><time datetime="2023-10-09">2023.10.09</time></td><td class="record-race">美国芝加哥<span class="record-note">第一轮大满贯第二星</span></td><td class="record-time">3:43:50</td></tr>
+          <tr><td class="record-no">No.9</td><td class="record-date"><time datetime="2023-09-24">2023.09.24</time></td><td class="record-race">德国柏林<span class="record-note">第一轮大满贯第一星</span></td><td class="record-time">3:46:20</td></tr>
+          <tr><td class="record-no">No.8</td><td class="record-date"><time datetime="2023-05-21">2023.05.21</time></td><td class="record-race">太原</td><td class="record-time">3:46:36</td></tr>
+          <tr><td class="record-no">No.7</td><td class="record-date"><time datetime="2023-03-19">2023.03.19</time></td><td class="record-race">无锡</td><td class="record-time">3:53:55</td></tr>
+          <tr><td class="record-no">No.6</td><td class="record-date"><time datetime="2022-12-04">2022.12.04</time></td><td class="record-race">澳门<span class="record-note">PB</span></td><td class="record-time">3:29:27</td></tr>
+          <tr><td class="record-no">No.5</td><td class="record-date"><time datetime="2022-11-27">2022.11.27</time></td><td class="record-race">厦门</td><td class="record-time">3:57:57</td></tr>
+          <tr><td class="record-no">No.4</td><td class="record-date"><time datetime="2021-04-18">2021.04.18</time></td><td class="record-race">郑州开封</td><td class="record-time">4:11:23</td></tr>
+          <tr><td class="record-no">No.3</td><td class="record-date"><time datetime="2020-12-06">2020.12.06</time></td><td class="record-race">澳门<span class="record-note">PB</span></td><td class="record-time">3:43:23</td></tr>
+          <tr><td class="record-no">No.2</td><td class="record-date"><time datetime="2020-11-29">2020.11.29</time></td><td class="record-race"><a class="link" href="shanghai-2020/">上海马拉松</a>（点击进入）<span class="record-note">PB</span></td><td class="record-time">3:56:48</td></tr>
+          <tr><td class="record-no">No.1</td><td class="record-date"><time datetime="2020-11-01">2020.11.01</time></td><td class="record-race"><a class="link" href="wuxi-2020/">无锡马拉松</a>（点击进入）</td><td class="record-time">4:06:36</td></tr>
+        </tbody>
+      </table>
     </div>
   </section>
 </main>
@@ -129,11 +187,11 @@
       <div class="grid">
         <div class="span-6 stack-5">
           <a class="nav__logo" href="../index.html"><span class="mark" data-mark="dots" aria-hidden="true"></span>厉宁 Ning Li</a>
-          <p class="footer__lede">马拉松记录：No.1–No.47。</p>
+          <p class="footer__lede">马拉松记录：No.1–No.52。</p>
         </div>
         <div class="span-3 start-7 footer__col">
           <h3>浏览</h3>
-          <ul><li><a href="index.html">马拉松</a></li><li><a href="#records">比赛清单</a></li><li><a href="../index.html#work">工作现场</a></li></ul>
+          <ul><li><a href="index.html">马拉松</a></li><li><a href="#records">比赛清单</a></li><li><a href="../index.html#journey">职业</a></li></ul>
         </div>
         <div class="span-3 footer__col">
           <h3>语言与联系</h3>

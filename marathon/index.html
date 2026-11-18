@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>马拉松跑者厉宁：八大满贯与近 50 场全马</title>
-<meta name="description" content="厉宁从 2016 年开始跑步，已完成全球 8 大满贯赛事、两轮六大满贯和近 50 场全马，个人最好成绩 3 小时 5 分 30 秒。">
+<meta name="description" content="厉宁的十年奔跑回忆：从 2016 年开始跑步，到完成世界马拉松八大满贯的八座城市。">
 <meta property="og:type" content="website">
 <meta property="og:title" content="马拉松跑者厉宁：八大满贯与近 50 场全马">
-<meta property="og:description" content="从减重开始，到首尔马拉松 3 小时 5 分 30 秒。">
+<meta property="og:description" content="我没看过深圳的夜景，却跑遍了世界八大马拉松。">
 <meta property="og:image" content="share-marathon.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
@@ -37,7 +37,18 @@
 .marathon-photo--detail { height: auto; aspect-ratio: 4 / 3; }
 .record-list .rows__value { color: var(--p-ink); font-weight: 500; font-variant-numeric: tabular-nums; }
 .record-list .rows__name small { display: block; font-weight: 400; color: var(--muted); font-size: var(--t-small); }
-@media (max-width: 1023px) { .marathon-photo { height: auto; aspect-ratio: 4 / 3; margin-top: var(--s-7); } }
+.memoir-subtitle { color: var(--muted); font-size: var(--t-lead); line-height: 1.5; }
+:is(h1,h2).memoir-title { font-size: clamp(34px, 3.15vw, 48px); line-height: 1.12; letter-spacing: var(--display-tracking); }
+.memoir-excerpt { display: grid; gap: var(--s-4); max-width: 62ch; }
+.memoir-excerpt p { margin: 0; font-size: var(--t-body); line-height: 1.75; }
+.read-full { margin-top: var(--s-7); }
+.hero.marathon-home-hero { height: auto; min-height: 100vh; min-height: 100svh; padding-bottom: var(--s-8); }
+.hero.marathon-home-hero > .wrap, .hero.marathon-home-hero .hero-text { height: auto; }
+.hero.marathon-home-hero .hero-text { align-content: start; }
+.hero.marathon-home-hero .hero__media { height: min(520px, var(--ly-fit)); }
+#start { height: auto; min-height: 0; }
+#start > .wrap { height: auto; }
+@media (max-width: 1023px) { .marathon-photo { height: auto; aspect-ratio: 4 / 3; margin-top: var(--s-7); } .hero.marathon-home-hero .hero__media { height: auto; aspect-ratio: 4 / 3; margin-top: var(--s-7); } }
 @media (max-width: 639px) { .hero__media .ly-float__title, .hero--split .hero__facts { display: none; } #start .marathon-photo { aspect-ratio: 16 / 9; } }
 </style>
 <script>document.documentElement.classList.add('m-enter');setTimeout(()=>document.documentElement.classList.add('m-enter-done'),700)</script>
@@ -56,10 +67,9 @@
     <a class="skip-link" href="#top">跳到正文 Skip to content</a>
     <a class="nav__logo" href="../index.html"><span class="mark" data-mark="dots" aria-hidden="true"></span>厉宁</a>
     <nav class="nav__links" aria-label="主导航">
-      <div class="nav__item"><a class="nav__link" href="../about/">关于</a></div>
-      <div class="nav__item"><a class="nav__link" href="../career/clients/">客户案例</a></div>
+      <div class="nav__item"><a class="nav__link" href="../index.html#journey">职业</a></div>
       <div class="nav__item"><a class="nav__link" href="index.html" aria-current="page">马拉松</a></div>
-      <div class="nav__item"><a class="nav__link" href="../practices/">领先实践</a></div>
+      <div class="nav__item"><a class="nav__link" href="../index.html#profile">关于</a></div>
     </nav>
     <div class="nav__actions">
       <a class="nav__link" href="../en/marathon/index.html" lang="en" hreflang="en">EN</a>
@@ -72,11 +82,11 @@
 </header>
 
 <main id="top">
-  <section class="hero hero--split" data-enter aria-labelledby="hero-h">
+  <section class="hero hero--split marathon-home-hero" data-enter aria-labelledby="hero-h">
     <div class="wrap"><div class="hero-text grid hero__grid">
       <div class="hero__text span-5">
         <h1 id="hero-h">马拉松跑者厉宁</h1>
-        <p class="hero__lead">从减重开始，到两轮六大满贯与全球八大满贯。</p>
+        <p class="hero__lead">我是一名马拉松爱好者。2016 年为了减重开始跑步，从 2 公里、5 公里、10 公里，到半马和全马。2026 年 3 月，我在首尔跑出个人最好成绩 3 小时 5 分 30 秒。2023年9月参加第一场全球六大满贯的柏林，在随后的10月芝加哥，11月的纽约，2024年3月的东京，4月波士顿和伦敦，不到7个月的时间成为第一轮六大满贯跑者，在全中国参加一轮大满贯的跑者排名进入前500，在2026年4月20日完成波士顿马拉松后，不到三年时间完成第二轮六大满贯，并且在5月24日开普敦马拉松成为全球第八大满贯后首批117名中国人完成八大满贯，华人排名44位，男子排名38位。</p>
         <div class="btn-row">
           <a class="btn btn--primary" href="records.html">查看赛事清单<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
           <a class="btn btn--secondary" href="#milestones">查看里程碑</a>
@@ -88,11 +98,7 @@
         </dl>
       </div>
       <div class="hero__media span-6 start-7">
-        <img src="../assets/photos/marathon/majors/major-medals-2023-2024.jpg" width="900" height="1200" alt="2023 至 2024 年柏林、芝加哥、纽约、东京、波士顿和伦敦马拉松奖牌陈列" style="object-fit:contain;background:#f3f3ef" fetchpriority="high" data-source="client" data-subject="major marathon medals">
-        <div class="ly-float">
-          <div class="ly-float__row"><span>首尔 · 2026.03</span><span>PB</span></div>
-          <div class="ly-float__title">3 小时 5 分 30 秒</div>
-        </div>
+        <img src="../assets/photos/marathon/ten-years/hero.jpg" width="1000" height="668" alt="厉宁在开普敦马拉松终点前举手机记录比赛" style="--ly-pos: 50% 42%; object-fit:cover;background:#f3f3ef" fetchpriority="high" data-source="client" data-subject="Cape Town Marathon">
       </div>
     </div></div>
   </section>
@@ -125,9 +131,24 @@
     <div class="wrap grid grid--top">
       <div class="span-6">
         <div class="section-head">
-          <h2 id="start-h">从六大满贯到八大满贯</h2>
+          <h2 id="start-h" class="memoir-title">我没看过深圳的夜景，却跑遍了世界八大马拉松</h2>
+          <p class="memoir-subtitle">——从200斤到八颗星，我的十年奔跑</p>
         </div>
-        <p class="t-lead">我是一名马拉松爱好者。2016 年为了减重开始跑步，从 2 公里、5 公里、10 公里，到半马和全马。2026 年 3 月，我在首尔跑出个人最好成绩 3 小时 5 分 30 秒。2023年9月参加第一场全球六大满贯的柏林，在随后的10月芝加哥，11月的纽约，2024年3月的东京，4月波士顿和伦敦，不到7个月的时间成为第一轮六大满贯跑者，在全中国参加一轮大满贯的跑者排名进入前500，在2026年4月15日完成波士顿马拉松后，不到三年时间完成第二轮六大满贯，并且在5月25日开普敦马拉松成为全球第八大满贯后首批117名中国人完成八大满贯，华人排名44位，男子排名38位。</p>
+        <div class="memoir-excerpt">
+          <p>在深圳生活了这么多年，我却没有怎么欣赏过深圳的夜景。</p>
+          <p>说起来有点不可思议。</p>
+          <p>深圳是一座充满活力的城市，而我的生活却很简单：早睡、早起、跑步、工作。平时的社交也不多，除了家人、同事，接触最多的就是一群喜欢跑步的朋友。</p>
+          <p>因为第二天清晨要跑步，我往往很早就睡了。</p>
+          <p>有人可能会觉得，这样的生活是不是有些单调？</p>
+          <p>但对我而言，这恰恰是跑步十年来带给我的改变：生活越来越规律，内心越来越平和，身体和精神状态也越来越好。</p>
+          <p>如果把时间倒回2016年，我很难想象自己有一天会过上这样的生活。</p>
+          <p>更不会想到，那个体重一度达到200斤、长期坐办公室、几乎不运动的自己，有一天竟然能够跑遍世界马拉松大满贯的八座城市。</p>
+          <p>2026年5月，我在南非开普敦完成了自己的第八颗世界马拉松大满贯之星。</p>
+          <p>根据我当时在官方统计平台看到的数据，首批完成八星的中国跑者共有117位，我在其中的中国男子排名第38位、总体排名第44位。</p>
+          <p>能够成为其中的一员，我感到非常荣幸。</p>
+          <p>但当我回顾过去十年的跑步经历时，我发现，比八颗星更珍贵的，是这十年中一点一滴发生的改变。</p>
+        </div>
+        <p class="read-full"><a class="btn btn--primary btn--xl" href="ten-years/index.html">点击阅读全文<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a></p>
       </div>
       <figure class="marathon-photo span-6 start-7">
         <img src="../assets/photos/marathon/majors/major-medals-wall.jpg"
@@ -163,7 +184,7 @@
         </div>
         <div class="span-3 start-7 footer__col">
           <h3>马拉松</h3>
-          <ul><li><a href="#milestones">里程碑</a></li><li><a href="records.html">赛事记录</a></li><li><a href="#start">起点</a></li><li><a href="#rhythm">现在的节奏</a></li></ul>
+          <ul><li><a href="#milestones">里程碑</a></li><li><a href="records.html">赛事记录</a></li><li><a href="#start">十年奔跑</a></li><li><a href="#rhythm">现在的节奏</a></li></ul>
         </div>
         <div class="span-3 footer__col">
           <h3>语言与联系</h3>
