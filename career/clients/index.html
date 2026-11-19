@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>客户案例：一家全球领先的乳业集团 | 厉宁</title>
-<meta name="description" content="厉宁服务一家全球领先乳业集团的人力资源运营模式转型案例：2020 年项目背景、解决方案、6 个月设计与 3 年实施路径。">
-<meta property="og:type" content="article">
-<meta property="og:title" content="客户案例：一家全球领先的乳业集团 | 厉宁">
-<meta property="og:description" content="从现有人力资源运营模式诊断到三年转型路径。">
-<meta property="og:image" content="../../career-share-dairy.jpg">
+<title>客户案例：组织转型与 HR 运营模式 | 厉宁</title>
+<meta name="description" content="厉宁的客户案例总览：全球乳业集团的人力资源运营模式转型，以及全球汽车集团在跨国业务合并后的 HR 共享服务可行性与运营模式设计。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="客户案例：组织转型与 HR 运营模式 | 厉宁">
+<meta property="og:description" content="从乳业集团的组织设计与三年路径，到汽车集团的全球 HR 共享服务可行性评估与转型路线图。">
+<meta property="og:image" content="../../career-share-clients.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
 <meta name="theme-color" content="#eeeeeb">
@@ -32,52 +32,48 @@
   --display-tracking: -0.03em;
   --display-tracking-xl: -0.038em;
 }
-.client-photo { margin: 0; border-radius: var(--r-lg); overflow: hidden; height: min(520px, var(--ly-fit)); }
-.client-photo img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 55%; }
-.client-logo-card { position: relative; height: min(520px, var(--ly-fit)); border: 1px solid var(--line); border-radius: var(--r-lg); background: #fff; overflow: hidden; }
-.client-logo-visual { position: absolute; inset: 0; }
-.client-logo-landscape { display: block; width: 100%; height: 100%; object-fit: cover; }
-.client-logo-mark { position: absolute; left: var(--s-5); bottom: var(--s-5); width: 86px; height: 86px; padding: 8px; border-radius: var(--r-md); background: #fff; }
-.client-logo-facts { margin: var(--s-6) 0 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--line); }
-.client-logo-facts div { display: grid; grid-template-columns: 1fr auto; gap: var(--s-4); padding: var(--s-3) 0; border-bottom: 1px solid var(--line); }
-.client-logo-facts div + div { padding-left: var(--s-5); border-left: 1px solid var(--line); }
-.client-logo-facts dt { color: var(--muted); font-size: var(--t-small); }
-.client-logo-facts dd { margin: 0; font-weight: 500; }
-.client-float { display: block; }
-.client-float span { display: block; }
-.client-methods { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s-7) var(--s-6); margin: 0; padding: 0; list-style: none; }
-.client-methods--single { grid-template-columns: 1fr; gap: var(--s-3); }
-.client-methods.client-methods--single li { padding-top: var(--s-2); }
-.client-methods li { padding-top: var(--s-4); border-top: 1px solid var(--line); }
-.client-method-n { display: block; color: var(--muted); font-size: var(--t-small); margin-bottom: var(--s-2); }
-.client-methods h4 { margin: 0 0 var(--s-2); font-size: var(--t-card); font-weight: 500; }
-.client-methods p { margin: 0; color: var(--ink); }
-.result-row .rows__value { color: var(--p-ink); font-weight: 500; }
-.result-row .rows__name small { display: block; font-weight: 400; color: var(--muted); font-size: var(--t-small); }
-.site-gallery figure { margin: 0; overflow: hidden; border-radius: var(--r-lg); }
-.site-gallery img { display: block; width: 100%; height: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.hero-label { display: flex; align-items: center; gap: var(--s-2); margin: 0; color: var(--muted); font-size: var(--t-label); }
+.hero-label::before { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); content: ""; }
+.hero__media::after { position: absolute; inset: auto var(--s-5) var(--s-5) auto; display: grid; place-items: center; width: 64px; height: 64px; border-radius: 50%; background: var(--p-bg); color: var(--accent); font-size: 18px; font-weight: 500; content: "02"; }
+.case-link { color: inherit; text-decoration: none; }
+.case-link:hover h3, .case-link:focus-visible h3 { color: var(--accent); }
+.case-link img { transition: transform 320ms ease; }
+.case-link:hover img, .case-link:focus-visible img { transform: scale(1.025); }
+.case-copy { display: flex; flex-direction: column; align-items: flex-start; }
+.case-copy > * + * { margin-top: var(--s-5); }
+.case-copy h3 { margin: 0; font-size: var(--t-h3); line-height: 1.18; }
+.case-copy p { margin: 0; }
+.case-arrow { display: inline-flex; align-items: center; gap: var(--s-2); color: var(--ink); font-size: var(--t-small); font-weight: 500; }
+.case-arrow svg { width: 14px; height: 14px; }
+.report-index { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin: 0; border-top: 1px solid var(--line); }
+.report-index div { display: grid; gap: var(--s-1); padding: var(--s-3) 0 var(--s-2); }
+.report-index div + div { padding-left: var(--s-5); border-left: 1px solid var(--line); }
+.report-index dt { color: var(--muted); font-size: var(--t-label); }
+.report-index dd { margin: 0; font-size: var(--t-body); font-weight: 500; }
+.case-image { height: min(520px, var(--ly-fit)); overflow: hidden; border-radius: var(--r-lg); background: var(--surface); }
+.case-image img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.case-image--lobby img { object-position: 50% 50%; }
 @media (max-width: 1023px) {
-  .client-photo, .client-logo-card { height: auto; margin-top: var(--s-7); }
-  .client-logo-card { min-height: 420px; }
+  .case-image { height: auto; margin-top: var(--s-6); }
 }
 @media (max-width: 639px) {
-  .hero__media .ly-float__title, .hero--split .hero__facts { display: none; }
-  .client-methods { grid-template-columns: 1fr; }
-  .client-logo-facts { grid-template-columns: 1fr; }
-  .client-logo-facts div + div { padding-left: 0; border-left: 0; }
+  .report-index { grid-template-columns: 1fr; }
+  .report-index div + div { padding-left: 0; border-left: 0; border-top: 1px solid var(--line); }
+  .case-copy h3 { font-size: 22px; }
+  .case-image { border-radius: var(--r-md); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .case-link img { transition: none; }
 }
 </style>
 <script>document.documentElement.classList.add('m-enter');setTimeout(()=>document.documentElement.classList.add('m-enter-done'),700)</script>
 <script>document.documentElement.classList.add('mo-js');setTimeout(()=>document.documentElement.classList.add('mo-safe'),2500)</script>
-<link rel="modulepreload" href="../../assets/moments/moments.js">
-<link rel="modulepreload" href="../../assets/moments/lib.js">
-<link rel="modulepreload" href="../../assets/moments/picture-develops/moment.js">
 </head>
 <body>
 <!-- type: service
      deal: hero split, palette steel-orange, nav split, footer columns, close type,
      rhythm space, buttons solid, mark arc
-     moments: picture-develops in #challenge -->
+     case index: two case rows, one paragraph and one image each -->
 <header class="nav nav--split">
   <div class="wrap nav__bar">
     <a class="skip-link" href="#top">跳到正文 Skip to content</a>
@@ -103,143 +99,84 @@
   <section class="hero hero--split" data-enter aria-labelledby="hero-h">
     <div class="wrap"><div class="hero-text grid hero__grid">
       <div class="hero__text span-5">
-        <h1 id="hero-h">客户案例：一家全球领先的乳业集团</h1>
-        <p class="hero__lead">2020 年，我参与一家全球领先的乳业集团的人力资源运营模式转型：从现有三支柱模式诊断开始，设计未来运营模式、三年实施路径和 HRBP、COE 赋能方案。</p>
+        <p class="hero-label">客户案例 · 组织与运营 · 2020</p>
+        <h1 id="hero-h">把组织问题，做成可执行的运营模式</h1>
+        <p class="hero__lead">两个 2020 年的大型组织转型项目：一个从人力资源三支柱诊断走向未来运营模式和三年实施路径；另一个在跨国业务合并后评估全球 HR 共享服务，推动区域诉求与全球方向形成共同基础。</p>
         <div class="btn-row">
-          <a class="btn btn--primary" href="#company">阅读案例<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
-          <a class="btn btn--secondary" href="../../about/#journey">返回职业经历</a>
+          <a class="btn btn--primary" href="#dairy-case">浏览客户案例<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
+          <a class="btn btn--secondary" href="../../about/#journey">查看职业经历</a>
         </div>
         <dl class="hero__facts">
-          <div><dt>项目启动</dt><dd>2020 年</dd></div>
-          <div><dt>组织与管控设计</dt><dd>6 个月</dd></div>
-          <div><dt>转型路径</dt><dd>3 年</dd></div>
+          <div><dt>公开案例</dt><dd>2 个</dd></div>
+          <div><dt>项目时间</dt><dd>2020 年</dd></div>
+          <div><dt>覆盖主题</dt><dd>组织与共享服务</dd></div>
         </dl>
       </div>
       <div class="hero__media span-6 start-7">
         <img src="../../assets/clients/dairy-group/dairy-landscape.webp" width="1440" height="772" alt="绿色牧场与丘陵景观" style="--ly-pos: 50% 55%" fetchpriority="high" data-source="editorial" data-subject="dairy landscape">
-        <div class="ly-float client-float">
-          <div><span class="ly-float__row">全球乳业集团 · 2020</span><span class="ly-float__title">人力资源运营模式转型</span></div>
-        </div>
       </div>
     </div></div>
   </section>
 
-  <section class="section" id="company" aria-labelledby="company-h">
-    <div class="wrap grid grid--top">
-      <div class="span-6">
-        <div class="section-head">
-          <h2 id="company-h">客户简介</h2>
-        </div>
-        <p class="t-lead">客户是一家全球领先的乳业集团，业务覆盖液态奶、奶粉、酸奶、冷饮等多个品类，并在全球范围开展研发、供应链与市场布局。</p>
-        <p>复杂的组织规模和业务组合，也让人力资源运营模式成为支撑增长的重要基础。本案例按客户披露边界匿名呈现，聚焦项目方法与本人承担的工作。</p>
-        <dl class="client-logo-facts">
-          <div><dt>客户类型</dt><dd>全球乳业集团</dd></div>
-          <div><dt>业务范围</dt><dd>多品类</dd></div>
-          <div><dt>组织特征</dt><dd>全球布局</dd></div>
-        </dl>
-      </div>
-      <figure class="client-logo-card span-6 start-7">
-        <div class="client-logo-visual">
-          <img class="client-logo-landscape" src="../../assets/clients/dairy-group/dairy-pasture.webp" width="640" height="567" alt="绿色牧场场景" loading="lazy" decoding="async">
-        </div>
-      </figure>
-    </div>
-  </section>
-
-  <section class="section g2" id="challenge" style="--h: 2" aria-labelledby="challenge-h">
-    <div class="wrap">
-      <div class="group">
-        <div class="grid grid--top">
-          <div class="span-6">
-            <div class="section-head">
-              <h2 id="challenge-h">项目背景与挑战</h2>
-            </div>
-            <p class="t-lead">2020 年，客户的业务进入转型期。集团已经建立初步的人力资源三支柱模式，但需要进一步解决如何更高效、更专业地服务业务。</p>
-            <p>项目的核心，是提升人力资源的效率和效能，并让 HRBP、COE 与共享服务在新的业务环境中形成更清晰的职责和服务边界。</p>
-          </div>
-          <figure class="client-photo span-6 start-7" data-moment="picture-develops">
-            <img src="../../assets/photos/stand-ins/photo-c877-960.jpg" width="960" height="640" alt="堆叠的专业资料与书页" loading="lazy" decoding="async" data-source="stand-in" data-subject="project materials">
-          </figure>
-        </div>
-      </div>
-      <div class="group" id="solution">
-        <div class="grid grid--top">
-          <div class="span-6">
-            <div class="section-head">
-              <h3>解决方案</h3>
-              <p>从诊断到高阶设计，再到投入产出与能力建设，形成一条可实施的转型路径。</p>
-            </div>
-            <ol class="client-methods client-methods--single">
-              <li>
-                <span class="client-method-n">01</span>
-                <h4>诊断现有人力资源运营模式</h4>
-                <p>梳理现有三支柱的职责、流程、服务界面和交付瓶颈，识别效率与效能的改进空间。</p>
-              </li>
-              <li>
-                <span class="client-method-n">02</span>
-                <h4>分析人力资源团队工作</h4>
-                <p>从时间分布、能力结构和技术手段三个维度，理解团队当前的工作方式。</p>
-              </li>
-              <li>
-                <span class="client-method-n">03</span>
-                <h4>设计未来人力资源运营模式</h4>
-                <p>完成目标运营模式的高阶设计，明确组织职责、服务分层与协同机制。</p>
-              </li>
-              <li>
-                <span class="client-method-n">04</span>
-                <h4>对标领先实践与评估投入产出</h4>
-                <p>对照业界领先实践，分析共享中心的投入、收益和实施优先级。</p>
-              </li>
-            </ol>
-          </div>
-          <figure class="client-photo span-6 start-7">
-            <img src="../../assets/photos/stand-ins/photo-f3791096-960.jpg" width="960" height="728" alt="项目工作坊中的彩色便签" loading="lazy" decoding="async" data-source="stand-in" data-subject="workshop notes">
-          </figure>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="outcome" aria-labelledby="outcome-h">
-    <div class="wrap grid grid--top">
-      <div class="span-6">
-        <div class="section-head">
-          <h2 id="outcome-h">价值与结果</h2>
-        </div>
-        <ul class="rows result-row">
-          <li><span class="rows__name">组织架构与管控模式<small>6 个月内完成设计</small></span><span class="rows__value">6 个月</span></li>
-          <li><span class="rows__name">转型实施路径图<small>覆盖未来三年的推进节奏</small></span><span class="rows__value">3 年</span></li>
-          <li><span class="rows__name">人员能力培养<small>围绕转型所需能力开展建设</small></span><span class="rows__value">能力建设</span></li>
-          <li><span class="rows__name">HRBP 与 COE 赋能<small>通过培训支持新运营模式落地</small></span><span class="rows__value">赋能培训</span></li>
-        </ul>
-      </div>
-      <figure class="client-photo span-6 start-7">
-        <img src="../../assets/photos/stand-ins/photo-f78874959-500.jpg" srcset="../../assets/photos/stand-ins/photo-f78874959-500.jpg 500w, ../../assets/photos/stand-ins/photo-f78874959-960.jpg 960w, ../../assets/photos/stand-ins/photo-f78874959.jpg 1280w" sizes="(max-width: 639px) 342px, 50vw" width="1280" height="962" alt="电脑键盘的近景" loading="lazy" decoding="async" data-source="stand-in" data-subject="project work">
-      </figure>
-    </div>
-  </section>
-
-  <section class="section" id="onsite" aria-labelledby="onsite-h">
+  <section class="section" id="dairy-case" aria-labelledby="dairy-h">
     <div class="wrap">
       <div class="section-head">
-        <h2 id="onsite-h">服务现场</h2>
-        <p>项目材料与工作坊片段。</p>
+        <p class="t-label">案例 01 · 乳业集团</p>
+        <h2 id="dairy-h">从诊断到转型路径</h2>
+        <p>从现有人力资源运营模式诊断，到组织设计、共享服务投入产出评估和三年实施路径。</p>
       </div>
-      <div class="grid site-gallery">
-        <figure class="span-4"><img src="../../assets/photos/stand-ins/selected/practice-notebook-960.jpg" width="960" height="640" alt="项目工作笔记" loading="lazy" decoding="async" data-source="stand-in" data-subject="project notes"></figure>
-        <figure class="span-4"><img src="../../assets/photos/stand-ins/selected/texture-paper-960.jpg" width="960" height="1371" alt="项目分析使用的纸张" loading="lazy" decoding="async" data-source="stand-in" data-subject="project materials"></figure>
-        <figure class="span-4"><img src="../../assets/photos/stand-ins/photo-f15816502-960.jpg" width="960" height="722" alt="不同颜色的项目便签" loading="lazy" decoding="async" data-source="stand-in" data-subject="workshop notes"></figure>
+      <a class="grid grid--top case-link" href="dairy-group/index.html">
+        <div class="span-5 case-copy">
+          <dl class="report-index">
+            <div><dt>时间</dt><dd>2020</dd></div>
+            <div><dt>客户</dt><dd>全球乳业集团</dd></div>
+            <div><dt>周期</dt><dd>6 个月</dd></div>
+          </dl>
+          <p class="t-label">组织设计 · 共享服务 · 能力建设</p>
+          <h3>一家全球领先的乳业集团：从现有人力资源运营模式，到三年转型路径</h3>
+          <p>客户已建立初步的三支柱模式。我从现有人力资源运营模式诊断、团队工作分析和高阶设计切入，完成组织架构与管控模式设计，并形成覆盖未来三年的实施路径。</p>
+          <span class="case-arrow">阅读完整案例<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h10M8 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></span>
+        </div>
+        <figure class="span-7 start-6 case-image">
+          <img src="../../assets/clients/dairy-group/dairy-pasture.webp" width="640" height="567" alt="绿色牧场中的奶牛" loading="lazy" decoding="async">
+        </figure>
+      </a>
+    </div>
+  </section>
+
+  <section class="section" id="automotive-case" aria-labelledby="automotive-h">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="t-label">案例 02 · 汽车集团</p>
+        <h2 id="automotive-h">跨国合并后的全球协同</h2>
+        <p>在区域自治与全球整合之间建立共同方向，并为全球 HR 共享服务形成可实施的高阶路线图。</p>
       </div>
+      <a class="grid grid--top case-link" href="automotive-group/index.html">
+        <div class="span-5 case-copy">
+          <dl class="report-index">
+            <div><dt>时间</dt><dd>2020</dd></div>
+            <div><dt>客户</dt><dd>全球汽车集团</dd></div>
+            <div><dt>范围</dt><dd>中国 · 美洲 · 欧洲</dd></div>
+          </dl>
+          <p class="t-label">全球 HR 共享服务 · 利益协同 · 实施路线图</p>
+          <h3>一家全球领先的汽车集团：从区域分歧走向全球共享服务共同方向</h3>
+          <p>在两家大型国际汽车业务合并后，我作为德勤中国侧项目经理，协调客户高管与全球咨询团队，以高管赞助、证据分析和分阶段协作回应区域 HR 对决策权与服务交付的顾虑，形成覆盖中国、美洲和欧洲的高阶实施路线图。</p>
+          <span class="case-arrow">阅读完整案例<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h10M8 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></span>
+        </div>
+        <figure class="span-7 start-6 case-image case-image--lobby">
+          <img src="../../assets/photos/work/automotive-group/site-lobby.jpg" srcset="../../assets/photos/work/automotive-group/site-lobby-740.jpg 740w, ../../assets/photos/work/automotive-group/site-lobby.jpg 1400w" sizes="(max-width: 639px) 342px, 58vw" width="1400" height="1050" alt="汽车集团办公大堂的品牌展示与休息区" loading="lazy" decoding="async" data-source="client" data-subject="automotive group office">
+        </figure>
+      </a>
     </div>
   </section>
 </main>
 
-<footer class="footer closing footer--dark ground-inverse" id="contact" aria-labelledby="close-h">
+<footer class="footer closing footer--dark ground-inverse" aria-labelledby="close-h">
   <div class="wrap">
     <div class="closing__cta close--type">
       <div class="section-head">
-        <h2 id="close-h">讨论组织转型</h2>
-        <p>如果你正在推进 HR 三支柱、共享服务或组织能力建设，欢迎交流。</p>
+        <h2 id="close-h">讨论组织与运营模式</h2>
+        <p>如果你正在推进 HR 三支柱、共享服务或跨国组织整合，欢迎交流。</p>
       </div>
       <a class="btn btn--primary btn--xl" href="mailto:lining78@sina.com">联系厉宁<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
     </div>
@@ -247,20 +184,20 @@
       <div class="grid">
         <div class="span-6 stack-5">
           <a class="nav__logo" href="../../index.html"><span class="mark" data-mark="arc" aria-hidden="true"></span>厉宁 Ning Li</a>
-          <p class="footer__lede">客户案例：全球领先乳业集团的人力资源运营模式转型。</p>
+          <p class="footer__lede">客户案例：组织设计、共享服务与跨国转型。</p>
         </div>
         <div class="span-3 start-7 footer__col">
           <h3>案例</h3>
-          <ul><li><a href="#company">客户简介</a></li><li><a href="#challenge">项目挑战</a></li><li><a href="#solution">解决方案</a></li><li><a href="#outcome">价值与结果</a></li></ul>
+          <ul><li><a href="#dairy-case">乳业集团</a></li><li><a href="#automotive-case">汽车集团</a></li><li><a href="../../about/">关于</a></li></ul>
         </div>
         <div class="span-3 footer__col">
           <h3>语言与联系</h3>
-          <ul><li><a href="../../about/">关于</a></li><li><a href="../../en/career/clients/" lang="en" hreflang="en">English</a></li><li><a href="mailto:lining78@sina.com">发送邮件</a></li></ul>
+          <ul><li><a href="../../en/career/clients/" lang="en" hreflang="en">English</a></li><li><a href="../../practices/">领先实践</a></li><li><a href="mailto:lining78@sina.com">发送邮件</a></li></ul>
         </div>
       </div>
       <div class="footer__legal">
         <span>&copy; 2026 厉宁 · 客户名称按披露边界匿名</span>
-        <details class="credits"><summary>客户按披露边界匿名呈现，项目内容由厉宁提供</summary><p>本页不展示客户名称与标识。图片为通用编辑素材，不代表客户办公场所、项目现场或客户背书。</p></details>
+        <details class="credits"><summary>客户名称按披露边界匿名，项目内容由厉宁提供</summary><p>客户名称与品牌标识归其所有者。页面照片由厉宁提供，照片中的场所标识仅用于记录工作现场，不代表客户对公开文本的额外确认或背书。</p></details>
       </div>
     </div>
   </div>
