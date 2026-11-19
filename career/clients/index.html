@@ -125,7 +125,7 @@
         <h2 id="dairy-h">从诊断到转型路径</h2>
         <p>从现有人力资源运营模式诊断，到组织设计、共享服务投入产出评估和三年实施路径。</p>
       </div>
-      <a class="grid grid--top case-link" href="dairy-group/index.html">
+      <a class="grid grid--top case-link" href="dairy-group/">
         <div class="span-5 case-copy">
           <dl class="report-index">
             <div><dt>时间</dt><dd>2020</dd></div>
@@ -151,7 +151,7 @@
         <h2 id="automotive-h">跨国合并后的全球协同</h2>
         <p>在区域自治与全球整合之间建立共同方向，并为全球 HR 共享服务形成可实施的高阶路线图。</p>
       </div>
-      <a class="grid grid--top case-link" href="automotive-group/index.html">
+      <a class="grid grid--top case-link" href="automotive-group/">
         <div class="span-5 case-copy">
           <dl class="report-index">
             <div><dt>时间</dt><dd>2020</dd></div>
@@ -206,5 +206,10 @@
 <script type="module" src="../../assets/system.js"></script>
 <script type="module" src="../../assets/motion/motion.js"></script>
 <script type="module" src="../../assets/layout/layout.js"></script>
+<script>
+if (location.protocol === 'file:') {
+  document.querySelectorAll('a.case-link[href$="/"]').forEach((link) => { link.href += 'index.html'; });
+}
+</script>
 </body>
 </html>

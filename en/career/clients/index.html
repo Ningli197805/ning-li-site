@@ -125,7 +125,7 @@
         <h2 id="dairy-h">HR operating-model transformation at a dairy group</h2>
         <p>A future operating model, shared-services assessment and three-year implementation path, built from a diagnostic of how HR worked.</p>
       </div>
-      <a class="grid grid--top case-link" href="dairy-group/index.html">
+      <a class="grid grid--top case-link" href="dairy-group/">
         <div class="span-5 case-copy">
           <dl class="report-index">
             <div><dt>Year</dt><dd>2020</dd></div>
@@ -151,7 +151,7 @@
         <h2 id="automotive-h">Global HR shared-services model at an automotive group</h2>
         <p>Building agreement between regional autonomy and global integration, and turning it into a practical global HR shared-services roadmap.</p>
       </div>
-      <a class="grid grid--top case-link" href="automotive-group/index.html">
+      <a class="grid grid--top case-link" href="automotive-group/">
         <div class="span-5 case-copy">
           <dl class="report-index">
             <div><dt>Year</dt><dd>2020</dd></div>
@@ -206,5 +206,10 @@
 <script type="module" src="../../../assets/system.js"></script>
 <script type="module" src="../../../assets/motion/motion.js"></script>
 <script type="module" src="../../../assets/layout/layout.js"></script>
+<script>
+if (location.protocol === 'file:') {
+  document.querySelectorAll('a.case-link[href$="/"]').forEach((link) => { link.href += 'index.html'; });
+}
+</script>
 </body>
 </html>
