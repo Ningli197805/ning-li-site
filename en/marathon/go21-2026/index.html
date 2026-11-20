@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="en" data-type="service" data-radius="soft" data-buttons="solid" data-motion>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Go21 Gobi Challenge: 121 kilometres in four days | Ning Li</title>
+<meta name="description" content="Ning Li's account of the 21st Xuanzang Road Gobi Challenge: four days and 121 kilometres with the Hong Kong Polytechnic University EE team, finishing second.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Go21 Gobi Challenge: 121 kilometres in four days | Ning Li">
+<meta property="og:description" content="Into the desert with a dream: preparation, four stages and a hard-earned team result.">
+<meta property="og:image" content="../../../assets/photos/marathon/go21-2026/hero.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../../../favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#eeeeeb">
+<meta name="site-kind" content="other">
+<meta name="page-type" content="service">
+<link rel="stylesheet" href="../../../assets/system.css">
+<link rel="stylesheet" href="../../../assets/ui/cards.css">
+<link rel="stylesheet" href="../../../assets/motion/motion.css">
+<link rel="stylesheet" href="../../../assets/layout/layout.css">
+<link rel="stylesheet" href="../../../assets/icons/icon.css">
+<style>
+@font-face { font-family: "Hanken Grotesk"; src: url("../../../assets/fonts/HankenGrotesk-Variable.ttf") format("truetype"); font-style: normal; font-weight: 400 700; font-display: swap; }
+:root {
+  --p-bg: #eeeeeb; --p-surface: #e1e1dd; --p-ink: #1c1d1f; --p-muted: #5c5e62;
+  --p-accent: #c2501b; --p-accent-ink: #ffffff; --p-action: #c2501b; --p-action-ink: #ffffff;
+  --p-inv-bg: #1c1d1f; --p-inv-surface: #28292b; --p-inv-ink: #eeeeeb; --p-inv-muted: #969796;
+  --p-inv-accent: #c2501b; --p-inv-accent-ink: #ffffff; --p-inv-action: #c2501b; --p-inv-action-ink: #ffffff;
+  --font-display: "Hanken Grotesk", sans-serif;
+  --font-text: "Hanken Grotesk", sans-serif;
+  --display-weight: 400;
+  --display-tracking: -0.03em;
+  --display-tracking-xl: -0.038em;
+}
+.hero.go21-hero { height: auto; min-height: min(100vh, 900px); min-height: min(100svh, 900px); padding: calc(var(--nav) + var(--hgap)) 0 var(--s-8); }
+.hero.go21-hero > .wrap, .hero.go21-hero .hero-text { height: auto; }
+.hero.go21-hero .hero-text { align-content: start; }
+.hero.go21-hero .go21-hero-media { height: min(520px, var(--ly-fit)); }
+.go21-hero h1 { font-size: clamp(40px, 4vw, 64px); line-height: 1.08; }
+.go21-hero-media { margin: 0; overflow: hidden; border-radius: var(--r-lg); background: #f3f3ef; }
+.go21-hero-media img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.go21-story { height: auto; min-height: 0; padding-block: var(--s-9) var(--s-10); }
+.go21-story > .wrap { height: auto; }
+.go21-memoir { max-width: 1020px; margin-inline: auto; }
+.go21-opening { display: grid; gap: var(--s-5); margin-bottom: var(--s-10); }
+.go21-opening p, .go21-copy > p, .go21-full > p { margin: 0; font-size: clamp(18px, .32vw + 16px, 21px); line-height: 1.9; }
+.go21-opening > p:first-child { font-size: clamp(25px, 1vw + 20px, 34px); line-height: 1.55; letter-spacing: var(--display-tracking); }
+.go21-chapter { clear: both; display: flow-root; margin-top: var(--s-10); padding-top: var(--s-6); border-top: 1px solid var(--line); }
+.go21-chapter h2 { margin: 0 0 var(--s-5); color: var(--p-accent); font-size: clamp(30px, 1.5vw + 22px, 44px); line-height: 1.16; }
+.go21-split { display: grid; grid-template-columns: minmax(0, 1.12fr) minmax(260px, .88fr); gap: var(--s-7); align-items: start; }
+.go21-split--media-left { grid-template-columns: minmax(260px, .88fr) minmax(0, 1.12fr); }
+.go21-copy { display: grid; gap: var(--s-4); }
+.go21-full { display: grid; gap: var(--s-4); margin-bottom: var(--s-6); }
+.go21-media { margin: 0; overflow: hidden; border-radius: var(--r-md); background: var(--surface); }
+.go21-media a { display: block; }
+.go21-media img { display: block; width: 100%; height: auto; }
+.go21-media-pair { display: grid; grid-template-columns: 1fr; gap: var(--s-4); width: 100%; }
+.go21-callout { margin: var(--s-5) 0; padding: var(--s-5); border-left: 4px solid var(--p-accent); background: #e5e5e0; color: var(--p-accent); font-size: clamp(26px, 1.3vw + 19px, 38px); line-height: 1.28; letter-spacing: -.025em; font-weight: 600; }
+.go21-trio { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr); gap: var(--s-4); align-items: center; margin: var(--s-6) 0; }
+.go21-trio .go21-callout { margin: 0; background: transparent; border: 0; padding: 0; }
+.go21-closing-line { margin: var(--s-7) 0 0 !important; padding: var(--s-6); background: var(--p-ink); color: var(--p-inv-ink); font-size: clamp(22px, 1vw + 18px, 30px) !important; line-height: 1.55 !important; }
+.go21-gallery-head { margin-top: var(--s-10); }
+.go21-gallery-head h2 { font-size: clamp(30px, 1.5vw + 22px, 44px); line-height: 1.16; }
+.photo-wall { display: grid; gap: var(--s-5); margin-top: var(--s-5); }
+.photo-row { display: grid; grid-template-columns: repeat(3, minmax(0, 360px)); justify-content: space-between; gap: var(--s-5); }
+.photo-tile { display: block; width: 100%; aspect-ratio: 1; overflow: hidden; border-radius: var(--r-lg); background: var(--surface); }
+.photo-tile img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.gallery-return { margin-top: var(--s-6); }
+.lightbox { width: min(calc(100vw - 48px), 1180px); max-width: none; max-height: calc(100svh - 48px); margin: auto; padding: 0; border: 0; border-radius: var(--r-lg); background: #171719; color: #eeeeeb; overflow: hidden; }
+.lightbox::backdrop { background: rgb(18 18 20 / .86); }
+.lightbox__bar { position: absolute; z-index: 2; top: 12px; right: 12px; display: flex; gap: var(--s-2); }
+.lightbox__control { display: grid; width: 44px; height: 44px; place-items: center; padding: 0; border: 1px solid rgb(255 255 255 / .42); border-radius: 50%; background: rgb(28 29 31 / .9); color: #fff; cursor: pointer; }
+.lightbox__control:hover { background: #c2501b; }
+.lightbox__image { display: block; width: 100%; max-height: calc(100svh - 48px); object-fit: contain; }
+.lightbox__nav { position: absolute; inset: auto 24px 24px; display: flex; justify-content: space-between; pointer-events: none; }
+.lightbox__nav .lightbox__control { pointer-events: auto; }
+@media (max-width: 900px) {
+  .hero.go21-hero { min-height: 100vh; min-height: 100svh; }
+  .hero.go21-hero .go21-hero-media { height: auto; aspect-ratio: 16 / 9; margin-top: var(--s-7); }
+  .go21-split, .go21-split--media-left { grid-template-columns: 1fr; gap: var(--s-6); }
+  .go21-split--media-left .go21-media { order: 2; }
+}
+@media (max-width: 639px) {
+  .hero__media .ly-float__title, .hero--split .hero__facts { display: none; }
+  .go21-story { padding-block: var(--s-8) var(--s-9); }
+  .go21-opening p, .go21-copy > p, .go21-full > p { font-size: 17px; line-height: 1.82; }
+  .go21-opening > p:first-child { font-size: 24px; }
+  .go21-chapter { margin-top: var(--s-9); }
+  .go21-callout { font-size: 27px; padding: var(--s-4); }
+  .go21-trio { grid-template-columns: 1fr; gap: 2px; }
+  .go21-trio .go21-callout { grid-column: auto; }
+  .photo-wall { gap: 2px; }
+  .photo-row { gap: 2px; }
+  .photo-tile { border-radius: 0; }
+  .lightbox { width: calc(100vw - 24px); max-height: calc(100svh - 24px); }
+  .lightbox__image { max-height: calc(100svh - 24px); }
+  .lightbox__bar { top: 8px; right: 8px; }
+  .lightbox__nav { inset: auto 8px 8px; }
+}
+</style>
+<script>document.documentElement.classList.add('m-enter');setTimeout(()=>document.documentElement.classList.add('m-enter-done'),700)</script>
+<script>document.documentElement.classList.add('mo-js');setTimeout(()=>document.documentElement.classList.add('mo-safe'),2500)</script>
+<link rel="modulepreload" href="../../../assets/moments/moments.js">
+<link rel="modulepreload" href="../../../assets/moments/lib.js">
+<link rel="modulepreload" href="../../../assets/moments/picture-develops/moment.js">
+</head>
+<body>
+<header class="nav nav--centre">
+  <div class="wrap nav__bar">
+    <a class="skip-link" href="#top">Skip to content</a>
+    <a class="nav__logo" href="../../index.html"><span class="mark" data-mark="dots" aria-hidden="true"></span>Ning Li</a>
+    <nav class="nav__links" aria-label="Main">
+      <div class="nav__item"><a class="nav__link" href="../../about/">About</a></div>
+      <div class="nav__item"><a class="nav__link" href="../index.html">Marathon</a></div>
+      <div class="nav__item"><a class="nav__link" href="../records.html">Race records</a></div>
+      <div class="nav__item"><a class="nav__link" href="../../career/clients/">Client work</a></div>
+      <div class="nav__item"><a class="nav__link" href="../../practices/">Leading practice</a></div>
+    </nav>
+    <div class="nav__actions">
+      <a class="nav__link" href="../../../marathon/go21-2026/index.html" lang="zh-CN" hreflang="zh-CN">中文</a>
+      <a class="btn btn--primary" href="https://ning-li.com/en/about/#contact">Contact Ning</a>
+    </div>
+    <button class="nav__toggle" type="button" aria-expanded="false" aria-label="Open menu">
+      <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M2 5h14M2 13h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero hero--split go21-hero" data-enter aria-labelledby="hero-h">
+    <div class="wrap"><div class="hero-text grid hero__grid">
+      <div class="hero__text span-5">
+        <p class="t-label">1–4 October 2026 · Go21 Challenge</p>
+        <h1 id="hero-h">Go21 Gobi Challenge</h1>
+        <p class="hero__lead">Into the desert with a dream. Four days and 121 kilometres, from months of preparation to second place in the EE team category.</p>
+        <div class="btn-row">
+          <a class="btn btn--primary" href="#story">Read the story<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
+          <a class="btn btn--secondary" href="../index.html#go21">Back to marathon</a>
+        </div>
+        <dl class="hero__facts">
+          <div><dt>Course</dt><dd>121 km / 4 days</dd></div>
+          <div><dt>Team result</dt><dd>EE runner-up</dd></div>
+          <div><dt>Bib</dt><dd>E34A002</dd></div>
+        </dl>
+      </div>
+      <figure class="go21-hero-media span-6 start-7" data-moment="picture-develops">
+        <img src="../../../assets/photos/marathon/go21-2026/hero.jpg" width="923" height="692" alt="Ning Li and the Hong Kong Polytechnic University Go21 team at the start" fetchpriority="high" data-source="client" data-subject="Go21 Gobi Challenge team">
+      </figure>
+    </div></div>
+  </section>
+
+  <section class="section go21-story" id="story" data-screen="free" aria-labelledby="story-h">
+    <div class="wrap">
+      <article class="go21-memoir" data-edge-free aria-labelledby="story-h">
+        <p class="t-label" id="story-h">The 21st Xuanzang Road Gobi Challenge</p>
+        <div class="go21-opening">
+          <p>The dust of Go21 has finally settled. Months of focused preparation and four days of extreme racing across 121 kilometres have become a permanent memory. Looking back on this once-in-a-lifetime run with the A Team, my heart is still racing.</p>
+          <p>People imagine that a great journey must be filled with dramatic stories. Only after crossing this desert did I realise how quickly those four days and three nights passed. There was no time to savour them before they became our own legend.</p>
+          <p>It all began at an ordinary gathering late last year. Through my old mountaineering friend Lao Pang, I met a group of exceptional runners and trail athletes. Team leader Yu asked me directly: “Would you like to run the Gobi Challenge?” The passion inside me was instantly lit. I agreed without hesitation. A marathon was already familiar territory, but four consecutive days and 121 kilometres through a harsh desert would be an entirely new test.</p>
+        </div>
+
+        <section class="go21-chapter" aria-labelledby="preparation-h">
+          <h2 id="preparation-h">Preparation</h2>
+          <div class="go21-split">
+            <div class="go21-copy">
+              <p>In March we began our group training camp in humid Hong Kong. I met our resilient captain Albert, far-sighted Professor Liang and teammate Xiaomai, who later had to withdraw through injury. We ran hard on the road on the first day and climbed the MacLehose Trail on the second. Everyone was full of energy.</p>
+              <p>From then on, we trained in deliberately demanding blocks designed to copy the rhythm of the race. Every two to three weeks I completed four consecutive days and more than 100 kilometres, forcing the body to produce again before it had fully recovered. My fitness improved sharply; in the first seven months of 2026 my average monthly distance reached 450 kilometres.</p>
+              <div class="go21-callout">The hardest part was finding the exact balance between high mileage and complete recovery.</div>
+              <p>Injuries fought back. Early in June, two kilometres from the finish of our first desert reconnaissance, my iliotibial band felt like a needle. An emergency massage from Shutang helped me continue. The next day a sandstorm forced the 33-kilometre stage to stop at 26 kilometres. On the third day, I fought a strong crosswind until my legs failed before a valley and I had to take the vehicle. The lesson was clear: run too little and aerobic endurance suffers; run too much and injury returns.</p>
+              <p>In mid-July we completed more than 70 kilometres of mountain roads in three days in Guiyang, finishing strongly despite sore knees. In August I travelled to Africa and ran four marathons in four countries over six days, coping with severe temperature changes, 1,600 metres of elevation difference and constant travel. My IT band held up and gave me renewed confidence.</p>
+              <p>Then came another test. On 6 September I ran the Shenyang Half Marathon with my wife. Knee pain returned two kilometres from the finish. A week later at the Harbin Marathon it appeared at 18 kilometres and became agonising at 26, one of the hardest battles in more than 40 marathons. With only two weeks left before Go21, I could not help feeling anxious.</p>
+            </div>
+            <div class="go21-media-pair">
+              <figure class="go21-media"><a href="../../../assets/photos/marathon/go21-2026/original/02-hong-kong-training.jpg" data-lightbox-link data-original="../../../assets/photos/marathon/go21-2026/original/02-hong-kong-training.jpg" data-alt="The Go21 team after training in Hong Kong"><img src="../../../assets/photos/marathon/go21-2026/original/02-hong-kong-training.jpg" width="469" height="248" alt="The Go21 team after training in Hong Kong" loading="lazy" decoding="async" data-source="client" data-subject="Go21 Hong Kong training"></a></figure>
+              <figure class="go21-media"><a href="../../../assets/photos/marathon/go21-2026/original/03-training-run.jpg" data-lightbox-link data-original="../../../assets/photos/marathon/go21-2026/original/03-training-run.jpg" data-alt="Teammates running side by side in training"><img src="../../../assets/photos/marathon/go21-2026/web/03-training-run.jpg" width="570" height="840" alt="Teammates running side by side in training" loading="lazy" decoding="async" data-source="client" data-subject="Go21 training run"></a></figure>
+              <figure class="go21-media"><a href="../../../assets/photos/marathon/go21-2026/original/18-route-banner.jpg" data-lightbox-link data-original="../../../assets/photos/marathon/go21-2026/original/18-route-banner.jpg" data-alt="The Go21 team in front of the course information sign"><img src="../../../assets/photos/marathon/go21-2026/original/18-route-banner.jpg" width="428" height="292" alt="The Go21 team in front of the course information sign" loading="lazy" decoding="async" data-source="client" data-subject="Go21 team before the course"></a></figure>
+            </div>
+          </div>
+        </section>
+
+        <section class="go21-chapter" aria-labelledby="experience-h">
+          <h2 id="experience-h">Experience day: 27 km</h2>
+          <div class="go21-split">
+            <div class="go21-copy">
+              <p>Experience-day times did not count towards the overall result, but my desire to race was impossible to contain. The start was crowded and the first two kilometres were slow. Once I broke clear after four kilometres, I raised the pace and kept my heart rate at 140. Hearing teammates over the radio, some ahead and some behind, told me everyone was saving energy.</p>
+              <p>I kept passing runners until there was nobody ahead of me after 20 kilometres. At 22 kilometres a bearded international runner came past and then followed my line. Three kilometres later he dropped away. In the final kilometre a volunteer shouted that four runners were still ahead. I emptied the tank, finished fifth overall and first in the EE group.</p>
+              <p>In a field where everyone else was holding back, I took the lead for the team and earned the first major first-place result of my running life.</p>
+              <aside class="go21-callout">I took the lead for the team and turned an all-out finish into its first result.</aside>
+            </div>
+            <div class="go21-media-pair">
+              <figure class="go21-media"><a href="../../../assets/photos/marathon/go21-2026/original/05-flag-finish.jpg" data-lightbox-link data-original="../../../assets/photos/marathon/go21-2026/original/05-flag-finish.jpg" data-alt="Ning Li raising the team flag at the finish"><img src="../../../assets/photos/marathon/go21-2026/original/05-flag-finish.jpg" width="338" height="471" alt="Ning Li raising the team flag at the finish" loading="lazy" decoding="async" data-source="client" data-subject="Go21 finish with team flag"></a></figure>
+              <figure class="go21-media"><a href="../../../assets/photos/marathon/go21-2026/original/04-race-day.jpg" data-lightbox-link data-original="../../../assets/photos/marathon/go21-2026/original/04-race-day.jpg" data-alt="Ning Li running on the race course"><img src="../../../assets/photos/marathon/go21-2026/original/04-race-day.jpg" width="341" height="512" alt="Ning Li running on the race course" loading="lazy" decoding="async" data-source="client" data-subject="Go21 race day"></a></figure>
+            </div>
+          </div>
+        </section>
+
+        <section class="go21-chapter" aria-labelledby="stage-one-h">
+          <h2 id="stage-one-h">Stage one: 33 km</h2>
+          <div class="go21-split go21-split--media-left">
+            <figure class="go21-media"><a href="../../../assets/photos/marathon/go21-2026/original/06-desert-run.jpg" data-lightbox-link data-original="../../../assets/photos/marathon/go21-2026/original/06-desert-run.jpg" data-alt="Ning Li running alone on the Gobi course"><img src="../../../assets/photos/marathon/go21-2026/original/06-desert-run.jpg" width="481" height="721" alt="Ning Li running alone on the Gobi course" loading="lazy" decoding="async" data-source="client" data-subject="Go21 stage one"></a></figure>
+            <div class="go21-copy">
+              <p>Based on the previous year's result, we started second-to-last among six strong EE teams. By the time the gun went at around 09:05, the desert was already heating up. I followed the planned 5:30 pace, but when my heart rate passed 150 I dropped to 5:45 and fixed my eyes on Albert and Tao ahead.</p>
+              <p>For 20 lonely kilometres, my teammates' voices over the radio were my strongest support. At 20 kilometres I passed the slower group that had started ahead. Through the compulsory check point and the climb that followed, I caught Tao and Albert, who had both fought through cramps.</p>
+              <p>We eased down for the last five kilometres and arrived safely together in 3:14. We had locked in second place in the EE category: more than 17 minutes behind the leaders but just over two minutes ahead of third. There was still no room for error.</p>
+              <aside class="go21-callout">Controlled, solitary racing brought the whole team home and secured the front edge of second place.</aside>
+            </div>
+          </div>
+        </section>
+
+        <section class="go21-chapter" aria-labelledby="stage-two-h">
+          <h2 id="stage-two-h">Stage two: 34 km</h2>
+          <div class="go21-full">
+            <p>We started only 30 seconds behind the leaders. We cut the first corner together, joined the leading group after one kilometre and erased the gap immediately. Our rivals accelerated and the team responded. I had slept badly in my tent and my legs felt heavy. The fear of letting the team down made me extremely anxious.</p>
+          </div>
+          <div class="go21-split">
+            <div class="go21-copy">
+              <p>After 10 kilometres I came back to life. At the 15-kilometre checkpoint I caught Professor Yang, Jianzhong and Tao, all running strongly. I left the checkpoint before the required five minutes were up and pushed alone through the brutal 16-to-26-kilometre climb, passing several EMBA A-team runners.</p>
+              <p>On the final seven kilometres, under the full sun on a rough, washboard road, the radio brought startling news: Jianzhong, who was much heavier than me, was only 700 metres behind. Albert was less than 500 metres ahead.</p>
+              <p>My stubbornness took over. With three kilometres left I threw away every bottle and gel, stripped back every burden and launched an all-out chase. I saw Albert, closed on him and passed him in the final kilometre, finishing in 3:32.</p>
+              <p>That day the whole team produced something extraordinary. Jianzhong, Professor Yang, Frank, Tao, Yuanguang and our sole female warrior Sisi all gave everything. We opened a 17-minute gap on third place and laid a steel foundation for the overall result.</p>
+            </div>
+            <figure class="go21-media"><a href="../../../assets/photos/marathon/go21-2026/original/07-team-on-course.jpg" data-lightbox-link data-original="../../../assets/photos/marathon/go21-2026/original/07-team-on-course.jpg" data-alt="The Go21 team running together on the course"><img src="../../../assets/photos/marathon/go21-2026/original/07-team-on-course.jpg" width="470" height="313" alt="The Go21 team running together on the course" loading="lazy" decoding="async" data-source="client" data-subject="Go21 team on the course"></a></figure>
+          </div>
+          <div class="go21-trio">
+            <figure class="go21-media"><a href="../../../assets/photos/marathon/go21-2026/original/08-camp-sunset.png" data-lightbox-link data-original="../../../assets/photos/marathon/go21-2026/original/08-camp-sunset.png" data-alt="Sunset over the Go21 desert camp and red tents"><img src="../../../assets/photos/marathon/go21-2026/thumbnails/08-camp-sunset.jpg" width="720" height="720" alt="Sunset over the Go21 desert camp and red tents" loading="lazy" decoding="async" data-source="client" data-subject="Go21 desert camp"></a></figure>
+            <aside class="go21-callout">Everyone gave their limit. We pushed through the wind and built a 17-minute buffer for the final victory.</aside>
+            <figure class="go21-media"><a href="../../../assets/photos/marathon/go21-2026/original/11-team-huddle.jpg" data-lightbox-link data-original="../../../assets/photos/marathon/go21-2026/original/11-team-huddle.jpg" data-alt="The team forming a circle with their hands together"><img src="../../../assets/photos/marathon/go21-2026/thumbnails/11-team-huddle.jpg" width="720" height="720" alt="The team forming a circle with their hands together" loading="lazy" decoding="async" data-source="client" data-subject="Go21 team huddle"></a></figure>
+          </div>
+        </section>
+
+        <section class="go21-chapter" aria-labelledby="stage-three-h">
+          <h2 id="stage-three-h">Stage three: 27 km</h2>
+          <div class="go21-split">
+            <div class="go21-copy">
+              <p>On the night before the final stage, Huanggu Yi had its first heavy rain in Go21 history. Under a brilliant sky after the storm, the team was ready. When the gun went, we chased the dream without hesitation. I led us along a shortcut by memory and followed two strong figures into the sunrise, assuming they were the leaders.</p>
+              <p>After a 14-kilometre pursuit I caught them and discovered they were Tao and Frank. The misjudgement disrupted our rhythm. Albert was out of sight and the radio went silent.</p>
+              <p>I gritted my teeth and attacked again, racing all the way to the valley at 21 kilometres. On the final four kilometres I crossed an icy river and climbed through a dense field of runners on exhausted legs. When the radio confirmed that Albert had already finished, I felt a moment of panic. Then I saw every team around me accelerating and found another gear, sprinting across the line.</p>
+              <aside class="go21-callout">Across the icy river and through the final sprint, the team embraced at the finish with the hard-earned runner-up trophy.</aside>
+              <p>Our teammates were waiting with open arms. The tears came without warning. We had held off the chasing teams and brought the EE runner-up trophy home to PolyU, a moment of pride for every member of the PolyU community.</p>
+            </div>
+            <div class="go21-media-pair">
+              <figure class="go21-media"><a href="../../../assets/photos/marathon/go21-2026/original/09-icy-river.png" data-lightbox-link data-original="../../../assets/photos/marathon/go21-2026/original/09-icy-river.png" data-alt="Ning Li crossing an icy river during the final stage"><img src="../../../assets/photos/marathon/go21-2026/original/09-icy-river.png" width="578" height="982" alt="Ning Li crossing an icy river during the final stage" loading="lazy" decoding="async" data-source="client" data-subject="Go21 icy river crossing"></a></figure>
+              <figure class="go21-media"><a href="../../../assets/photos/marathon/go21-2026/original/10-awards-collage.jpg" data-lightbox-link data-original="../../../assets/photos/marathon/go21-2026/original/10-awards-collage.jpg" data-alt="A collage of the Go21 awards ceremony"><img src="../../../assets/photos/marathon/go21-2026/original/10-awards-collage.jpg" width="423" height="423" alt="A collage of the Go21 awards ceremony" loading="lazy" decoding="async" data-source="client" data-subject="Go21 awards"></a></figure>
+            </div>
+          </div>
+        </section>
+
+        <section class="go21-chapter" aria-labelledby="after-h">
+          <h2 id="after-h">After the race</h2>
+          <div class="go21-full">
+            <p>This remarkable victory was never the work of one person. Without the team's total commitment, the result would have been impossible.</p>
+          </div>
+          <div class="go21-split go21-split--media-left">
+            <div class="go21-media-pair">
+              <figure class="go21-media"><a href="../../../assets/photos/marathon/go21-2026/original/12-team-stage.jpg" data-lightbox-link data-original="../../../assets/photos/marathon/go21-2026/original/12-team-stage.jpg" data-alt="The Hong Kong Polytechnic University Go21 team at the awards ceremony"><img src="../../../assets/photos/marathon/go21-2026/original/12-team-stage.jpg" width="435" height="290" alt="The Hong Kong Polytechnic University Go21 team at the awards ceremony" loading="lazy" decoding="async" data-source="client" data-subject="Go21 awards stage"></a></figure>
+              <figure class="go21-media"><a href="../../../assets/photos/marathon/go21-2026/original/14-medal-desert.jpg" data-lightbox-link data-original="../../../assets/photos/marathon/go21-2026/original/14-medal-desert.jpg" data-alt="A Go21 medal on the desert course"><img src="../../../assets/photos/marathon/go21-2026/original/14-medal-desert.jpg" width="430" height="286" alt="A Go21 medal on the desert course" loading="lazy" decoding="async" data-source="client" data-subject="Go21 medal in the desert"></a></figure>
+              <figure class="go21-media"><a href="../../../assets/photos/marathon/go21-2026/original/13-camp-support.png" data-lightbox-link data-original="../../../assets/photos/marathon/go21-2026/original/13-camp-support.png" data-alt="Food, drinks and supplies at the Go21 camp"><img src="../../../assets/photos/marathon/go21-2026/original/13-camp-support.png" width="416" height="312" alt="Food, drinks and supplies at the Go21 camp" loading="lazy" decoding="async" data-source="client" data-subject="Go21 camp support"></a></figure>
+            </div>
+            <div class="go21-copy">
+              <aside class="go21-callout">A steel rear guard: one runner's race, the whole team's protection.</aside>
+              <p><strong>Team leader Yu:</strong> Without him there would have been no PolyU Go21 team. He built the squad from a difficult starting point, found people, prepared supplies for every training session and was always there to hand us water and shout encouragement. During camps we shared a room, yet he would work late and still lead the next morning. His selflessness was the foundation of the team.</p>
+              <p><strong>Coach Guohui:</strong> Our tactical brain. He built a professional, scientific training plan for the desert. He sprained his ankle at the first Hong Kong camp but still accompanied us through Guiyang, Shenzhen and the Gobi, taking care of every detail.</p>
+              <p><strong>Sister Chang:</strong> Our emotional centre. She slept only a few hours before meeting us in Hong Kong, shared hard-won experience at the send-off and remembered every teammate's name. During the race she monitored us on the radio, timed every water and food handover at the checkpoints, and reviewed the day afterwards. She even rented an electric bike to accompany our morning run near Leiyin Temple.</p>
+              <p><strong>Master Xiaojing:</strong> Our recovery specialist. He identified risks, taught us hip-opening exercises, applied kinesiology tape before each stage and worked on our tired muscles afterwards. His hands protected the team, and my IT band survived four hard days without pain.</p>
+              <p><strong>Xiaoyu:</strong> The force behind the camp. She kept working despite being unwell. Each morning she prepared hot water, moved ahead with the next station and made a simple desert tent feel warm with noodles, beef, tea and snacks. She turned a harsh desert into a safe harbour.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="go21-chapter" aria-labelledby="teammates-h">
+          <h2 id="teammates-h">Teammates and support</h2>
+          <div class="go21-split">
+            <div class="go21-copy">
+              <p><strong>My teammates:</strong> Albert, Tao, Professor Liang, Professor Yang, Frank, Jianzhong, Yuanguang and Sisi. Some were old friends from training camps and some were new. The moment we stepped onto the course, we became a team bound by blood and sweat. To the resilient members of the B and C teams, thank you for the strength you brought. I hope to see you in the A Team colours, adding another chapter for PolyU.</p>
+              <p><strong>Senior Jiang Ming (A+):</strong> You crossed 121 kilometres of Gobi alone in one continuous effort. Your example became a light for everyone on our team.</p>
+              <p><strong>Everyone behind us:</strong> To the many members of the PolyU community who could not be in the desert, your messages, cheers and donations were our strongest rear guard. We will never forget that support.</p>
+            </div>
+            <figure class="go21-media"><a href="../../../assets/photos/marathon/go21-2026/original/15-team-poster.png" data-lightbox-link data-original="../../../assets/photos/marathon/go21-2026/original/15-team-poster.png" data-alt="Poster celebrating the Hong Kong Polytechnic University Go21 EE team's runner-up result"><img src="../../../assets/photos/marathon/go21-2026/web/15-team-poster.jpg" width="545" height="993" alt="Poster celebrating the Hong Kong Polytechnic University Go21 EE team's runner-up result" loading="lazy" decoding="async" data-source="client" data-subject="Go21 team poster"></a></figure>
+          </div>
+        </section>
+
+        <section class="go21-chapter" aria-labelledby="reflection-h">
+          <h2 id="reflection-h">Reflection</h2>
+          <div class="go21-split">
+            <div class="go21-copy">
+              <p>Life does not always require us to surpass something. What matters is that we do it.</p>
+              <p>The long and brutal course gave me an unexpected kind of clarity. For years we have talked about challenging and surpassing ourselves. After crossing this desert, I understood that we do not have to keep overtaking something. To stand on the ground, give everything and “do it” is already heroic.</p>
+              <p>The course taught another unforgettable lesson: when it hurts, hold on a little longer.</p>
+              <aside class="go21-callout">A promise without regret: hold the thought, move forward without fear.</aside>
+              <p>The road may be dangerous and every step painful, but when the whole team stays connected and keeps moving, we can pass through the dark. When the moment of victory finally arrives, all the hardship and sweat acquire a meaning that lights up the years.</p>
+              <p>Looking back, I believe even more strongly that a dream matters not only for the glory at the finish line. It also gives us the responsibility and courage to set out for one another and fight side by side.</p>
+              <p>We do not need perfect lives or constant self-transcendence. If the team holds a shared thought and dares to move forward, one more step will eventually be enough. One day, a dream that once seemed impossibly distant will break into reality through sustained effort and sweat.</p>
+            </div>
+            <div class="go21-media-pair">
+              <figure class="go21-media"><a href="../../../assets/photos/marathon/go21-2026/original/16-course-map.png" data-lightbox-link data-original="../../../assets/photos/marathon/go21-2026/original/16-course-map.png" data-alt="Map of the Go21 main race course"><img src="../../../assets/photos/marathon/go21-2026/original/16-course-map.png" width="415" height="234" alt="Map of the Go21 main race course" loading="lazy" decoding="async" data-source="client" data-subject="Go21 course map"></a></figure>
+              <figure class="go21-media"><a href="../../../assets/photos/marathon/go21-2026/original/17-sunset-run.jpg" data-lightbox-link data-original="../../../assets/photos/marathon/go21-2026/original/17-sunset-run.jpg" data-alt="Teammates running together in the Gobi sunset"><img src="../../../assets/photos/marathon/go21-2026/original/17-sunset-run.jpg" width="415" height="213" alt="Teammates running together in the Gobi sunset" loading="lazy" decoding="async" data-source="client" data-subject="Go21 sunset run"></a></figure>
+            </div>
+          </div>
+          <p class="go21-closing-line"><strong>Life does not always require us to surpass something. What matters is that we do it.</strong></p>
+        </section>
+
+        <div class="go21-gallery-head section-head">
+          <h2>Go21 in pictures</h2>
+          <p>Select any photograph to view the original. Use the arrow keys to move between images.</p>
+        </div>
+        <div class="photo-wall" id="photos" aria-label="Go21 Challenge photographs in three columns">
+          <div class="photo-row">
+            <a class="photo-tile" href="../../../assets/photos/marathon/go21-2026/original/01-start-lineup.png" data-lightbox-link data-original="../../../assets/photos/marathon/go21-2026/original/01-start-lineup.png" data-alt="Ning Li and the Hong Kong Polytechnic University Go21 team at the start" aria-label="View original: Go21 team at the start"><img src="../../../assets/photos/marathon/go21-2026/thumbnails/01-start-lineup.jpg" width="720" height="720" alt="Ning Li and the Hong Kong Polytechnic University Go21 team at the start" loading="lazy" decoding="async" data-source="client" data-subject="Go21 team at the start"></a>
+            <a class="photo-tile" href="../../../assets/photos/marathon/go21-2026/original/02-hong-kong-training.jpg" data-lightbox-link data-original="../../../assets/photos/marathon/go21-2026/original/02-hong-kong-training.jpg" data-alt="The Go21 team after training in Hong Kong" aria-label="View original: Hong Kong training"><img src="../../../assets/photos/marathon/go21-2026/thumbnails/02-hong-kong-training.jpg" width="720" height="720" alt="The Go21 team after training in Hong Kong" loading="lazy" decoding="async" data-source="client" data-subject="Go21 Hong Kong training"></a>
+            <a class="photo-tile" href="../../../assets/photos/marathon/go21-2026/original/03-training-run.jpg" data-lightbox-link data-original="../../../assets/photos/marathon/go21-2026/original/03-training-run.jpg" data-alt="Teammates running side by side in training" aria-label="View original: team training"><img src="../../../assets/photos/marathon/go21-2026/thumbnails/03-training-run.jpg" width="720" height="720" alt="Teammates running side by side in training" loading="lazy" decoding="async" data-source="client" data-subject="Go21 training run"></a>
+          </div>
+          <div class="photo-row">
+            <a class="photo-tile" href="../../../assets/photos/marathon/go21-2026/original/04-race-day.jpg" data-lightbox-link data-original="../../../assets/photos/marathon/go21-2026/original/04-race-day.jpg" data-alt="Ning Li running on the race course" aria-label="View original: Ning Li racing"><img src="../../../assets/photos/marathon/go21-2026/thumbnails/04-race-day.jpg" width="720" height="720" alt="Ning Li running on the race course" loading="lazy" decoding="async" data-source="client" data-subject="Go21 race day"></a>
+            <a class="photo-tile" href="../../../assets/photos/marathon/go21-2026/original/05-flag-finish.jpg" data-lightbox-link data-original="../../../assets/photos/marathon/go21-2026/original/05-flag-finish.jpg" data-alt="Ning Li raising the team flag at the finish" aria-label="View original: team flag at the finish"><img src="../../../assets/photos/marathon/go21-2026/thumbnails/05-flag-finish.jpg" width="720" height="720" alt="Ning Li raising the team flag at the finish" loading="lazy" decoding="async" data-source="client" data-subject="Go21 finish with team flag"></a>
+            <a class="photo-tile" href="../../../assets/photos/marathon/go21-2026/original/06-desert-run.jpg" data-lightbox-link data-original="../../../assets/photos/marathon/go21-2026/original/06-desert-run.jpg" data-alt="Ning Li running alone on the Gobi course" aria-label="View original: running alone in the desert"><img src="../../../assets/photos/marathon/go21-2026/thumbnails/06-desert-run.jpg" width="720" height="720" alt="Ning Li running alone on the Gobi course" loading="lazy" decoding="async" data-source="client" data-subject="Go21 stage one"></a>
+          </div>
+          <div class="photo-row">
+            <a class="photo-tile" href="../../../assets/photos/marathon/go21-2026/original/07-team-on-course.jpg" data-lightbox-link data-original="../../../assets/photos/marathon/go21-2026/original/07-team-on-course.jpg" data-alt="The Go21 team running together on the course" aria-label="View original: team on the course"><img src="../../../assets/photos/marathon/go21-2026/thumbnails/07-team-on-course.jpg" width="720" height="720" alt="The Go21 team running together on the course" loading="lazy" decoding="async" data-source="client" data-subject="Go21 team on the course"></a>
+            <a class="photo-tile" href="../../../assets/photos/marathon/go21-2026/original/08-camp-sunset.png" data-lightbox-link data-original="../../../assets/photos/marathon/go21-2026/original/08-camp-sunset.png" data-alt="Sunset over the Go21 desert camp and red tents" aria-label="View original: desert camp"><img src="../../../assets/photos/marathon/go21-2026/thumbnails/08-camp-sunset.jpg" width="720" height="720" alt="Sunset over the Go21 desert camp and red tents" loading="lazy" decoding="async" data-source="client" data-subject="Go21 desert camp"></a>
+            <a class="photo-tile" href="../../../assets/photos/marathon/go21-2026/original/09-icy-river.png" data-lightbox-link data-original="../../../assets/photos/marathon/go21-2026/original/09-icy-river.png" data-alt="Ning Li crossing an icy river during the final stage" aria-label="View original: icy river crossing"><img src="../../../assets/photos/marathon/go21-2026/thumbnails/09-icy-river.jpg" width="720" height="720" alt="Ning Li crossing an icy river during the final stage" loading="lazy" decoding="async" data-source="client" data-subject="Go21 icy river crossing"></a>
+          </div>
+          <div class="photo-row">
+            <a class="photo-tile" href="../../../assets/photos/marathon/go21-2026/original/10-awards-collage.jpg" data-lightbox-link data-original="../../../assets/photos/marathon/go21-2026/original/10-awards-collage.jpg" data-alt="A collage of the Go21 awards ceremony" aria-label="View original: awards ceremony"><img src="../../../assets/photos/marathon/go21-2026/thumbnails/10-awards-collage.jpg" width="720" height="720" alt="A collage of the Go21 awards ceremony" loading="lazy" decoding="async" data-source="client" data-subject="Go21 awards"></a>
+            <a class="photo-tile" href="../../../assets/photos/marathon/go21-2026/original/11-team-huddle.jpg" data-lightbox-link data-original="../../../assets/photos/marathon/go21-2026/original/11-team-huddle.jpg" data-alt="The team forming a circle with their hands together" aria-label="View original: team huddle"><img src="../../../assets/photos/marathon/go21-2026/thumbnails/11-team-huddle.jpg" width="720" height="720" alt="The team forming a circle with their hands together" loading="lazy" decoding="async" data-source="client" data-subject="Go21 team huddle"></a>
+            <a class="photo-tile" href="../../../assets/photos/marathon/go21-2026/original/12-team-stage.jpg" data-lightbox-link data-original="../../../assets/photos/marathon/go21-2026/original/12-team-stage.jpg" data-alt="The Hong Kong Polytechnic University Go21 team at the awards ceremony" aria-label="View original: team on stage"><img src="../../../assets/photos/marathon/go21-2026/thumbnails/12-team-stage.jpg" width="720" height="720" alt="The Hong Kong Polytechnic University Go21 team at the awards ceremony" loading="lazy" decoding="async" data-source="client" data-subject="Go21 awards stage"></a>
+          </div>
+          <div class="photo-row">
+            <a class="photo-tile" href="../../../assets/photos/marathon/go21-2026/original/13-camp-support.png" data-lightbox-link data-original="../../../assets/photos/marathon/go21-2026/original/13-camp-support.png" data-alt="Food, drinks and supplies at the Go21 camp" aria-label="View original: camp supplies"><img src="../../../assets/photos/marathon/go21-2026/thumbnails/13-camp-support.jpg" width="720" height="720" alt="Food, drinks and supplies at the Go21 camp" loading="lazy" decoding="async" data-source="client" data-subject="Go21 camp support"></a>
+            <a class="photo-tile" href="../../../assets/photos/marathon/go21-2026/original/14-medal-desert.jpg" data-lightbox-link data-original="../../../assets/photos/marathon/go21-2026/original/14-medal-desert.jpg" data-alt="A Go21 medal on the desert course" aria-label="View original: medal in the desert"><img src="../../../assets/photos/marathon/go21-2026/thumbnails/14-medal-desert.jpg" width="720" height="720" alt="A Go21 medal on the desert course" loading="lazy" decoding="async" data-source="client" data-subject="Go21 medal in the desert"></a>
+            <a class="photo-tile" href="../../../assets/photos/marathon/go21-2026/original/15-team-poster.png" data-lightbox-link data-original="../../../assets/photos/marathon/go21-2026/original/15-team-poster.png" data-alt="Poster celebrating the Hong Kong Polytechnic University Go21 EE team's runner-up result" aria-label="View original: runner-up poster"><img src="../../../assets/photos/marathon/go21-2026/thumbnails/15-team-poster.jpg" width="720" height="720" alt="Poster celebrating the Hong Kong Polytechnic University Go21 EE team's runner-up result" loading="lazy" decoding="async" data-source="client" data-subject="Go21 team poster"></a>
+          </div>
+          <div class="photo-row">
+            <a class="photo-tile" href="../../../assets/photos/marathon/go21-2026/original/16-course-map.png" data-lightbox-link data-original="../../../assets/photos/marathon/go21-2026/original/16-course-map.png" data-alt="Map of the Go21 main race course" aria-label="View original: Go21 course map"><img src="../../../assets/photos/marathon/go21-2026/thumbnails/16-course-map.jpg" width="720" height="720" alt="Map of the Go21 main race course" loading="lazy" decoding="async" data-source="client" data-subject="Go21 course map"></a>
+            <a class="photo-tile" href="../../../assets/photos/marathon/go21-2026/original/17-sunset-run.jpg" data-lightbox-link data-original="../../../assets/photos/marathon/go21-2026/original/17-sunset-run.jpg" data-alt="Teammates running together in the Gobi sunset" aria-label="View original: sunset run"><img src="../../../assets/photos/marathon/go21-2026/thumbnails/17-sunset-run.jpg" width="720" height="720" alt="Teammates running together in the Gobi sunset" loading="lazy" decoding="async" data-source="client" data-subject="Go21 sunset run"></a>
+            <a class="photo-tile" href="../../../assets/photos/marathon/go21-2026/original/18-route-banner.jpg" data-lightbox-link data-original="../../../assets/photos/marathon/go21-2026/original/18-route-banner.jpg" data-alt="The Go21 team in front of the course information sign" aria-label="View original: team before the course"><img src="../../../assets/photos/marathon/go21-2026/thumbnails/18-route-banner.jpg" width="720" height="720" alt="The Go21 team in front of the course information sign" loading="lazy" decoding="async" data-source="client" data-subject="Go21 team before the course"></a>
+          </div>
+        </div>
+        <div class="gallery-return"><a class="btn btn--secondary" href="../index.html#go21">Back to Go21 Challenge</a></div>
+      </article>
+    </div>
+  </section>
+
+  <dialog class="lightbox" data-lightbox aria-label="View original Go21 photographs">
+    <div class="lightbox__bar">
+      <button class="lightbox__control" type="button" data-lightbox-close aria-label="Close original image">
+        <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M3 3l12 12M15 3 3 15" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+    <img class="lightbox__image" data-lightbox-image src="" alt="">
+    <div class="lightbox__nav">
+      <button class="lightbox__control" type="button" data-lightbox-prev aria-label="Previous original image">
+        <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="m11 3-6 6 6 6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <button class="lightbox__control" type="button" data-lightbox-next aria-label="Next original image">
+        <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="m7 3 6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
+  </dialog>
+</main>
+
+<footer class="footer closing footer--dark ground-inverse" id="contact" aria-labelledby="close-h">
+  <div class="wrap">
+    <div class="closing__cta close--type">
+      <div class="section-head">
+        <h2 id="close-h">Keep moving</h2>
+        <p>The 121-kilometre journey is over, but the feeling of moving forward with a team remains.</p>
+      </div>
+      <a class="btn btn--primary btn--xl" href="../index.html#go21">Back to marathon<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
+    </div>
+    <div class="closing__links">
+      <div class="grid">
+        <div class="span-6 stack-5">
+          <a class="nav__logo" href="../../index.html"><span class="mark" data-mark="dots" aria-hidden="true"></span>Ning Li</a>
+          <p class="footer__lede">Go21 Challenge, 1–4 October 2026.</p>
+        </div>
+        <div class="span-3 start-7 footer__col">
+          <h3>Browse</h3>
+          <ul><li><a href="../index.html">Marathon</a></li><li><a href="../records.html">Race records</a></li><li><a href="../../about/">About</a></li></ul>
+        </div>
+        <div class="span-3 footer__col">
+          <h3>Language and contact</h3>
+          <ul><li><a href="../../../marathon/go21-2026/index.html" lang="zh-CN" hreflang="zh-CN">中文</a></li><li><a href="mailto:lining78@sina.com">Send an email</a></li></ul>
+        </div>
+      </div>
+      <div class="footer__legal">
+        <span>&copy; 2026 Ning Li</span>
+        <a class="credits" href="../../../credits.html">Photo credits and licences</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script type="module" src="../../../assets/system.js"></script>
+<script type="module" src="../../../assets/motion/motion.js"></script>
+<script type="module" src="../../../assets/layout/layout.js"></script>
+<script>
+(() => {
+  const dialog = document.querySelector('[data-lightbox]');
+  const image = dialog.querySelector('[data-lightbox-image]');
+  const links = [...document.querySelectorAll('[data-lightbox-link]')];
+  const close = dialog.querySelector('[data-lightbox-close]');
+  const prev = dialog.querySelector('[data-lightbox-prev]');
+  const next = dialog.querySelector('[data-lightbox-next]');
+  let active = 0;
+  let trigger = null;
+
+  function show(index) {
+    active = (index + links.length) % links.length;
+    const link = links[active];
+    image.src = link.dataset.original;
+    image.alt = link.dataset.alt;
+  }
+
+  links.forEach((link, index) => {
+    link.addEventListener('click', (event) => {
+      event.preventDefault();
+      trigger = link;
+      show(index);
+      dialog.showModal();
+    });
+  });
+  close.addEventListener('click', () => dialog.close());
+  prev.addEventListener('click', () => show(active - 1));
+  next.addEventListener('click', () => show(active + 1));
+  dialog.addEventListener('click', (event) => {
+    if (event.target === dialog) dialog.close();
+  });
+  dialog.addEventListener('keydown', (event) => {
+    if (event.key === 'ArrowLeft') show(active - 1);
+    if (event.key === 'ArrowRight') show(active + 1);
+  });
+  dialog.addEventListener('close', () => {
+    image.removeAttribute('src');
+    trigger?.focus();
+  });
+})();
+</script>
+</body>
+</html>

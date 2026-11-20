@@ -47,6 +47,10 @@
 .records-table :is(th, td):nth-child(3) { padding-inline: 12px 20px; }
 .records-table :is(th, td):last-child { width: 15%; padding-right: var(--s-4); text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
 .record-note { display: block; margin-top: 4px; color: var(--muted); font-size: var(--t-small); line-height: 1.35; }
+.featured-record { display: flex; align-items: end; justify-content: space-between; gap: var(--s-5); margin-bottom: var(--s-6); padding: var(--s-5); border: 1px solid var(--line); background: #e5e5e0; }
+.featured-record h3 { margin: 4px 0; font-size: clamp(24px, 1.2vw + 18px, 34px); line-height: 1.2; }
+.featured-record p { margin: 0; }
+.featured-record .t-label { color: var(--accent); }
 @media (max-width: 639px) {
   .hero.hero--statement { min-height: 0; padding-bottom: var(--s-7); }
   .records-table { width: 100vw; max-width: none; margin-inline: calc(50% - 50vw); }
@@ -59,6 +63,7 @@
   .records-table .record-race { grid-column: 2; grid-row: 1; padding: 0; }
   .records-table .record-time { grid-column: 3; grid-row: 1; padding-right: var(--s-3); text-align: right; }
   .records-table .record-date { grid-column: 2; grid-row: 2; text-align: left; color: var(--muted); font-size: var(--t-small); }
+  .featured-record { display: grid; align-items: start; }
 }
 </style>
 <script>document.documentElement.classList.add('m-enter');setTimeout(()=>document.documentElement.classList.add('m-enter-done'),700)</script>
@@ -111,6 +116,14 @@
     <div class="wrap">
       <div class="section-head">
         <h2 id="records-h">比赛清单</h2>
+      </div>
+      <div class="featured-record">
+        <div>
+          <p class="t-label">特别赛记</p>
+          <h3>戈21挑战赛</h3>
+          <p>2026.10.01–04 · 4天121公里 · EE组亚军</p>
+        </div>
+        <a class="btn btn--primary" href="go21-2026/">点击阅读全文<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
       </div>
       <table class="records-table">
         <caption>按编号倒序排列，编号越大越靠前。</caption>
