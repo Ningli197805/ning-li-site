@@ -34,6 +34,8 @@
 }
 .client-photo { margin: 0; border-radius: var(--r-lg); overflow: hidden; height: min(520px, var(--ly-fit)); background: var(--surface); }
 .client-photo img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 50%; }
+.client-photo.proof-photo { height: auto; }
+.client-photo.proof-photo img { height: auto; object-fit: contain; }
 .client-float { display: block; }
 .client-float span { display: block; }
 .narrative { max-width: none; }
@@ -55,9 +57,11 @@
 #approach .section-head h3 { font-size: var(--t-card); }
 .result-row .rows__value { color: var(--p-ink); font-weight: 500; }
 .result-row .rows__name small { display: block; color: var(--muted); font-size: var(--t-small); font-weight: 400; }
-.learning { margin: var(--s-7) 0 0; padding-top: var(--s-5); border-top: 1px solid var(--line-strong); }
-.learning h3 { margin: 0 0 var(--s-3); font-size: var(--t-card); font-weight: 500; }
-.learning p { max-width: 72ch; margin: 0; font-size: var(--t-lead); line-height: 1.55; }
+.learning { display: grid; grid-template-columns: minmax(0, 1fr) clamp(240px, 26vw, 320px); gap: var(--s-5) var(--s-6); align-items: start; margin: var(--s-7) 0 0; padding-top: var(--s-5); border-top: 1px solid var(--line-strong); }
+.learning h3 { grid-column: 1; margin: 0 0 var(--s-3); font-size: var(--t-card); font-weight: 500; }
+.learning p { grid-column: 1; max-width: 72ch; margin: 0; font-size: var(--t-lead); line-height: 1.55; }
+.learning-photo { grid-column: 2; grid-row: 2 / span 3; margin: 0; overflow: hidden; border-radius: var(--r-lg); background: var(--surface); }
+.learning-photo img { display: block; width: 100%; height: auto; }
 main > .section { height: auto; min-height: 0; padding-block: clamp(72px, 7vw, 104px); }
 main > .section > .wrap { height: auto; }
 .site-gallery { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: var(--gutter); margin-top: var(--s-6); }
@@ -70,6 +74,14 @@ main > .section > .wrap { height: auto; }
   .client-photo { height: auto; margin-top: var(--s-6); }
   .site-gallery { grid-template-columns: 1fr; }
   .site-gallery figure, .site-gallery figure:first-child, .site-gallery figure:nth-child(2), .site-gallery figure:nth-child(3) { grid-column: 1 / -1; height: auto; aspect-ratio: 4 / 3; }
+}
+@media (max-width: 767px) {
+  .learning { grid-template-columns: 1fr; }
+  .learning h3, .learning p, .learning-photo { grid-column: 1; }
+  .learning-photo { grid-row: auto; margin-block: var(--s-4); }
+}
+@media (min-width: 1024px) and (max-width: 1100px), (min-width: 1024px) and (max-height: 850px) {
+  main > .hero.hero--split { height: auto; min-height: 100svh; }
 }
 @media (max-width: 639px) {
   .hero__media .ly-float__title, .hero--split .hero__facts { display: none; }
@@ -211,28 +223,33 @@ main > .section > .wrap { height: auto; }
   </section>
 
   <section class="section" id="outcome" aria-labelledby="outcome-h">
-    <div class="wrap grid grid--top">
-      <div class="span-6">
-        <div class="section-head">
-          <p class="t-label">价值与结果</p>
-          <h2 id="outcome-h">按期完成，并形成后续实施基础</h2>
+    <div class="wrap">
+      <div class="grid grid--top">
+        <div class="span-6">
+          <div class="section-head">
+            <p class="t-label">价值与结果</p>
+            <h2 id="outcome-h">按期完成，并形成后续实施基础</h2>
+          </div>
+          <ul class="rows result-row">
+            <li><span class="rows__name">可行性评估<small>按约定时间完成</small></span><span class="rows__value">按期</span></li>
+            <li><span class="rows__name">高阶实施路线图<small>覆盖中国、美洲和欧洲</small></span><span class="rows__value">客户高层接受</span></li>
+            <li><span class="rows__name">全球共享服务方向<small>建立评估未来模式的共同基础</small></span><span class="rows__value">共同方向</span></li>
+            <li><span class="rows__name">后续转型计划<small>为分阶段实施提供起点</small></span><span class="rows__value">实施基础</span></li>
+          </ul>
         </div>
-        <ul class="rows result-row">
-          <li><span class="rows__name">可行性评估<small>按约定时间完成</small></span><span class="rows__value">按期</span></li>
-          <li><span class="rows__name">高阶实施路线图<small>覆盖中国、美洲和欧洲</small></span><span class="rows__value">客户高层接受</span></li>
-          <li><span class="rows__name">全球共享服务方向<small>建立评估未来模式的共同基础</small></span><span class="rows__value">共同方向</span></li>
-          <li><span class="rows__name">后续转型计划<small>为分阶段实施提供起点</small></span><span class="rows__value">实施基础</span></li>
-        </ul>
-        <div class="learning">
-          <h3>关键学习</h3>
-          <p><strong>阻力不一定来自不愿改变，也可能来自对决策权、责任边界和团队未来的合理担忧。</strong>有效的转型领导需要理解这些担忧、建立信任，并帮助利益相关方看到变化如何为更大范围的组织创造价值。</p>
-          <p>业务伙伴关系不只是提供技术上正确的人力资源方案，也包括理解业务优先级、影响关键利益相关方，并帮助领导者做出有依据的组织决策。</p>
-          <p>项目中，我持续与德勤国际咨询团队协作，把中国、美洲和欧洲的不同视角整合为一组连贯、可供客户高层决策的建议。</p>
-        </div>
+        <figure class="client-photo proof-photo span-6 start-7">
+          <img src="../../../assets/photos/work/automotive-group/project-thank-you.jpg" srcset="../../../assets/photos/work/automotive-group/project-thank-you-740.jpg 740w, ../../../assets/photos/work/automotive-group/project-thank-you.jpg 1099w" sizes="(max-width: 639px) 342px, 50vw" width="1099" height="528" alt="线上项目会议中展示的团队感谢页" loading="lazy" decoding="async" data-source="client" data-subject="project thank-you presentation">
+        </figure>
       </div>
-      <figure class="client-photo span-6 start-7">
-        <img src="../../../assets/photos/work/automotive-group/client-space.jpg" srcset="../../../assets/photos/work/automotive-group/client-space-740.jpg 740w, ../../../assets/photos/work/automotive-group/client-space.jpg 1400w" sizes="(max-width: 639px) 342px, 50vw" width="1400" height="1050" alt="汽车集团办公楼内部的采光休息区" loading="lazy" decoding="async" data-source="client" data-subject="automotive group office interior">
-      </figure>
+      <div class="learning">
+        <h3>关键学习</h3>
+        <p><strong>阻力不一定来自不愿改变，也可能来自对决策权、责任边界和团队未来的合理担忧。</strong>有效的转型领导需要理解这些担忧、建立信任，并帮助利益相关方看到变化如何为更大范围的组织创造价值。</p>
+        <figure class="learning-photo">
+          <img src="../../../assets/photos/work/automotive-group/multilingual-thank-you.jpg" srcset="../../../assets/photos/work/automotive-group/multilingual-thank-you-740.jpg 740w, ../../../assets/photos/work/automotive-group/multilingual-thank-you.jpg 1020w" sizes="(max-width: 767px) 342px, 320px" width="1020" height="672" alt="线上会议中展示的多种语言感谢与里程碑页面" loading="lazy" decoding="async" data-source="client" data-subject="multilingual thank-you milestone">
+        </figure>
+        <p>业务伙伴关系不只是提供技术上正确的人力资源方案，也包括理解业务优先级、影响关键利益相关方，并帮助领导者做出有依据的组织决策。</p>
+        <p>项目中，我持续与德勤国际咨询团队协作，把中国、美洲和欧洲的不同视角整合为一组连贯、可供客户高层决策的建议。</p>
+      </div>
     </div>
   </section>
 

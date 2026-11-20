@@ -34,6 +34,8 @@
 }
 .client-photo { margin: 0; border-radius: var(--r-lg); overflow: hidden; height: min(520px, var(--ly-fit)); background: var(--surface); }
 .client-photo img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 50%; }
+.client-photo.proof-photo { height: auto; }
+.client-photo.proof-photo img { height: auto; object-fit: contain; }
 .client-float { display: block; }
 .client-float span { display: block; }
 .narrative { max-width: none; }
@@ -55,9 +57,11 @@
 #approach .section-head h3 { font-size: var(--t-card); }
 .result-row .rows__value { color: var(--p-ink); font-weight: 500; }
 .result-row .rows__name small { display: block; color: var(--muted); font-size: var(--t-small); font-weight: 400; }
-.learning { margin: var(--s-7) 0 0; padding-top: var(--s-5); border-top: 1px solid var(--line-strong); }
-.learning h3 { margin: 0 0 var(--s-3); font-size: var(--t-card); font-weight: 500; }
-.learning p { max-width: 72ch; margin: 0; font-size: var(--t-lead); line-height: 1.55; }
+.learning { display: grid; grid-template-columns: minmax(0, 1fr) clamp(240px, 26vw, 320px); gap: var(--s-5) var(--s-6); align-items: start; margin: var(--s-7) 0 0; padding-top: var(--s-5); border-top: 1px solid var(--line-strong); }
+.learning h3 { grid-column: 1; margin: 0 0 var(--s-3); font-size: var(--t-card); font-weight: 500; }
+.learning p { grid-column: 1; max-width: 72ch; margin: 0; font-size: var(--t-lead); line-height: 1.55; }
+.learning-photo { grid-column: 2; grid-row: 2 / span 3; margin: 0; overflow: hidden; border-radius: var(--r-lg); background: var(--surface); }
+.learning-photo img { display: block; width: 100%; height: auto; }
 main > .section { height: auto; min-height: 0; padding-block: clamp(72px, 7vw, 104px); }
 main > .section > .wrap { height: auto; }
 .site-gallery { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: var(--gutter); margin-top: var(--s-6); }
@@ -70,6 +74,14 @@ main > .section > .wrap { height: auto; }
   .client-photo { height: auto; margin-top: var(--s-6); }
   .site-gallery { grid-template-columns: 1fr; }
   .site-gallery figure, .site-gallery figure:first-child, .site-gallery figure:nth-child(2), .site-gallery figure:nth-child(3) { grid-column: 1 / -1; height: auto; aspect-ratio: 4 / 3; }
+}
+@media (max-width: 767px) {
+  .learning { grid-template-columns: 1fr; }
+  .learning h3, .learning p, .learning-photo { grid-column: 1; }
+  .learning-photo { grid-row: auto; margin-block: var(--s-4); }
+}
+@media (min-width: 1024px) and (max-width: 1100px), (min-width: 1024px) and (max-height: 850px) {
+  main > .hero.hero--split { height: auto; min-height: 100svh; }
 }
 @media (max-width: 639px) {
   .hero__media .ly-float__title, .hero--split .hero__facts { display: none; }
@@ -211,28 +223,33 @@ main > .section > .wrap { height: auto; }
   </section>
 
   <section class="section" id="outcome" aria-labelledby="outcome-h">
-    <div class="wrap grid grid--top">
-      <div class="span-6">
-        <div class="section-head">
-          <p class="t-label">Business impact</p>
-          <h2 id="outcome-h">Client outcomes</h2>
+    <div class="wrap">
+      <div class="grid grid--top">
+        <div class="span-6">
+          <div class="section-head">
+            <p class="t-label">Business impact</p>
+            <h2 id="outcome-h">Client outcomes</h2>
+          </div>
+          <ul class="rows result-row">
+            <li><span class="rows__name">Feasibility assessment<small>Completed within the agreed timeline</small></span><span class="rows__value">On time</span></li>
+            <li><span class="rows__name">High-level roadmap<small>Covering China, the Americas and Europe</small></span><span class="rows__value">Accepted</span></li>
+            <li><span class="rows__name">Global shared-services direction<small>A common basis for evaluating the future model</small></span><span class="rows__value">Shared direction</span></li>
+            <li><span class="rows__name">Future transformation planning<small>A starting point for phased implementation</small></span><span class="rows__value">Foundation</span></li>
+          </ul>
         </div>
-        <ul class="rows result-row">
-          <li><span class="rows__name">Feasibility assessment<small>Completed within the agreed timeline</small></span><span class="rows__value">On time</span></li>
-          <li><span class="rows__name">High-level roadmap<small>Covering China, the Americas and Europe</small></span><span class="rows__value">Accepted</span></li>
-          <li><span class="rows__name">Global shared-services direction<small>A common basis for evaluating the future model</small></span><span class="rows__value">Shared direction</span></li>
-          <li><span class="rows__name">Future transformation planning<small>A starting point for phased implementation</small></span><span class="rows__value">Foundation</span></li>
-        </ul>
-        <div class="learning">
-          <h3>Key learning from the client project</h3>
-          <p><strong>Resistance is not always a refusal to change. It often reflects legitimate concerns about decision rights, accountability and the future of a team.</strong> Effective transformation leadership requires understanding those concerns, building trust and helping stakeholders see how a proposed change can create value for the broader organisation.</p>
-          <p>Business partnering is not only about technically sound HR solutions. It is also about understanding business priorities, influencing stakeholders and helping leaders make informed organisational decisions.</p>
-          <p>Throughout the project, I worked closely with Deloitte's international consulting teams to integrate Chinese, Americas and European perspectives into one coherent set of recommendations for senior client decision-makers.</p>
-        </div>
+        <figure class="client-photo proof-photo span-6 start-7">
+          <img src="../../../../assets/photos/work/automotive-group/project-thank-you.jpg" srcset="../../../../assets/photos/work/automotive-group/project-thank-you-740.jpg 740w, ../../../../assets/photos/work/automotive-group/project-thank-you.jpg 1099w" sizes="(max-width: 639px) 342px, 50vw" width="1099" height="528" alt="A project team thank-you slide shown during an online meeting" loading="lazy" decoding="async" data-source="client" data-subject="project thank-you presentation">
+        </figure>
       </div>
-      <figure class="client-photo span-6 start-7">
-        <img src="../../../../assets/photos/work/automotive-group/client-space.jpg" srcset="../../../../assets/photos/work/automotive-group/client-space-740.jpg 740w, ../../../../assets/photos/work/automotive-group/client-space.jpg 1400w" sizes="(max-width: 639px) 342px, 50vw" width="1400" height="1050" alt="A daylit seating area inside an automotive group office" loading="lazy" decoding="async" data-source="client" data-subject="automotive group office interior">
-      </figure>
+      <div class="learning">
+        <h3>Key learning from the client project</h3>
+        <p><strong>Resistance is not always a refusal to change. It often reflects legitimate concerns about decision rights, accountability and the future of a team.</strong> Effective transformation leadership requires understanding those concerns, building trust and helping stakeholders see how a proposed change can create value for the broader organisation.</p>
+        <figure class="learning-photo">
+          <img src="../../../../assets/photos/work/automotive-group/multilingual-thank-you.jpg" srcset="../../../../assets/photos/work/automotive-group/multilingual-thank-you-740.jpg 740w, ../../../../assets/photos/work/automotive-group/multilingual-thank-you.jpg 1020w" sizes="(max-width: 767px) 342px, 320px" width="1020" height="672" alt="Multilingual thank-you and milestone slide shown during an online meeting" loading="lazy" decoding="async" data-source="client" data-subject="multilingual thank-you milestone">
+        </figure>
+        <p>Business partnering is not only about technically sound HR solutions. It is also about understanding business priorities, influencing stakeholders and helping leaders make informed organisational decisions.</p>
+        <p>Throughout the project, I worked closely with Deloitte's international consulting teams to integrate Chinese, Americas and European perspectives into one coherent set of recommendations for senior client decision-makers.</p>
+      </div>
     </div>
   </section>
 
