@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="zh-CN" data-type="service" data-radius="soft" data-buttons="solid" data-motion>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>我的父亲，画家厉家恩 | 厉宁</title>
+<meta name="description" content="厉家恩，1947 年生于上海的职业画家。本页收录他的画家简介、戏曲人物油画的三个特点与七幅作品。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="我的父亲，画家厉家恩">
+<meta property="og:description" content="从江南园林到昆曲人物，厉家恩用油画材料与油画刀描绘中国传统文化精神。">
+<meta property="og:image" content="../assets/photos/father/garden-singer-1920.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#efe9e0">
+<meta name="site-kind" content="other">
+<meta name="page-type" content="service">
+<link rel="stylesheet" href="../assets/system.css">
+<link rel="stylesheet" href="../assets/ui/cards.css">
+<link rel="stylesheet" href="../assets/motion/motion.css">
+<link rel="stylesheet" href="../assets/layout/layout.css">
+<link rel="stylesheet" href="../assets/icons/icon.css">
+<style>
+@font-face { font-family: "Hanken Grotesk"; src: url("../assets/fonts/HankenGrotesk-Variable.ttf") format("truetype"); font-style: normal; font-weight: 400 700; font-display: swap; }
+:root {
+  --p-bg: #efe9e0; --p-surface: #e2d9cb; --p-ink: #22261f; --p-muted: #5a5c53;
+  --p-accent: #2e5b44; --p-accent-ink: #ffffff; --p-action: #2e5b44; --p-action-ink: #ffffff;
+  --p-inv-bg: #1c211d; --p-inv-surface: #2b312c; --p-inv-ink: #efe9e0; --p-inv-muted: #aaa79d;
+  --p-inv-accent: #d9c7a4; --p-inv-accent-ink: #22261f; --p-inv-action: #d9c7a4; --p-inv-action-ink: #22261f;
+  --font-display: "Songti SC", "STSong", "Noto Serif SC", "Source Han Serif SC", serif;
+  --font-text: "Hanken Grotesk", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  --display-weight: 400;
+  --display-tracking: -0.02em;
+  --display-tracking-xl: -0.026em;
+  --ly-h1-xl: clamp(44px, 4vw, 64px);
+}
+.hero--photo > .wrap > .hero-text { justify-content: flex-start; }
+.hero--photo .hero__text { background: color-mix(in oklab, var(--p-bg) 94%, transparent); }
+.hero--photo .seal {
+  display: inline-grid; place-items: center; width: 50px; height: 50px; margin-bottom: var(--s-5);
+  color: #f8f0df; background: #9d3328; font: 400 22px/1 var(--font-display); letter-spacing: 0.08em;
+}
+.hero--photo .hero__lead { max-width: 34ch; }
+.artist-intro { font-family: var(--font-display); font-size: clamp(24px, 2vw + 12px, 36px); line-height: 1.35; letter-spacing: var(--display-tracking); max-width: 24ch; margin-bottom: var(--s-5); }
+.bio-copy p, .trait-copy p { color: var(--ink); line-height: 1.68; }
+.bio-copy p + p, .trait-copy p + p { margin-top: var(--s-3); }
+.grid > figure { margin: 0; }
+.bio-facts { margin-top: var(--s-5); }
+.bio-facts li { font-size: 16px; }
+main > section.art-section > .wrap { display: grid !important; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gutter); align-items: start; }
+.art-section .group { grid-column: 1 / span 6; display: flex; flex-direction: column; min-width: 0; }
+.art-section .section-head { margin-bottom: var(--s-5); }
+.art-section .art-stage { grid-column: 8 / span 5; justify-self: stretch; display: block; margin: 0; min-width: 0; }
+.art-frame {
+  display: block; margin: 0; overflow: hidden; border-radius: var(--r-lg); background: var(--surface);
+}
+.art-frame img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.bio-art { height: min(600px, var(--ly-fit)); }
+.bio-art img { object-position: 50% 35%; }
+.trait-one-art, .trait-two-art, .trait-third-art { height: min(600px, var(--ly-fit)); }
+.trait-two-art img { object-position: 50% 34%; }
+.trait-third-art img { object-position: 50% 36%; }
+.trait-no { display: block; margin-bottom: var(--s-2); color: var(--accent); font: 500 var(--t-label)/1.4 var(--font-text); letter-spacing: 0.02em; }
+.trait-copy { padding-top: var(--s-2); }
+.trait-quote {
+  margin: var(--s-4) 0 0;
+  color: var(--ink); font-family: var(--font-display); font-size: var(--t-lead); line-height: 1.4;
+}
+.statement { background: var(--surface); }
+.statement .wrap { height: 100%; display: flex; flex-direction: column; justify-content: center; }
+.statement h2 { margin-bottom: var(--s-5); }
+.statement .mo-wh__text { max-width: 24ch; font-size: var(--t-h3); }
+.works-grid { align-items: stretch; }
+.work-frame { height: min(440px, var(--ly-fit)); }
+.work-frame img { transition-duration: 600ms; }
+.work-caption {
+  position: absolute; left: 0; right: 0; bottom: 0; display: flex; justify-content: space-between; gap: var(--s-4);
+  padding: var(--s-4); color: #fff; background: color-mix(in oklab, var(--p-ink) 78%, transparent);
+}
+.work-card { position: relative; display: block; }
+.closing__cta .footer__lede { max-width: 36ch; }
+@media (min-width: 640px) and (max-width: 1023px) {
+  #biography, #trait-one, #trait-two, #trait-three { --h: 1; }
+  main > section.art-section > .wrap { display: flex !important; flex-direction: column; height: auto; }
+  .art-section .group { display: flex; flex-direction: column; }
+  .art-section .art-stage { width: 100%; height: 300px; min-height: 0; margin: var(--s-7) 0 0; }
+  .bio-art, .trait-one-art, .trait-two-art, .trait-third-art { height: auto; aspect-ratio: 4 / 3; margin-top: var(--s-7); }
+  #biography .grid > figure { margin-top: var(--s-7); }
+  .hero--photo > .wrap > .hero-text { justify-content: flex-end; }
+  #works .works-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-rows: 1fr; flex: 1; min-height: 0; }
+  #works .works-grid > * { grid-column: auto; height: 100%; }
+  #works .work-frame { height: 100%; aspect-ratio: auto; }
+}
+@media (max-width: 639px) {
+  #biography, #trait-one, #trait-two, #trait-three { --hm: 2; }
+  #trait-two, #trait-three { --padt: 16px; }
+  #works { --hm: 2; }
+  main > section.art-section > .wrap { display: grid !important; grid-template-columns: minmax(0, 1fr); grid-template-rows: minmax(0, 1fr) minmax(0, 1fr); row-gap: 0; height: 100%; align-items: stretch; }
+  .art-section .group { grid-column: 1; grid-row: 1; display: flex; flex-direction: column; }
+  .art-section .art-stage { grid-column: 1; grid-row: 2; align-self: end; width: 100%; height: calc(100svh - 144px); min-height: 0; margin: 0; }
+  .hero--photo { --photo: 40svh; }
+  .hero--photo h1 { font-size: clamp(32px, 9vw, 36px); }
+  .hero--photo > .wrap > .hero-text { justify-content: flex-end; }
+  .hero--photo .hero__text > * + * { margin-top: var(--s-4); }
+  .hero--photo .hero__text > .btn-row { margin-top: var(--s-5); }
+  .hero--photo .hero__text { background: none; }
+  .hero--photo .seal { width: 42px; height: 42px; font-size: 19px; margin-bottom: var(--s-3); }
+  .bio-art, .trait-one-art, .trait-two-art, .trait-third-art { height: auto; aspect-ratio: 4 / 5; margin-top: var(--s-7); }
+  .trait-one-art { aspect-ratio: 4 / 3; }
+  .works-grid > * { grid-column: 1 / -1; }
+  .works-grid { grid-auto-rows: 1fr; flex: 1; min-height: 0; }
+  .work-frame { height: 100%; aspect-ratio: auto; }
+  .work-frame--wide { aspect-ratio: 4 / 3; }
+  footer.closing .footer__col { display: none; }
+  #biography .grid > figure { margin-top: var(--s-7); }
+  .bio-facts > li { grid-template-columns: minmax(0, 1fr); gap: var(--s-1); }
+  .statement .wrap { justify-content: flex-start; }
+}
+</style>
+<script>document.documentElement.classList.add('m-enter');setTimeout(()=>document.documentElement.classList.add('m-enter-done'),700)</script>
+<script>document.documentElement.classList.add('mo-js');setTimeout(()=>document.documentElement.classList.add('mo-safe'),2500)</script>
+<link rel="modulepreload" href="../assets/moments/moments.js">
+<link rel="modulepreload" href="../assets/moments/lib.js">
+<link rel="modulepreload" href="../assets/moments/picture-develops/moment.js">
+<link rel="modulepreload" href="../assets/moments/word-highlight/moment.js">
+</head>
+<body>
+<!-- type: service
+     deal: photo hero, palette clay-pine, nav centre, footer columns, close type (re-dealt for no unused work), rhythm surface-pairs, buttons solid (re-dealt so the nav label stays centred), mark arc (re-dealt for the Chinese site)
+     moments: picture-develops in #biography; word-highlight in #statement -->
+<header class="nav nav--centre">
+  <div class="wrap nav__bar">
+    <a class="skip-link" href="#top">跳到正文 Skip to content</a>
+    <a class="nav__logo" href="../index.html"><span class="mark" data-mark="arc" aria-hidden="true"></span>厉宁</a>
+    <nav class="nav__links" aria-label="主导航">
+      <div class="nav__item"><a class="nav__link" href="../about/">关于</a></div>
+      <div class="nav__item"><a class="nav__link" href="../index.html#work">工作现场</a></div>
+      <div class="nav__item"><a class="nav__link" href="../career/clients/">客户案例</a></div>
+      <div class="nav__item"><a class="nav__link" href="../marathon/index.html">马拉松</a></div>
+      <div class="nav__item"><a class="nav__link" href="../practices/index.html">领先实践</a></div>
+      <div class="nav__item"><a class="nav__link" href="index.html" aria-current="page">我的父亲</a></div>
+    </nav>
+    <div class="nav__actions">
+      <a class="nav__link" href="../en/father/index.html" lang="en" hreflang="en">EN</a>
+      <a class="btn btn--primary" href="https://ning-li.com/about/#contact">联系厉宁</a>
+    </div>
+    <button class="nav__toggle" type="button" aria-expanded="false" aria-label="打开菜单">
+      <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M2 5h14M2 13h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero hero--photo" data-enter data-calm="left" aria-labelledby="hero-h">
+    <img class="hero__bg"
+         src="../assets/photos/father/garden-singer-1920.jpg"
+         sizes="100vw" width="1920" height="1415"
+         alt="厉家恩创作的戏曲人物与春日园林油画"
+         style="--ly-pos: 63% 43%; --ly-pos-phone: 72% 42%" fetchpriority="high"
+         data-source="user-provided" data-subject="Li Jia'en painting">
+    <div class="wrap"><div class="hero-text">
+      <div class="hero__text">
+        <span class="seal" aria-hidden="true">厉</span>
+        <h1 id="hero-h">我的父亲，画家厉家恩</h1>
+        <p class="hero__lead">1947 年生于上海。他用油画材料与油画刀描绘昆曲人物、江南园林，在写实与写意之间留下自己的语言。</p>
+        <div class="btn-row">
+          <a class="btn btn--primary" href="#works">查看作品<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
+          <a class="btn btn--secondary" href="#biography">阅读画家简介</a>
+        </div>
+      </div>
+    </div></div>
+  </section>
+
+  <section class="section art-section" id="biography" aria-labelledby="biography-h">
+    <div class="wrap">
+      <div class="group">
+      <div class="section-head">
+        <span class="t-label">画家简介</span>
+        <h2 id="biography-h">从江南生活走向戏曲人物</h2>
+      </div>
+        <div class="bio-copy">
+          <p class="artist-intro">厉家恩，职业画家。中国美术家协会深圳分会会员，现居深圳。</p>
+          <p>画家自幼生活在江南，深受民间文艺戏曲的影响，对油画艺术有着独特的理解和审美取向。其作品致力于表达人的情感和意境，他的画追求唯美，认为艺术应当表现美的事物。</p>
+          <p>2002 年，其油画作品在瑞士日内瓦展出，受到国际友人的喜爱。近年来，他用油画这种西方的艺术形式来描绘中国传统的戏曲人物和江南古典园林，形成自己特有风格，多次举办个展。</p>
+          <p>2006 年元月，厉家恩举办昆曲人物油画作品展。著名剧作家白先勇携昆曲《牡丹亭》剧组来深时，看到他创作的昆曲人物赞不绝口，诸多报刊和电视台做了专题报道。其作品在历次拍卖中亦有较好成绩，一些画廊和港台新加坡人士均有收藏。</p>
+        </div>
+      </div>
+          <a class="art-frame bio-art art-stage m-zoom" href="../assets/photos/father/red-robe-1400.jpg"
+             data-moment="picture-develops" data-moment-opts='{"look":"film","duration":1600}'
+             target="_blank" rel="noopener"
+             aria-label="打开这幅戏曲人物油画的大图">
+            <img src="../assets/photos/father/red-robe-1400.jpg"
+                 width="1161" height="1400" alt="厉家恩创作的红衣戏曲人物油画" decoding="async"
+                 data-source="user-provided" data-subject="Li Jia'en painting">
+          </a>
+    </div>
+  </section>
+
+  <section class="section art-section" id="trait-one" aria-labelledby="trait-one-h">
+    <div class="wrap">
+      <div class="group">
+      <div class="section-head">
+        <span class="t-label">艺术特点 01</span>
+        <h2 id="trait-one-h">人物与园林</h2>
+        <p>戏曲女子被放进姹紫嫣红的花园，人物姿态与江南园林共同生成画中的诗意。</p>
+      </div>
+        <div class="span-6 trait-copy">
+          <span class="trait-no" aria-hidden="true">01</span>
+          <p>画家把一个青春典雅、健康文静的戏曲女子，置身于姹紫嫣红开遍的花园，置身于牡丹亭边芍药栏前。如此优雅的环境之中，平添了几分诗意。</p>
+          <p>他通过对人物动作神态的细致刻画，来表达画中女子那矜持的含羞状态和大家闺秀温情脉脉甚至有点微妙的情感波澜。一个个青春女子或坐或倚，悠然自得，大方得体，表现出江南女子特有的清纯与青春、深婉与清丽。</p>
+          <p>甜美的形象、华丽的色彩、飘逸的线条，与充满诗意的古典园林彼此辉映，交织呈现乃至完美融合，烘托出梦境的迷幻和情感的浓烈。</p>
+        </div>
+      </div>
+        <a class="art-frame trait-one-art art-stage m-zoom" href="../assets/photos/father/fan-and-bridge-1400.jpg"
+           target="_blank" rel="noopener" aria-label="打开戏曲人物与园林油画的大图">
+          <img src="../assets/photos/father/fan-and-bridge-1400.jpg"
+               width="1400" height="1025"
+               alt="厉家恩创作的白衣戏曲人物、折扇与园林景致油画" decoding="async"
+               data-source="user-provided" data-subject="Li Jia'en painting">
+        </a>
+    </div>
+  </section>
+
+  <section class="section art-section" id="trait-two" aria-labelledby="trait-two-h">
+    <div class="wrap">
+      <div class="group">
+      <div class="section-head">
+        <span class="t-label">艺术特点 02</span>
+        <h2 id="trait-two-h">整体写实，局部抽象</h2>
+        <p>衣纹与头饰不被细致复制，而是在刀痕和肌理中被重新组织。</p>
+      </div>
+        <div class="span-6 trait-copy">
+          <span class="trait-no" aria-hidden="true">02</span>
+          <p>画面整体看是写实的，但局部处理上，画家并未细致具体地描绘人物的衣纹、图案和头饰等细节，而是把它抽象化，突出表现性。</p>
+          <p>他把握戏曲情景中的精神，浓彩淡墨，以极其鲜明的色彩和随意挥洒的笔触，来表现画中人的声音容貌。为加强画面力度，画家放弃画笔，全部改用油画刀作画。</p>
+          <p>画面中，刀势的运作和肌理的构成甚至脱离客观的真实，而任凭主观的喜爱和想象。二维和三维空间各自独立又互相转换，而整体气氛十分融洽，形成鲜明的个人风格。</p>
+          <p class="trait-quote">粗犷的风景背景与人物面部，都由油画刀刻画。</p>
+        </div>
+      </div>
+        <a class="art-frame trait-two-art art-stage m-zoom" href="../assets/photos/father/flute-1400.jpg"
+           target="_blank" rel="noopener" aria-label="打开持笛戏曲人物油画的大图">
+          <img src="../assets/photos/father/flute-1400.jpg"
+               width="1217" height="1400" alt="厉家恩创作的持笛戏曲人物油画" decoding="async"
+               data-source="user-provided" data-subject="Li Jia'en painting">
+        </a>
+    </div>
+  </section>
+
+  <section class="section art-section" id="trait-three" aria-labelledby="trait-three-h">
+    <div class="wrap">
+      <div class="group">
+      <div class="section-head">
+        <span class="t-label">艺术特点 03</span>
+        <h2 id="trait-three-h">油彩与国画理念</h2>
+        <p>材料是西方的，精神与笔意却来自中国传统文化。</p>
+      </div>
+        <div class="span-6 trait-copy">
+          <span class="trait-no" aria-hidden="true">03</span>
+          <p>西方油画往往注重客观的真实性，而中国国画则强调精神，强调意境及色彩线条等表现技法上的主观性。画家把两者融合起来，使用的虽是油画材料工具，表现的却是中国传统文化精神。</p>
+          <p>画面中，中国民间艺术元素得到充分发挥，大胆使用原色，追求明快艳丽；用笔上追求洒脱随意，不拖泥带水。</p>
+          <p>即使是油画，用笔仍见飞白，似有水墨的韵味，深具中国油画的特色。</p>
+          <p class="trait-quote">《水仙》｜布面油画｜76 × 61 cm</p>
+        </div>
+      </div>
+        <a class="art-frame trait-third-art art-stage m-zoom" href="../assets/photos/father/narcissus-1600.jpg"
+           target="_blank" rel="noopener" aria-label="打开《水仙》油画的大图">
+          <img src="../assets/photos/father/narcissus-1600.jpg"
+               width="1262" height="1600" alt="厉家恩的布面油画《水仙》，画中戏曲女子身旁是一盆水仙" decoding="async"
+               data-source="user-provided" data-subject="Li Jia'en painting">
+        </a>
+    </div>
+  </section>
+
+  <section class="section statement" id="statement" data-moment="word-highlight" aria-label="他的画法">
+    <div class="wrap">
+      <p class="t-label">他的画法</p>
+      <p class="mo-wh__text">他使用的是<strong>油画材料与油画刀</strong>，表现的却是中国传统文化精神。飞白与水墨的韵味，留在了油彩之中。</p>
+    </div>
+  </section>
+
+  <section class="section" id="works" aria-labelledby="works-h">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="t-label">作品图录</span>
+        <h2 id="works-h">其余两幅作品</h2>
+        <p>网页中的七幅作品图像均由家人提供。点击画面可打开大图细看。</p>
+      </div>
+      <div class="grid grid--top works-grid">
+        <a class="work-card m-zoom span-6" href="../assets/photos/father/yellow-fan-1084.jpg"
+           target="_blank" rel="noopener" aria-label="打开黄扇戏曲人物油画的大图">
+          <span class="art-frame work-frame">
+            <img src="../assets/photos/father/yellow-fan-1084.jpg" width="779" height="1084"
+                 alt="厉家恩创作的黄扇戏曲人物油画" decoding="async"
+                 data-source="user-provided" data-subject="Li Jia'en painting">
+          </span>
+        </a>
+        <a class="work-card m-zoom span-6" href="../assets/photos/father/two-roles-1400.jpg"
+           target="_blank" rel="noopener" aria-label="打开双人戏曲油画的大图">
+          <span class="art-frame work-frame">
+            <img src="../assets/photos/father/two-roles-1400.jpg"
+                 width="1206" height="1400" alt="厉家恩创作的一文一武两位戏曲人物油画" decoding="async"
+                 data-source="user-provided" data-subject="Li Jia'en painting">
+          </span>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer closing" id="contact" aria-labelledby="close-h">
+  <div class="wrap">
+    <div class="closing__cta close--type">
+      <div class="section-head">
+        <h2 id="close-h">一页父亲的作品，也是一段家中的记忆</h2>
+        <p class="footer__lede">本页依据家人提供的《画家介绍》与七幅作品图像整理。</p>
+      </div>
+      <a class="btn btn--primary" href="#works">查看作品<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
+    </div>
+    <div class="closing__links">
+      <div class="grid">
+        <div class="span-6 stack-5">
+          <a class="nav__logo" href="../index.html"><span class="mark" data-mark="arc" aria-hidden="true"></span>厉宁 Ning Li</a>
+          <p class="footer__lede">我的父亲厉家恩，职业画家，现居深圳。</p>
+        </div>
+        <div class="span-3 start-7 footer__col">
+          <h3>浏览</h3>
+          <ul><li><a href="#biography">画家简介</a></li><li><a href="#trait-one">人物与园林</a></li><li><a href="#trait-three">油彩与国画</a></li><li><a href="#works">作品图录</a></li></ul>
+        </div>
+        <div class="span-3 footer__col">
+          <h3>语言与联系</h3>
+          <ul><li><a href="../en/father/index.html" lang="en" hreflang="en">English</a></li><li><a href="../index.html">返回首页</a></li><li><a href="mailto:lining78@sina.com">发送邮件</a></li></ul>
+        </div>
+      </div>
+      <div class="footer__legal">
+        <span>&copy; 2026 厉宁</span>
+        <details class="credits">
+          <summary>文字与作品图像来源</summary>
+          <p>介绍文字依据家人提供的《厉家恩——画家简介及戏曲人物油画艺术特点》整理；七幅作品图像由厉宁提供，作品版权归画家及权利人所有。</p>
+        </details>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script type="module" src="../assets/system.js"></script>
+<script type="module" src="../assets/motion/motion.js"></script>
+<script type="module" src="../assets/layout/layout.js"></script>
+</body>
+</html>
