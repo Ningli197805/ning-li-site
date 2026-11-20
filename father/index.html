@@ -91,6 +91,7 @@ main > section.art-section > .wrap { display: grid !important; grid-template-col
   #works .work-frame { height: 100%; aspect-ratio: auto; }
 }
 @media (max-width: 639px) {
+  .nav:not(.is-open) .nav__actions { display: none; }
   #biography, #trait-one, #trait-two, #trait-three { --hm: 2; }
   #trait-two, #trait-three { --padt: 16px; }
   #works { --hm: 2; }
